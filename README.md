@@ -77,7 +77,6 @@ Aquí está la lista completa de herramientas disponibles en **Guia-Comandos-Lin
 - **nc**: Muestra ejemplos y descripciones de uso de `nc` (netcat).
 - **netstat**: Muestra ejemplos y descripciones de uso de `netstat`.
 - **nmap**: Muestra ejemplos y descripciones de uso de `nmap`.
-- **mysql**: Muestra ejemplos y descripciones de consultas de `mysql`.
 - **regex**: Muestra ejemplos y descripciones de expresiones regulares.
 - **ps**: Muestra ejemplos y descripciones de uso de `ps`.
 - **scp**: Muestra ejemplos y descripciones de uso de `scp`.
@@ -93,7 +92,6 @@ Aquí está la lista completa de herramientas disponibles en **Guia-Comandos-Lin
 - **uniq**: Muestra ejemplos y descripciones de uso de `uniq`.
 - **vim**: Muestra ejemplos y descripciones de uso de `vim`.
 - **watch**: Muestra ejemplos y descripciones de uso de `watch`.
-- **windows**: Muestra ejemplos y descripciones de comandos de `windows` en sistemas Linux.
 - **xargs**: Muestra ejemplos y descripciones de uso de `xargs`.
 
 ---
