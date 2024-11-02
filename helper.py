@@ -34,7 +34,6 @@ tools = {
     "nc": (os.path.join(tools_dir, "nc.py"), "Displays examples and descriptions of nc (netcat) usage."),
     "netstat": (os.path.join(tools_dir, "netstat.py"), "Displays examples and descriptions of netstat usage."),
     "nmap": (os.path.join(tools_dir, "nmap.py"), "Displays examples and descriptions of nmap usage."),
-    "mysql": (os.path.join(tools_dir, "mysql.py"), "Displays examples and descriptions of mysql queries."),
     "regex": (os.path.join(tools_dir, "regex.py"), "Displays examples and descriptions of regular expressions."),
     "ps": (os.path.join(tools_dir, "ps.py"), "Displays examples and descriptions of ps usage."),
     "scp": (os.path.join(tools_dir, "scp.py"), "Displays examples and descriptions of scp usage."),
@@ -50,7 +49,6 @@ tools = {
     "uniq": (os.path.join(tools_dir, "uniq.py"), "Displays examples and descriptions of uniq usage."),
     "vim": (os.path.join(tools_dir, "vim.py"), "Displays examples and descriptions of vim usage."),
     "watch": (os.path.join(tools_dir, "watch.py"), "Displays examples and descriptions of watch usage."),
-    "windows": (os.path.join(tools_dir, "windows.py"), "Displays examples and descriptions of windows commands."),
     "xargs": (os.path.join(tools_dir, "xargs.py"), "Displays examples and descriptions of xargs usage.")
 }
 
