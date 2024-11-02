@@ -1,40 +1,35 @@
-
-# Configuración de colores
-GREEN = "\033[92m"
-YELLOW = "\033[93m"
-RED = "\033[91m"
-RESET = "\033[0m"
+from shellcolorize import Color
 
 grep_commands = [
-    {"command": f"{GREEN}grep {RESET}{YELLOW}'palabra' {RESET}filename", "description": "Busca líneas que contengan 'palabra' en el archivo 'filename'"},
-    {"command": f"{GREEN}grep {RESET}-i {YELLOW}'palabra' {RESET}filename", "description": "Busca líneas que contengan 'palabra', ignorando mayúsculas/minúsculas"},
-    {"command": f"{GREEN}grep {RESET}-v {YELLOW}'palabra' {RESET}filename", "description": "Muestra todas las líneas que NO contienen 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-w {YELLOW}'palabra' {RESET}filename", "description": "Busca coincidencias exactas de 'palabra' como palabra completa"},
-    {"command": f"{GREEN}grep {RESET}-x {YELLOW}'palabra' {RESET}filename", "description": "Muestra líneas que coinciden exactamente con 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-c {YELLOW}'palabra' {RESET}filename", "description": "Cuenta las líneas que contienen 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-l {YELLOW}'palabra' {RESET}*", "description": "Lista archivos que contienen 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-L {YELLOW}'palabra' {RESET}*", "description": "Lista archivos que NO contienen 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-n {YELLOW}'palabra' {RESET}filename", "description": "Muestra líneas con 'palabra' junto con su número de línea"},
-    {"command": f"{GREEN}grep {RESET}-A NUM {YELLOW}'palabra' {RESET}filename", "description": "Muestra 'NUM' líneas después de la línea coincidente"},
-    {"command": f"{GREEN}grep {RESET}-B NUM {YELLOW}'palabra' {RESET}filename", "description": "Muestra 'NUM' líneas antes de la línea coincidente"},
-    {"command": f"{GREEN}grep {RESET}-C NUM {YELLOW}'palabra' {RESET}filename", "description": "Muestra 'NUM' líneas alrededor de la línea coincidente"},
-    {"command": f"{GREEN}grep {RESET}--color {YELLOW}'palabra' {RESET}filename", "description": "Resalta 'palabra' en el resultado con color"},
-    {"command": f"{GREEN}grep {RESET}-E {YELLOW}'palabra1|palabra2' {RESET}filename", "description": "Usa expresiones regulares extendidas para buscar 'palabra1' o 'palabra2'"},
-    {"command": f"{GREEN}grep {RESET}-f {YELLOW}palabras.txt {RESET}filename", "description": "Usa patrones de búsqueda desde un archivo"},
-    {"command": f"{GREEN}grep {RESET}-o {YELLOW}'palabra' {RESET}filename", "description": "Muestra solo la coincidencia exacta de 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-q {YELLOW}'palabra' {RESET}filename", "description": "Silenciosamente, devuelve éxito o falla si encuentra 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}-s {YELLOW}'palabra' {RESET}filename", "description": "No muestra mensajes de error en archivos inexistentes o inaccesibles"},
-    {"command": f"{GREEN}grep {RESET}-R {YELLOW}'palabra' {RESET}directory", "description": "Busca recursivamente en todos los archivos dentro del directorio"},
-    {"command": f"{GREEN}grep {RESET}-m NUM {YELLOW}'palabra' {RESET}filename", "description": "Muestra solo las primeras 'NUM' coincidencias"},
-    {"command": f"{GREEN}grep {RESET}--exclude={YELLOW}'*.log' 'palabra' {RESET}directory", "description": "Excluye archivos que coincidan con el patrón especificado"},
-    {"command": f"{GREEN}grep {RESET}--include={YELLOW}'*.txt' 'palabra' {RESET}directory", "description": "Incluye solo archivos que coincidan con el patrón especificado"},
-    {"command": f"{GREEN}grep {RESET}-Z {YELLOW}'palabra' {RESET}filename", "description": "Imprime un carácter NULL después del nombre del archivo (para uso con xargs)"},
-    {"command": f"{GREEN}grep {RESET}--line-buffered {YELLOW}'palabra' {RESET}filename", "description": "Procesa línea por línea en lugar de en bloques, útil en tiempo real"},
-    {"command": f"{GREEN}grep {RESET}--binary-files=text {YELLOW}'palabra' {RESET}filename", "description": "Considera archivos binarios como texto (evita omisión de archivos binarios)"},
-    {"command": f"{GREEN}grep {RESET}-P {YELLOW}'palabra' {RESET}filename", "description": "Usa expresiones regulares Perl (PCRE) en 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}{YELLOW}'\\bpalabra\\b' {RESET}filename", "description": "Busca 'palabra' como una palabra completa usando límites de palabra"},
-    {"command": f"{GREEN}grep {RESET}{YELLOW}'palabra$' {RESET}filename", "description": "Busca líneas que terminen con 'palabra'"},
-    {"command": f"{GREEN}grep {RESET}{YELLOW}'^palabra' {RESET}filename", "description": "Busca líneas que comiencen con 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}{Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Busca líneas que contengan 'palabra' en el archivo 'filename'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-i {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Busca líneas que contengan 'palabra', ignorando mayúsculas/minúsculas"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-v {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra todas las líneas que NO contienen 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-w {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Busca coincidencias exactas de 'palabra' como palabra completa"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-x {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra líneas que coinciden exactamente con 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-c {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Cuenta las líneas que contienen 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-l {Color.YELLOW}'palabra' {Color.RESET}*", "description": "Lista archivos que contienen 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-L {Color.YELLOW}'palabra' {Color.RESET}*", "description": "Lista archivos que NO contienen 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-n {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra líneas con 'palabra' junto con su número de línea"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-A NUM {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra 'NUM' líneas después de la línea coincidente"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-B NUM {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra 'NUM' líneas antes de la línea coincidente"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-C NUM {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra 'NUM' líneas alrededor de la línea coincidente"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}--color {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Resalta 'palabra' en el resultado con color"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-E {Color.YELLOW}'palabra1|palabra2' {Color.RESET}filename", "description": "Usa expresiones regulares extendidas para buscar 'palabra1' o 'palabra2'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-f {Color.YELLOW}palabras.txt {Color.RESET}filename", "description": "Usa patrones de búsqueda desde un archivo"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-o {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra solo la coincidencia exacta de 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-q {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Silenciosamente, devuelve éxito o falla si encuentra 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-s {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "No muestra mensajes de error en archivos inexistentes o inaccesibles"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-R {Color.YELLOW}'palabra' {Color.RESET}directory", "description": "Busca recursivamente en todos los archivos dentro del directorio"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-m NUM {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Muestra solo las primeras 'NUM' coincidencias"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}--exclude={Color.YELLOW}'*.log' 'palabra' {Color.RESET}directory", "description": "Excluye archivos que coincidan con el patrón especificado"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}--include={Color.YELLOW}'*.txt' 'palabra' {Color.RESET}directory", "description": "Incluye solo archivos que coincidan con el patrón especificado"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-Z {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Imprime un carácter NULL después del nombre del archivo (para uso con xargs)"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}--line-buffered {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Procesa línea por línea en lugar de en bloques, útil en tiempo real"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}--binary-files=text {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Considera archivos binarios como texto (evita omisión de archivos binarios)"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}-P {Color.YELLOW}'palabra' {Color.RESET}filename", "description": "Usa expresiones regulares Perl (PCRE) en 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}{Color.YELLOW}'\\bpalabra\\b' {Color.RESET}filename", "description": "Busca 'palabra' como una palabra completa usando límites de palabra"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}{Color.YELLOW}'palabra$' {Color.RESET}filename", "description": "Busca líneas que terminen con 'palabra'"},
+    {"command": f"{Color.GREEN}grep {Color.RESET}{Color.YELLOW}'^palabra' {Color.RESET}filename", "description": "Busca líneas que comiencen con 'palabra'"},
 ]
 
 print(f"\nOpciones de GREP con ejemplos y descripciones:\n")
@@ -42,6 +37,6 @@ print(f"{'Comando':<47} | {'Descripción'}")
 print("-" * 125)
 for cmd in grep_commands:
     command = cmd["command"]
-    description = f"{RED}{cmd['description']}{RESET}"
+    description = f"{Color.RED}{cmd['description']}{Color.RESET}"
     print(f"{command:<65} | {description}")
 

@@ -1,13 +1,9 @@
-
-GREEN = "\033[92m"
-YELLOW = "\033[93m"
-RED = "\033[91m"
-RESET = "\033[0m"
+from shellcolorize import Color
 
 watch_commands = [
-    {"command": f"{GREEN}watch {RESET}df -h", "description": "Ejecuta 'df -h' en intervalos regulares, mostrando el uso de disco"},
-    {"command": f"{GREEN}watch {RESET}-n 5 ls", "description": "Ejecuta 'ls' cada 5 segundos"},
-    {"command": f"{GREEN}watch {RESET}-d ls", "description": "Resalta diferencias entre cada ejecución de 'ls'"},
+    {"command": f"{Color.GREEN}watch {Color.RESET}df -h", "description": "Ejecuta 'df -h' en intervalos regulares, mostrando el uso de disco"},
+    {"command": f"{Color.GREEN}watch {Color.RESET}-n 5 ls", "description": "Ejecuta 'ls' cada 5 segundos"},
+    {"command": f"{Color.GREEN}watch {Color.RESET}-d ls", "description": "Resalta diferencias entre cada ejecución de 'ls'"},
 ]
 
 print(f"\nOpciones de WATCH con ejemplos y descripciones:\n")
@@ -15,6 +11,6 @@ print(f"{'Comando':<16} | {'Descripción'}")
 print("-" * 85)
 for cmd in watch_commands:
     command = cmd["command"]
-    description = f"{RED}{cmd['description']}{RESET}"
+    description = f"{Color.RED}{cmd['description']}{Color.RESET}"
     print(f"{command:<25} | {description}")
 

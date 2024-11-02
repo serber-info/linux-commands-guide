@@ -1,54 +1,51 @@
-# Configuración de colores
-GREEN = "\033[92m"
-RED = "\033[91m"
-RESET = "\033[0m"
+from shellcolorize import Color
 
 system_commands = [
     # Navigation Commands
-    {"category": f"{RED}Comandos de Navegación de Directorios{RESET}", "command": "", "description": ""},
-    {"command": f"{GREEN}cd{RESET} <directory>", "description": f"{RED}Cambia el directorio actual al especificado{RESET}"},
-    {"command": f"{GREEN}pwd{RESET}", "description": f"{RED}Imprime el directorio de trabajo actual{RESET}"},
-    {"command": f"{GREEN}pushd{RESET} <directory>", "description": f"{RED}Guarda el directorio actual en la pila y cambia al directorio especificado{RESET}"},
-    {"command": f"{GREEN}popd{RESET}", "description": f"{RED}Elimina el directorio superior de la pila y cambia a ese directorio{RESET}"},
-    {"command": f"{GREEN}dirs{RESET}", "description": f"{RED}Muestra la pila de directorios actual{RESET}"},
+    {"category": f"{Color.RED}Comandos de Navegación de Directorios{Color.RESET}", "command": "", "description": ""},
+    {"command": f"{Color.GREEN}cd{Color.RESET} <directory>", "description": f"{Color.RED}Cambia el directorio actual al especificado{Color.RESET}"},
+    {"command": f"{Color.GREEN}pwd{Color.RESET}", "description": f"{Color.RED}Imprime el directorio de trabajo actual{Color.RESET}"},
+    {"command": f"{Color.GREEN}pushd{Color.RESET} <directory>", "description": f"{Color.RED}Guarda el directorio actual en la pila y cambia al directorio especificado{Color.RESET}"},
+    {"command": f"{Color.GREEN}popd{Color.RESET}", "description": f"{Color.RED}Elimina el directorio superior de la pila y cambia a ese directorio{Color.RESET}"},
+    {"command": f"{Color.GREEN}dirs{Color.RESET}", "description": f"{Color.RED}Muestra la pila de directorios actual{Color.RESET}"},
     
     # File and Directory Management
-    {"category": f"{RED}Comandos de Gestión de Archivos y Directorios{RESET}", "command": "", "description": ""},
-    {"command": f"{GREEN}touch{RESET} <file>", "description": f"{RED}Crea un archivo vacío o actualiza la fecha y hora de acceso/modificación de un archivo existente{RESET}"},
-    {"command": f"{GREEN}mkdir{RESET} <directory>", "description": f"{RED}Crea un nuevo directorio{RESET}"},
-    {"command": f"{GREEN}mkdir{RESET} -p <path>", "description": f"{RED}Crea un directorio y todos sus directorios padres necesarios{RESET}"},
-    {"command": f"{GREEN}rm{RESET} <file>", "description": f"{RED}Elimina un archivo{RESET}"},
-    {"command": f"{GREEN}rm{RESET} -r <directory>", "description": f"{RED}Elimina un directorio y su contenido de forma recursiva{RESET}"},
-    {"command": f"{GREEN}cp{RESET} <source> <destination>", "description": f"{RED}Copia un archivo de origen a destino{RESET}"},
-    {"command": f"{GREEN}cp{RESET} -r <source_directory> <destination>", "description": f"{RED}Copia un directorio completo de forma recursiva{RESET}"},
-    {"command": f"{GREEN}mv{RESET} <source> <destination>", "description": f"{RED}Mueve o renombra un archivo o directorio{RESET}"},
-    {"command": f"{GREEN}ln{RESET} <target> <link>", "description": f"{RED}Crea un enlace físico (hard link) al archivo de destino{RESET}"},
-    {"command": f"{GREEN}ln{RESET} -s <target> <link>", "description": f"{RED}Crea un enlace simbólico (alias) al archivo o directorio de destino{RESET}"},
-    {"command": f"{GREEN}find{RESET} <path> -name <pattern>", "description": f"{RED}Busca archivos o directorios en un camino específico según un patrón de nombre{RESET}"},
-    {"command": f"{GREEN}locate{RESET} <filename>", "description": f"{RED}Busca archivos rápidamente mediante la base de datos de `locate`{RESET}"},
+    {"category": f"{Color.RED}Comandos de Gestión de Archivos y Directorios{Color.RESET}", "command": "", "description": ""},
+    {"command": f"{Color.GREEN}touch{Color.RESET} <file>", "description": f"{Color.RED}Crea un archivo vacío o actualiza la fecha y hora de acceso/modificación de un archivo existente{Color.RESET}"},
+    {"command": f"{Color.GREEN}mkdir{Color.RESET} <directory>", "description": f"{Color.RED}Crea un nuevo directorio{Color.RESET}"},
+    {"command": f"{Color.GREEN}mkdir{Color.RESET} -p <path>", "description": f"{Color.RED}Crea un directorio y todos sus directorios padres necesarios{Color.RESET}"},
+    {"command": f"{Color.GREEN}rm{Color.RESET} <file>", "description": f"{Color.RED}Elimina un archivo{Color.RESET}"},
+    {"command": f"{Color.GREEN}rm{Color.RESET} -r <directory>", "description": f"{Color.RED}Elimina un directorio y su contenido de forma recursiva{Color.RESET}"},
+    {"command": f"{Color.GREEN}cp{Color.RESET} <source> <destination>", "description": f"{Color.RED}Copia un archivo de origen a destino{Color.RESET}"},
+    {"command": f"{Color.GREEN}cp{Color.RESET} -r <source_directory> <destination>", "description": f"{Color.RED}Copia un directorio completo de forma recursiva{Color.RESET}"},
+    {"command": f"{Color.GREEN}mv{Color.RESET} <source> <destination>", "description": f"{Color.RED}Mueve o renombra un archivo o directorio{Color.RESET}"},
+    {"command": f"{Color.GREEN}ln{Color.RESET} <target> <link>", "description": f"{Color.RED}Crea un enlace físico (hard link) al archivo de destino{Color.RESET}"},
+    {"command": f"{Color.GREEN}ln{Color.RESET} -s <target> <link>", "description": f"{Color.RED}Crea un enlace simbólico (alias) al archivo o directorio de destino{Color.RESET}"},
+    {"command": f"{Color.GREEN}find{Color.RESET} <path> -name <pattern>", "description": f"{Color.RED}Busca archivos o directorios en un camino específico según un patrón de nombre{Color.RESET}"},
+    {"command": f"{Color.GREEN}locate{Color.RESET} <filename>", "description": f"{Color.RED}Busca archivos rápidamente mediante la base de datos de `locate`{Color.RESET}"},
     
     # File Viewing and Basic Editing
-    {"category": f"{RED}Comandos de Visualización de Archivos{RESET}", "command": "", "description": ""},
-    {"command": f"{GREEN}cat{RESET} <file>", "description": f"{RED}Muestra el contenido de un archivo{RESET}"},
-    {"command": f"{GREEN}less{RESET} <file>", "description": f"{RED}Muestra el contenido de un archivo de forma interactiva, permitiendo desplazarse{RESET}"},
-    {"command": f"{GREEN}more{RESET} <file>", "description": f"{RED}Muestra el contenido de un archivo página por página{RESET}"},
-    {"command": f"{GREEN}nl{RESET} <file>", "description": f"{RED}Muestra el contenido de un archivo, numerando las líneas{RESET}"},
+    {"category": f"{Color.RED}Comandos de Visualización de Archivos{Color.RESET}", "command": "", "description": ""},
+    {"command": f"{Color.GREEN}cat{Color.RESET} <file>", "description": f"{Color.RED}Muestra el contenido de un archivo{Color.RESET}"},
+    {"command": f"{Color.GREEN}less{Color.RESET} <file>", "description": f"{Color.RED}Muestra el contenido de un archivo de forma interactiva, permitiendo desplazarse{Color.RESET}"},
+    {"command": f"{Color.GREEN}more{Color.RESET} <file>", "description": f"{Color.RED}Muestra el contenido de un archivo página por página{Color.RESET}"},
+    {"command": f"{Color.GREEN}nl{Color.RESET} <file>", "description": f"{Color.RED}Muestra el contenido de un archivo, numerando las líneas{Color.RESET}"},
     
     # Touch and Modification Timestamps
-    {"category": f"{RED}Comandos de Tiempos de Modificación{RESET}", "command": "", "description": ""},
-    {"command": f"{GREEN}touch{RESET} <file>", "description": f"{RED}Crea un archivo vacío o actualiza las marcas de tiempo de un archivo existente{RESET}"},
-    {"command": f"{GREEN}stat{RESET} <file>", "description": f"{RED}Muestra detalles del archivo, incluidas las marcas de tiempo y permisos{RESET}"},
-    {"command": f"{GREEN}date{RESET}", "description": f"{RED}Muestra la fecha y hora actuales del sistema{RESET}"},
-    {"command": f"{GREEN}date{RESET} -s <date_string>", "description": f"{RED}Establece la fecha y hora del sistema a la especificada{RESET}"},
+    {"category": f"{Color.RED}Comandos de Tiempos de Modificación{Color.RESET}", "command": "", "description": ""},
+    {"command": f"{Color.GREEN}touch{Color.RESET} <file>", "description": f"{Color.RED}Crea un archivo vacío o actualiza las marcas de tiempo de un archivo existente{Color.RESET}"},
+    {"command": f"{Color.GREEN}stat{Color.RESET} <file>", "description": f"{Color.RED}Muestra detalles del archivo, incluidas las marcas de tiempo y permisos{Color.RESET}"},
+    {"command": f"{Color.GREEN}date{Color.RESET}", "description": f"{Color.RED}Muestra la fecha y hora actuales del sistema{Color.RESET}"},
+    {"command": f"{Color.GREEN}date{Color.RESET} -s <date_string>", "description": f"{Color.RED}Establece la fecha y hora del sistema a la especificada{Color.RESET}"},
     
     # Directory Listing and Information
-    {"category": f"{RED}Comandos de Información de Directorios{RESET}", "command": "", "description": ""},
-    {"command": f"{GREEN}ls{RESET}", "description": f"{RED}Lista los contenidos del directorio actual{RESET}"},
-    {"command": f"{GREEN}ls{RESET} -a", "description": f"{RED}Lista todos los archivos, incluyendo los ocultos{RESET}"},
-    {"command": f"{GREEN}ls{RESET} -l", "description": f"{RED}Lista los archivos en formato largo, mostrando detalles adicionales{RESET}"},
-    {"command": f"{GREEN}ls{RESET} -lh", "description": f"{RED}Lista los archivos en formato largo con tamaños legibles por humanos{RESET}"},
-    {"command": f"{GREEN}ll{RESET}", "description": f"{RED}Lista los archivos en formato largo con tamaños legibles por humanos{RESET}"},
-    {"command": f"{GREEN}tree{RESET}", "description": f"{RED}Muestra el contenido de directorios y subdirectorios en forma de árbol (si está instalado){RESET}"},
+    {"category": f"{Color.RED}Comandos de Información de Directorios{Color.RESET}", "command": "", "description": ""},
+    {"command": f"{Color.GREEN}ls{Color.RESET}", "description": f"{Color.RED}Lista los contenidos del directorio actual{Color.RESET}"},
+    {"command": f"{Color.GREEN}ls{Color.RESET} -a", "description": f"{Color.RED}Lista todos los archivos, incluyendo los ocultos{Color.RESET}"},
+    {"command": f"{Color.GREEN}ls{Color.RESET} -l", "description": f"{Color.RED}Lista los archivos en formato largo, mostrando detalles adicionales{Color.RESET}"},
+    {"command": f"{Color.GREEN}ls{Color.RESET} -lh", "description": f"{Color.RED}Lista los archivos en formato largo con tamaños legibles por humanos{Color.RESET}"},
+    {"command": f"{Color.GREEN}ll{Color.RESET}", "description": f"{Color.RED}Lista los archivos en formato largo con tamaños legibles por humanos{Color.RESET}"},
+    {"command": f"{Color.GREEN}tree{Color.RESET}", "description": f"{Color.RED}Muestra el contenido de directorios y subdirectorios en forma de árbol (si está instalado){Color.RESET}"},
 ]
 
 # Display formatted table
