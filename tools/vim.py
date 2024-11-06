@@ -25,6 +25,8 @@ vim_commands = [
     {"command": f"{Color.GREEN}v{Color.RESET}", "description": "Entra en modo visual para seleccionar texto"},
     {"command": f"{Color.GREEN}V{Color.RESET}", "description": "Entra en modo visual de línea para seleccionar líneas completas"},
     {"command": f"{Color.GREEN}Ctrl + v{Color.RESET}", "description": "Entra en modo visual en bloque (selección en columna)"},
+    {"command": f"{Color.GREEN}Ctrl + a{Color.RESET}", "description": "Aumenta en 1 el número donde se posicione el cursor"},
+    {"command": f"{Color.GREEN}Ctrl + x{Color.RESET}", "description": "Reduce en 1 el número donde se posicione el cursor"},
     {"command": f"{Color.GREEN}>G{Color.RESET}", "description": "Indenta todas las líneas desde la actual hasta el final del archivo"},
     {"command": f"{Color.GREEN}:!command{Color.RESET}", "description": "Ejecuta un comando de shell sin salir de vim"},
     {"command": f"{Color.GREEN}:syntax on{Color.RESET}", "description": "Activa el resaltado de sintaxis"},
