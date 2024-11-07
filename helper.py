@@ -30,6 +30,7 @@ tools = {
     "iptables": (os.path.join(tools_dir, "iptables.py"), "Displays examples and descriptions of iptables usage."),
     "logs": (os.path.join(tools_dir, "logs.py"), "Displays examples and descriptions of logs locations."),
     "lsblk": (os.path.join(tools_dir, "lsblk.py"), "Displays examples and descriptions of lsblk usage."),
+    "lsof": (os.path.join(tools_dir, "lsof.py"), "Displays examples and descriptions of lsof usage."),
     "lxc": (os.path.join(tools_dir, "lxc.py"), "Displays examples and descriptions of lxc usage."),
     "nc": (os.path.join(tools_dir, "nc.py"), "Displays examples and descriptions of nc (netcat) usage."),
     "netstat": (os.path.join(tools_dir, "netstat.py"), "Displays examples and descriptions of netstat usage."),
