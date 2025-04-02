@@ -7,8 +7,8 @@
 ## ✨ Características
 
 - 🖥 **Ejemplos Interactivos**: Muestra ejemplos de uso para comandos comunes de Linux.
-- 📖 **Descripciones Claras**: Explicaciones detalladas para cada comando, lo que facilita el aprendizaje.
-- 🎛 **Menú de Herramientas**: Acceso rápido a herramientas específicas a través de un menú interactivo.
+- 📖 **Descripciones Claras**: Explicaciones rápidas para cada comando, lo que facilita el aprendizaje.
+- 🎛 **Menú de Herramientas**: Acceso rápido a ejemplos de los comandos mas básicos de cada herramienta.
 
 ---
 
@@ -22,6 +22,10 @@
    ```
 
 2. Asegúrate de tener Python instalado en tu sistema.
+
+3. Una vez lo tengas clonado, te recomiendo que lo añadas al $PATH y le crees un Alias en tu .bashrc/zshrc para ejecutarlo fácilmente desde cualquier parte de tu shell:
+
+![image](https://github.com/user-attachments/assets/a6ab8320-4379-4fb0-8e17-286c751455ee)
 
 ---
 
