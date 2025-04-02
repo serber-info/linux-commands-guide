@@ -84,6 +84,7 @@ Aquí está la lista completa de herramientas disponibles en **Guia-Comandos-Lin
 - **sort**: Muestra ejemplos y descripciones de uso de `sort`.
 - **system**: Muestra ejemplos y descripciones de uso básico del sistema.
 - **systemctl**: Muestra ejemplos y descripciones de uso de `systemctl`.
+- **shortcuts**: Muestra ejemplos y descripciones de uso de los `shell keyboard shortcuts`.
 - **tail**: Muestra ejemplos y descripciones de uso de `tail`.
 - **tee**: Muestra ejemplos y descripciones de uso de `tee`.
 - **top**: Muestra ejemplos y descripciones de uso de `top`.
