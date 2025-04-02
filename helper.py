@@ -42,6 +42,7 @@ tools = {
     "sort": (os.path.join(tools_dir, "sort.py"), "Displays examples and descriptions of sort usage."),
     "system": (os.path.join(tools_dir, "system.py"), "Displays examples and descriptions of basic system usage."),
     "systemctl": (os.path.join(tools_dir, "systemctl.py"), "Displays examples and descriptions of systemctl usage."),
+    "shortcuts": (os.path.join(tools_dir, "shortcuts.py"), "Displays examples and descriptions shell shortcuts."),
     "tail": (os.path.join(tools_dir, "tail.py"), "Displays examples and descriptions of tail usage."),
     "tee": (os.path.join(tools_dir, "tee.py"), "Displays examples and descriptions of tee usage."),
     "top": (os.path.join(tools_dir, "top.py"), "Displays examples and descriptions of top usage."),
