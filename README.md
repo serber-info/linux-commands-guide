@@ -1,7 +1,7 @@
 # Guia-Comandos-Linux
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/serber-info/Guia-Comandos-Linux?style=social)](https://github.com/serber-info/Guia-Comandos-Linux/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/serber-info/Guia-Comandos-Linux?style=social)](https://github.com/serber-info/linux-commands-guide/stargazers)
 
 **Bilingual ES/EN interactive Linux command reference for the terminal.** 50+ tools covered, keyword search across all of them, pip-installable with a single `lh` command.
 
@@ -25,7 +25,7 @@ pip install guia-linux
 Or clone and install in development mode:
 
 ```bash
-git clone https://github.com/serber-info/Guia-Comandos-Linux.git
+git clone https://github.com/serber-info/linux-commands-guide.git
 cd Guia-Comandos-Linux
 pip install -e .
 ```
