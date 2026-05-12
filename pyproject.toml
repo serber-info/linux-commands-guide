@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guia-linux"
+version = "2.0.0"
+description = "Bilingual ES/EN interactive Linux command reference — 50+ commands with search"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Sergio Berruetta" }]
+requires-python = ">=3.8"
+dependencies = ["shellcolorize"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: Console",
+    "Topic :: System :: Systems Administration",
+]
+
+[project.urls]
+Homepage     = "https://github.com/serber-info/Guia-Comandos-Linux"
+"Bug Tracker" = "https://github.com/serber-info/Guia-Comandos-Linux/issues"
+"Source Code" = "https://github.com/serber-info/Guia-Comandos-Linux"
+
+[project.scripts]
+lh = "guia_linux.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["guia_linux*"]

@@ -1,120 +1,130 @@
 # Guia-Comandos-Linux
 
-**Guia-Comandos-Linux** es una herramienta de línea de comandos en Python que proporciona ejemplos y descripciones detalladas para el uso de múltiples comandos de Linux. Esta guía permite al usuario ejecutar ejemplos prácticos y ver descripciones de comandos útiles en la terminal, haciéndola ideal para quienes desean mejorar su productividad y comprensión de la CLI en sistemas Linux.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/serber-info/Guia-Comandos-Linux?style=social)](https://github.com/serber-info/Guia-Comandos-Linux/stargazers)
+
+**Bilingual ES/EN interactive Linux command reference for the terminal.** 50+ tools covered, keyword search across all of them, pip-installable with a single `lh` command.
 
 ---
 
-## ✨ Características
+## ✨ Features
 
-- 🖥 **Ejemplos Interactivos**: Muestra ejemplos de uso para comandos comunes de Linux.
-- 📖 **Descripciones Claras**: Explicaciones rápidas para cada comando, lo que facilita el aprendizaje.
-- 🎛 **Menú de Herramientas**: Acceso rápido a ejemplos de los comandos mas básicos de cada herramienta.
-
----
-
-## 📥 Instalación
-
-1. Clona este repositorio en tu máquina local:
-
-   ```bash
-   git clone https://github.com/serber-info/Guia-Comandos-Linux.git
-   cd Guia-Comandos-Linux
-   ```
-
-2. Asegúrate de tener Python instalado en tu sistema.
-
-3. Una vez lo tengas clonado, te recomiendo que lo añadas al $PATH y le crees un Alias en tu .bashrc/zshrc para ejecutarlo fácilmente desde cualquier parte de tu shell:
-
-![image](https://github.com/user-attachments/assets/a6ab8320-4379-4fb0-8e17-286c751455ee)
+- 🌐 **Bilingual** — full Spanish and English descriptions via `--lang en` / `--lang es`
+- 🔍 **Cross-tool search** — `lh -s recursive` finds every command mentioning "recursive" across all tools
+- 📦 **50+ tools** — awk, grep, find, git, docker, ssh, tmux, jq, ss, rsync, tar, crontab and many more
+- 🚀 **pip-installable** — one command, available anywhere in your shell as `lh`
 
 ---
 
-## 🛠 Uso
-
-Para ejecutar el script, utiliza:
+## 📥 Installation
 
 ```bash
-python3 helper.py -o <herramienta>
+pip install guia-linux
 ```
 
-Ejemplos de uso:
+Or clone and install in development mode:
 
-- Mostrar ayuda general:
-  ```bash
-  python3 helper.py -h
-  ```
-
-- Ejecutar una herramienta específica (ejemplo con `grep`):
-  ```bash
-  python3 helper.py -o grep
-  ```
+```bash
+git clone https://github.com/serber-info/Guia-Comandos-Linux.git
+cd Guia-Comandos-Linux
+pip install -e .
+```
 
 ---
 
-## 🔧 Lista de Herramientas
+## 🛠 Usage
 
-Aquí está la lista completa de herramientas disponibles en **Guia-Comandos-Linux** y una breve descripción de cada una:
+```bash
+lh <tool>                  # Show commands for a tool (Spanish by default)
+lh --lang en <tool>        # Force English output
+lh -s <keyword>            # Search across all tools
+lh -s <keyword> --lang en  # Search in English
+lh --help                  # Show help and full tool list
+```
 
-- **awk**: Muestra ejemplos y descripciones de uso de `awk`.
-- **cat**: Muestra ejemplos y descripciones de uso de `cat`.
-- **chown**: Muestra ejemplos y descripciones de uso de `chown`.
-- **chmod**: Muestra ejemplos y descripciones de uso de `chmod`.
-- **curl**: Muestra ejemplos y descripciones de uso de `curl`.
-- **cut**: Muestra ejemplos y descripciones de uso de `cut`.
-- **descriptors**: Muestra ejemplos y descripciones sobre descriptores de archivos y redirecciones.
-- **df**: Muestra ejemplos y descripciones de uso de `df`.
-- **docker**: Muestra ejemplos y descripciones de uso de `docker`.
-- **du**: Muestra ejemplos y descripciones de uso de `du`.
-- **firewall-cmd**: Muestra ejemplos y descripciones de uso de `firewall-cmd`.
-- **find**: Muestra ejemplos y descripciones de uso de `find`.
-- **free**: Muestra ejemplos y descripciones de uso de `free`.
-- **git**: Muestra ejemplos y descripciones de uso de `git`.
-- **grep**: Muestra ejemplos y descripciones de uso de `grep`.
-- **head**: Muestra ejemplos y descripciones de uso de `head`.
-- **htop**: Muestra ejemplos y descripciones de uso de `htop`.
-- **ifconfig**: Muestra ejemplos y descripciones de uso de `ifconfig`.
-- **ip**: Muestra ejemplos y descripciones de uso de `ip`.
-- **iptables**: Muestra ejemplos y descripciones de uso de `iptables`.
-- **logs**: Muestra ejemplos y ubicaciones de logs comunes en Linux.
-- **lsblk**: Muestra ejemplos y descripciones de uso de `lsblk`.
-- **lxc**: Muestra ejemplos y descripciones de uso de `lxc`.
-- **nc**: Muestra ejemplos y descripciones de uso de `nc` (netcat).
-- **netstat**: Muestra ejemplos y descripciones de uso de `netstat`.
-- **nmap**: Muestra ejemplos y descripciones de uso de `nmap`.
-- **regex**: Muestra ejemplos y descripciones de expresiones regulares.
-- **ps**: Muestra ejemplos y descripciones de uso de `ps`.
-- **scp**: Muestra ejemplos y descripciones de uso de `scp`.
-- **sed**: Muestra ejemplos y descripciones de uso de `sed`.
-- **sort**: Muestra ejemplos y descripciones de uso de `sort`.
-- **system**: Muestra ejemplos y descripciones de uso básico del sistema.
-- **systemctl**: Muestra ejemplos y descripciones de uso de `systemctl`.
-- **shortcuts**: Muestra ejemplos y descripciones de uso de los `shell keyboard shortcuts`.
-- **tail**: Muestra ejemplos y descripciones de uso de `tail`.
-- **tee**: Muestra ejemplos y descripciones de uso de `tee`.
-- **top**: Muestra ejemplos y descripciones de uso de `top`.
-- **tr**: Muestra ejemplos y descripciones de uso de `tr`.
-- **uname**: Muestra ejemplos y descripciones de uso de `uname`.
-- **uniq**: Muestra ejemplos y descripciones de uso de `uniq`.
-- **vim**: Muestra ejemplos y descripciones de uso de `vim`.
-- **watch**: Muestra ejemplos y descripciones de uso de `watch`.
-- **xargs**: Muestra ejemplos y descripciones de uso de `xargs`.
+### Examples
+
+```bash
+lh grep                    # All grep options in Spanish
+lh --lang en grep          # All grep options in English
+lh -s recursive            # Find every command mentioning "recursive"
+lh -s port --lang en       # Find port-related commands (English descriptions)
+lh ssh
+lh docker
+lh tmux
+lh jq
+```
 
 ---
 
-## 📝 Licencia
+## 🔧 Available Tools
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+| Tool | Description |
+|------|-------------|
+| `awk` | Column-based text processing |
+| `cat` | Display and concatenate file contents |
+| `chmod` | Change file permissions |
+| `chown` | Change file owner and group |
+| `crontab` | Periodic task scheduling |
+| `curl` | Transfer data with URLs |
+| `cut` | Extract sections from each line |
+| `df` | Display disk space usage |
+| `docker` | Docker container management |
+| `du` | Display directory space usage |
+| `descriptors` | File descriptors and redirections |
+| `find` | Search for files and directories |
+| `firewall-cmd` | Manage the firewalld firewall |
+| `free` | Display system memory usage |
+| `git` | Version control with Git |
+| `grep` | Search for patterns in files |
+| `head` | Display the beginning of a file |
+| `htop` | Interactive process monitor |
+| `ifconfig` | Network interface configuration (legacy) |
+| `ip` | Modern network interface and routing management |
+| `iptables` | Kernel firewall rule management |
+| `jq` | Command-line JSON processor |
+| `logs` | Important log file paths in Linux |
+| `lsblk` | List block devices |
+| `lsof` | List open files by processes |
+| `lxc` | LXC container management |
+| `nc` | TCP/IP Swiss army knife |
+| `netstat` | Network connection statistics |
+| `nmap` | Network and port scanner |
+| `ps` | Information about running processes |
+| `regex` | Regular expression patterns |
+| `rsync` | Efficient file synchronization |
+| `scp` | Secure file copy over SSH |
+| `sed` | Stream text editor |
+| `shortcuts` | Terminal keyboard shortcuts |
+| `sort` | Sort lines of text |
+| `ss` | Socket statistics (replaces netstat) |
+| `ssh` | Secure Shell client |
+| `system` | Basic system commands |
+| `systemctl` | Manage services with systemd |
+| `tail` | Display the end of a file |
+| `tar` | File archiving and compression |
+| `tee` | Read stdin and write to stdout and files |
+| `tmux` | Terminal multiplexer |
+| `top` | Real-time process monitor |
+| `tr` | Translate or delete characters |
+| `uname` | System and kernel information |
+| `uniq` | Filter adjacent duplicate lines |
+| `vim` | Modal terminal text editor |
+| `watch` | Execute a command periodically |
+| `xargs` | Build and execute commands from stdin |
+
+---
+
+## 📝 License
+
+MIT — see [LICENSE](LICENSE).
 
 ---
 
 ## 💬 Feedback
 
-Si tienes preguntas, sugerencias o deseas contribuir, no dudes en abrir un issue o un pull request.
+Open an issue or reach out via GitHub.
 
-## 🌐 Conéctate Conmigo
+## 🌐 Connect
 
 [![GitHub](https://img.shields.io/badge/GitHub-@serber--info-181717?style=flat-square&logo=github)](https://github.com/serber-info)
-
----
-
-### 🚀 ¡Mejora tu conocimiento de los comandos de Linux con Guia-Comandos-Linux!
