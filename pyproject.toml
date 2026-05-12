@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "linux-commands-guide"
-version = "2.0.0"
+version = "2.0.1"
 description = "Bilingual ES/EN interactive Linux command reference — 50+ tools with keyword search"
 readme = "README.md"
 license = "MIT"
