@@ -10,6 +10,10 @@ them, one short command: `lh`. Like a cheat sheet that is always one keystroke a
 
 *Guía de comandos Linux bilingüe (español / inglés) para la terminal.*
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/serber-info/linux-commands-guide/main/docs/demo.gif" alt="lh demo: ssh reference, keyword search and Spanish output" width="820">
+</p>
+
 ---
 
 ## ✨ Features
