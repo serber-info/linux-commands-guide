@@ -12,7 +12,7 @@ COMMANDS = [
     {"command": f"{Color.GREEN}chown{Color.RESET} :group filename", "description": "Cambia solo el grupo", "description_en": "Change group only"},
     {"command": f"{Color.GREEN}chown{Color.RESET} -R user directory", "description": "Cambia propietario recursivamente", "description_en": "Change owner recursively"},
     {"command": f"{Color.GREEN}chown{Color.RESET} -R user:group directory", "description": "Cambia propietario y grupo recursivamente", "description_en": "Change owner and group recursively"},
-    {"command": f"{Color.GREEN}chown{Color.RESET} --from=old_user:new_user filename", "description": "Cambia solo si coincide con el propietario actual", "description_en": "Change only if current owner matches"},
+    {"command": f"{Color.GREEN}chown{Color.RESET} --from=old_user new_user filename", "description": "Cambia a new_user solo si el propietario actual es old_user", "description_en": "Change owner to new_user only if the current owner is old_user"},
     {"command": f"{Color.GREEN}chown{Color.RESET} --reference=ref_file filename", "description": "Copia propietario y grupo de otro archivo", "description_en": "Copy owner and group from another file"},
 ]
 

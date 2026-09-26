@@ -1,9 +1,20 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import sys
 from shellcolorize import Color
+from guia_linux import __version__
 from guia_linux.tools import TOOLS
 from guia_linux.utils import search_all, strip_ansi
+
+
+def default_lang() -> str:
+    """Spanish for es_* locales, English otherwise."""
+    for var in ('LC_ALL', 'LC_MESSAGES', 'LANG', 'LANGUAGE'):
+        value = os.environ.get(var)
+        if value:
+            return 'es' if value.lower().startswith('es') else 'en'
+    return 'en'
 
 
 def _help_header(lang: str) -> None:
@@ -13,7 +24,7 @@ def _help_header(lang: str) -> None:
     print()
     print(f"  {Color.CYAN}╔{border}╗{Color.RESET}")
     print(f"  {Color.CYAN}║{Color.RESET}  {Color.BOLD}{Color.CYAN}{title}{Color.RESET}"
-          + ' ' * max(0, w - len(title) - 2)
+          + ' ' * max(0, w - len(title) - 4)
           + f"  {Color.CYAN}║{Color.RESET}")
     print(f"  {Color.CYAN}╚{border}╝{Color.RESET}")
 
@@ -28,6 +39,7 @@ def _print_help(lang: str) -> None:
     {Color.GREEN}lh{Color.RESET} <tool> --lang en         Force English output
     {Color.GREEN}lh{Color.RESET} -s <keyword>             Search across all tools
     {Color.GREEN}lh{Color.RESET} -s <keyword> --lang en   Search with English descriptions
+    {Color.GREEN}lh{Color.RESET} --version                Show version
 
   {Color.BOLD}Examples{Color.RESET}
     {Color.GREEN}lh grep{Color.RESET}                     All grep options
@@ -41,6 +53,7 @@ def _print_help(lang: str) -> None:
     {Color.GREEN}lh{Color.RESET} <herramienta> --lang es    Fuerza salida en español
     {Color.GREEN}lh{Color.RESET} -s <término>               Busca en todas las herramientas
     {Color.GREEN}lh{Color.RESET} -s <término> --lang en     Busca con descripciones en inglés
+    {Color.GREEN}lh{Color.RESET} --version                  Muestra la versión
 
   {Color.BOLD}Ejemplos{Color.RESET}
     {Color.GREEN}lh grep{Color.RESET}                       Todas las opciones de grep
@@ -71,7 +84,7 @@ def _search(query: str, lang: str) -> None:
     print()
     print(f"  {Color.CYAN}╔{border}╗{Color.RESET}")
     print(f"  {Color.CYAN}║{Color.RESET}  {Color.BOLD}{Color.CYAN}{header}{Color.RESET}"
-          + ' ' * max(0, w - len(header) - 2)
+          + ' ' * max(0, w - len(header) - 4)
           + f"  {Color.CYAN}║{Color.RESET}")
     print(f"  {Color.CYAN}╚{border}╝{Color.RESET}")
 
@@ -96,15 +109,17 @@ def _search(query: str, lang: str) -> None:
     print()
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(add_help=False)
+def main(argv=None) -> None:
+    parser = argparse.ArgumentParser(prog='lh', add_help=False)
     parser.add_argument('tool', nargs='?', default=None)
     parser.add_argument('-s', '--search', metavar='KEYWORD', default=None)
-    parser.add_argument('--lang', choices=['es', 'en'], default='es')
+    parser.add_argument('--lang', choices=['es', 'en'], default=None)
     parser.add_argument('-h', '--help', action='store_true')
-    args = parser.parse_args()
+    parser.add_argument('-V', '--version', action='version', version=f'lh (linux-commands-guide) {__version__}')
+    args = parser.parse_args(argv)
+    Color.auto()
 
-    lang = args.lang
+    lang = args.lang or default_lang()
 
     if args.help or (args.tool is None and args.search is None):
         _print_help(lang)
@@ -119,11 +134,22 @@ def main() -> None:
         msg = (f"Tool '{args.tool}' not found — run 'lh --help' for the full list."
                if lang == 'en'
                else f"Herramienta '{args.tool}' no encontrada — ejecuta 'lh --help' para ver la lista.")
-        print(f"\n  {Color.RED}✖  {msg}{Color.RESET}\n")
+        print(f"\n  {Color.RED}✖  {msg}{Color.RESET}\n", file=sys.stderr)
         sys.exit(1)
 
     TOOLS[key].show(lang)
 
 
+def run() -> None:
+    """Console entry point: like main(), but quiet when the output pipe is closed early (| head)."""
+    try:
+        main()
+        sys.stdout.flush()
+    except BrokenPipeError:
+        devnull = os.open(os.devnull, os.O_WRONLY)
+        os.dup2(devnull, sys.stdout.fileno())
+        sys.exit(141)
+
+
 if __name__ == '__main__':
-    main()
+    run()

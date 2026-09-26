@@ -1,31 +1,51 @@
 [build-system]
-requires = ["setuptools>=61", "wheel"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "linux-commands-guide"
-version = "2.0.1"
+dynamic = ["version"]
 description = "Bilingual ES/EN interactive Linux command reference — 50+ tools with keyword search"
 readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Sergio Berruetta" }]
-requires-python = ">=3.8"
-dependencies = ["shellcolorize"]
+requires-python = ">=3.9"
+dependencies = ["shellcolorize>=1.1.0"]
+keywords = ["linux", "cheatsheet", "commands", "reference", "sysadmin", "bilingual", "cli"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: POSIX :: Linux",
     "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Natural Language :: English",
+    "Natural Language :: Spanish",
     "Topic :: System :: Systems Administration",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
 
 [project.urls]
 Homepage     = "https://github.com/serber-info/linux-commands-guide"
 "Bug Tracker" = "https://github.com/serber-info/linux-commands-guide/issues"
 "Source Code" = "https://github.com/serber-info/linux-commands-guide"
+Changelog    = "https://github.com/serber-info/linux-commands-guide/blob/main/CHANGELOG.md"
 
 [project.scripts]
-lh = "guia_linux.cli:main"
+lh = "guia_linux.cli:run"
 
 [tool.setuptools.packages.find]
-where = ["."]
 include = ["guia_linux*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "guia_linux.__version__" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E9", "F", "B"]

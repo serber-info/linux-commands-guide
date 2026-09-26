@@ -17,7 +17,7 @@ COMMANDS = [
     {"command": f"{Color.GREEN}ifconfig{Color.RESET} <iface> promisc", "description": "Activa el modo promiscuo", "description_en": "Enable promiscuous mode"},
     {"command": f"{Color.GREEN}ifconfig{Color.RESET} <iface> -promisc", "description": "Desactiva el modo promiscuo", "description_en": "Disable promiscuous mode"},
     {"command": f"{Color.GREEN}ifconfig{Color.RESET} <iface> hw ether <mac>", "description": "Cambia la dirección MAC", "description_en": "Change the MAC address"},
-    {"command": f"{Color.GREEN}ifconfig{Color.RESET} <iface> add <ip>", "description": "Añade una dirección IP secundaria", "description_en": "Add a secondary IP address"},
+    {"command": f"{Color.GREEN}ifconfig{Color.RESET} <iface> add <ipv6>/<prefix>", "description": "Añade una dirección IPv6 (en IPv4 se usan alias <iface>:N)", "description_en": "Add an IPv6 address (IPv4 uses <iface>:N aliases)"},
     {"command": f"{Color.GREEN}ifconfig{Color.RESET} <iface> del <ip>", "description": "Elimina una dirección IP secundaria", "description_en": "Remove a secondary IP address"},
     {"command": f"{Color.GREEN}ifconfig{Color.RESET} -a", "description": "Muestra todas las interfaces, activas e inactivas", "description_en": "Show all interfaces, active and inactive"},
 ]

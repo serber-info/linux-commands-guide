@@ -14,7 +14,7 @@ COMMANDS = [
     {"command": f"{Color.GREEN}iptables{Color.RESET} -A INPUT -p tcp --dport 443 -j ACCEPT", "description": "Permite tráfico HTTPS entrante (puerto 443)", "description_en": "Allow incoming HTTPS traffic (port 443)"},
     {"command": f"{Color.GREEN}iptables{Color.RESET} -A OUTPUT -d IP -j DROP", "description": "Bloquea el tráfico saliente hacia una IP", "description_en": "Block outgoing traffic to an IP"},
     {"command": f"{Color.GREEN}iptables{Color.RESET} -A INPUT -p icmp --icmp-type 8 -j ACCEPT", "description": "Permite ping (ICMP tipo 8)", "description_en": "Allow ping (ICMP type 8)"},
-    {"command": f"{Color.GREEN}iptables{Color.RESET} -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT", "description": "Permite tráfico de conexiones existentes", "description_en": "Allow traffic from established connections"},
+    {"command": f"{Color.GREEN}iptables{Color.RESET} -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT", "description": "Permite el tráfico de conexiones ya establecidas", "description_en": "Allow traffic from established connections"},
     {"command": f"{Color.GREEN}iptables{Color.RESET} -P INPUT DROP", "description": "Política por defecto DROP en INPUT", "description_en": "Set default DROP policy for INPUT"},
     {"command": f"{Color.GREEN}iptables{Color.RESET} -P OUTPUT ACCEPT", "description": "Política por defecto ACCEPT en OUTPUT", "description_en": "Set default ACCEPT policy for OUTPUT"},
     {"command": f"{Color.GREEN}iptables{Color.RESET} -D INPUT -s IP -j ACCEPT", "description": "Elimina una regla específica de INPUT", "description_en": "Delete a specific rule from INPUT"},
