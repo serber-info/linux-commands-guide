@@ -16,11 +16,11 @@ COMMANDS = [
     {"command": f"{Color.GREEN}cat{Color.RESET} -E filename", "description": "Muestra $ al final de cada línea", "description_en": "Show $ at end of each line"},
     {"command": f"{Color.GREEN}cat{Color.RESET} -v filename", "description": "Muestra caracteres no imprimibles", "description_en": "Show non-printable characters"},
     {"command": f"{Color.GREEN}cat{Color.RESET} -A filename", "description": "Muestra todos los caracteres especiales", "description_en": "Show all special characters"},
-    {"command": f"{Color.GREEN}cat{Color.RESET} -r, --line-range N:M filename", "description": "Muestra solo las líneas N a M (batcat)", "description_en": "Show only lines N to M (batcat)"},
-    {"command": f"{Color.GREEN}cat{Color.RESET} --theme <theme>", "description": "Establece el tema de resaltado de sintaxis (batcat)", "description_en": "Set syntax-highlighting theme (batcat)"},
-    {"command": f"{Color.GREEN}cat{Color.RESET} --paging never filename", "description": "Desactiva el paginador en batcat", "description_en": "Disable pager in batcat"},
-    {"command": f"{Color.GREEN}cat{Color.RESET} -u, --unbuffered", "description": "Desactiva el buffering (compatibilidad POSIX)", "description_en": "Disable buffering (POSIX compatibility)"},
-    {"command": f"{Color.GREEN}cat{Color.RESET} -L, --list-languages", "description": "Lista los lenguajes soportados para resaltado", "description_en": "List supported syntax-highlighting languages"},
+    {"command": f"{Color.GREEN}bat{Color.RESET} -r N:M filename", "description": "Muestra solo las líneas N a M (bat/batcat)", "description_en": "Show only lines N to M (bat/batcat)"},
+    {"command": f"{Color.GREEN}bat{Color.RESET} --theme=<theme> filename", "description": "Resalta la sintaxis con el tema indicado (bat)", "description_en": "Highlight syntax with the given theme (bat)"},
+    {"command": f"{Color.GREEN}bat{Color.RESET} --paging=never filename", "description": "Muestra el archivo sin paginador (bat)", "description_en": "Print the file without a pager (bat)"},
+    {"command": f"{Color.GREEN}cat{Color.RESET} -u filename", "description": "Ignorada por GNU cat (se mantiene por compatibilidad POSIX)", "description_en": "Ignored by GNU cat (kept for POSIX compatibility)"},
+    {"command": f"{Color.GREEN}bat{Color.RESET} --list-languages", "description": "Lista los lenguajes con resaltado de sintaxis (bat)", "description_en": "List languages with syntax highlighting (bat)"},
 ]
 
 

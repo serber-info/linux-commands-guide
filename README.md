@@ -1,32 +1,38 @@
-# Guia-Comandos-Linux
+# linux-commands-guide — `lh`
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/serber-info/Guia-Comandos-Linux?style=social)](https://github.com/serber-info/linux-commands-guide/stargazers)
+[![CI](https://github.com/serber-info/linux-commands-guide/actions/workflows/ci.yml/badge.svg)](https://github.com/serber-info/linux-commands-guide/actions/workflows/ci.yml)
+[![PyPI version](https://badge.fury.io/py/linux-commands-guide.svg)](https://badge.fury.io/py/linux-commands-guide)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/serber-info/linux-commands-guide?style=social)](https://github.com/serber-info/linux-commands-guide/stargazers)
 
-**Bilingual ES/EN interactive Linux command reference for the terminal.** 50+ tools covered, keyword search across all of them, pip-installable with a single `lh` command.
+**Bilingual ES/EN Linux command reference for the terminal.** 51 tools covered, keyword search across all of
+them, one short command: `lh`. Like a cheat sheet that is always one keystroke away — and works over SSH.
+
+*Guía de comandos Linux bilingüe (español / inglés) para la terminal.*
 
 ---
 
 ## ✨ Features
 
-- 🌐 **Bilingual** — full Spanish and English descriptions via `--lang en` / `--lang es`
-- 🔍 **Cross-tool search** — `lh -s recursive` finds every command mentioning "recursive" across all tools
-- 📦 **50+ tools** — awk, grep, find, git, docker, ssh, tmux, jq, ss, rsync, tar, crontab and many more
-- 🚀 **pip-installable** — one command, available anywhere in your shell as `lh`
+- 🌐 **Bilingual** — Spanish or English, picked from your locale (`--lang es|en` to force it)
+- 🔍 **Cross-tool search** — `lh -s port` finds every command mentioning "port", in both languages
+- 📦 **51 tools** — awk, grep, find, git, docker, ssh, tmux, jq, ss, rsync, tar, systemctl, iptables and more
+- ✅ **Checked content** — every entry is tested for both translations; examples are real, working commands
+- 🔇 **Pipe-friendly** — plain text when piped (`lh tar | less`), honours `NO_COLOR`
 
 ---
 
 ## 📥 Installation
 
 ```bash
-pip install guia-linux
+pip install linux-commands-guide
 ```
 
-Or clone and install in development mode:
+Or from source:
 
 ```bash
 git clone https://github.com/serber-info/linux-commands-guide.git
-cd Guia-Comandos-Linux
+cd linux-commands-guide
 pip install -e .
 ```
 
@@ -35,24 +41,53 @@ pip install -e .
 ## 🛠 Usage
 
 ```bash
-lh <tool>                  # Show commands for a tool (Spanish by default)
-lh --lang en <tool>        # Force English output
+lh <tool>                  # Show commands for a tool
 lh -s <keyword>            # Search across all tools
-lh -s <keyword> --lang en  # Search in English
-lh --help                  # Show help and full tool list
+lh --lang en <tool>        # Force English (or --lang es for Spanish)
+lh --help                  # Help and the full tool list
+lh --version
 ```
 
 ### Examples
 
 ```bash
-lh grep                    # All grep options in Spanish
-lh --lang en grep          # All grep options in English
-lh -s recursive            # Find every command mentioning "recursive"
-lh -s port --lang en       # Find port-related commands (English descriptions)
 lh ssh
-lh docker
-lh tmux
-lh jq
+```
+
+```
+  ╔══════════════════════════════════════════════╗
+  ║  SSH Options                                 ║
+  ╚══════════════════════════════════════════════╝
+
+  Command                                             Description
+  ──────────────────────────────────────────────────────────────────────────────────────────────
+  ssh user@host                                       Connect to host as the given user
+  ssh -p <port> user@host                             Connect using the specified port
+  ssh -i key.pem user@host                            Use a private key for authentication
+  ssh -L 8080:localhost:80 user@host                  Local tunnel: forward local port 8080 to host port 80
+  ssh -R 9090:localhost:8080 user@host                Remote tunnel: forward host port 9090 to local port 8080
+  …
+```
+
+```bash
+lh -s port
+```
+
+```
+  ╔══════════════════════════════════════════════════╗
+  ║  Search: port                                    ║
+  ╚══════════════════════════════════════════════════╝
+
+  34 results
+
+  ▶  docker
+    docker run -p 8080:80 image_name
+    Map host port to container port
+  ▶  firewall-cmd
+    firewall-cmd --zone=zone --add-port=80/tcp --permanent
+    Permanently open TCP port 80
+    firewall-cmd --zone=zone --remove-port=80/tcp --permanent
+  …
 ```
 
 ---
@@ -112,6 +147,22 @@ lh jq
 | `vim` | Modal terminal text editor |
 | `watch` | Execute a command periodically |
 | `xargs` | Build and execute commands from stdin |
+
+---
+
+## 🧪 Development
+
+```bash
+pip install -e ".[dev]"
+ruff check .
+pytest
+```
+
+Each tool is a small module in `guia_linux/tools/` with a `COMMANDS` list. To add one, copy an existing
+module, register it in `guia_linux/tools/__init__.py`, add it to the table above, and run `pytest` —
+the test suite checks that every entry has both translations and that the README lists every tool.
+
+See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ---
 

@@ -22,7 +22,7 @@ def _header(title: str) -> None:
     print()
     print(f"  {Color.CYAN}╔{border}╗{Color.RESET}")
     print(f"  {Color.CYAN}║{Color.RESET}  {Color.BOLD}{Color.CYAN}{title}{Color.RESET}"
-          + ' ' * max(0, w - len(title) - 2)
+          + ' ' * max(0, w - len(title) - 4)
           + f"  {Color.CYAN}║{Color.RESET}")
     print(f"  {Color.CYAN}╚{border}╝{Color.RESET}")
     print()
@@ -66,8 +66,10 @@ def print_table(title: str, commands: list, lang: str = 'es') -> None:
                 _section(strip_ansi(str(text)))
             continue
 
-        display = entry.get('command') or entry.get('logfile') or entry.get('pattern') or ''
+        display = str(entry.get('command') or entry.get('logfile') or entry.get('pattern') or '')
         desc    = entry.get(desc_key, '')
+        if not Color.RESET:          # colors disabled (piped output / NO_COLOR)
+            display = strip_ansi(display)
 
         if display or desc:
             padded = ansi_ljust(str(display), CMD_WIDTH)
@@ -79,7 +81,7 @@ def print_table(title: str, commands: list, lang: str = 'es') -> None:
 # ── Cross-tool search ─────────────────────────────────────────────────────────
 
 def search_all(query: str, tools: dict, lang: str = 'es') -> list:
-    desc_key = 'description_en' if lang == 'en' else 'description'
+    """(tool, entry) pairs whose command or description (in either language) contains query."""
     results  = []
     q        = query.lower()
     for tool_name, module in tools.items():
@@ -91,7 +93,7 @@ def search_all(query: str, tools: dict, lang: str = 'es') -> list:
                 entry.get('logfile') or
                 entry.get('pattern') or ''
             ))
-            desc = entry.get(desc_key, '')
-            if q in display.lower() or q in desc.lower():
+            text = ' '.join((display, entry.get('description', ''), entry.get('description_en', '')))
+            if q in text.lower():
                 results.append((tool_name, entry))
     return results
