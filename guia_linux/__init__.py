@@ -1,4 +1,4 @@
-__version__ = "2.1.0"
+__version__ = "2.1.1"
 
 from guia_linux.cli import main  # noqa: E402  (after __version__: cli imports it)
 
