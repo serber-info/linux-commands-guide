@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.1
+
+### Changed
+- Project metadata: author and project links now point to github.com/serber-info.
+- No functional changes.
+
 ## 2.1.0
 
 ### Fixed (content)
