@@ -10,7 +10,7 @@ END = '<!-- END GENERATED CATALOG -->'
 
 def catalogue_markdown():
     tools = load_catalog().list()
-    lines = [f'{len(tools)} references / fichas. Categories and aliases are available through `lh list`.', '',
+    lines = [f'{len(tools)} references. Categories and aliases are available through `lh list`.', '',
              '| Tool | Description | Category |', '|------|-------------|----------|']
     for tool in tools:
         brief = tool.brief.en.replace('|', r'\|').replace('\n', ' ')

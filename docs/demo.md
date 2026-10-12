@@ -1,8 +1,9 @@
-# Reproduce the terminal demo / Reproducir la demo
+# Reproduce the terminal demo
 
 `demo.gif` is rendered from the actual PTY output in `demo.cast`, not generated text or a desktop
-recording. It shows quick lookup, task-based search, an explanation preview, pipes, a practice hint,
-and English output. Commands are scripted; typing and reading pauses use a virtual clock. Outputs
+recording. It shows quick lookup, task-based search, an explanation preview, pipes, available practice exercises,
+and output alternating between English and Spanish using explicit `--lang en` / `--lang es` options.
+The README remains English-only. Commands are scripted; typing and reading pauses use a virtual clock. Outputs
 are captured from the current source checkout without alteration.
 
 ## Development tools only

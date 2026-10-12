@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 import struct
 
+from scripts.record_demo import SCENES
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -15,12 +17,15 @@ def test_recording_has_real_scene_output_and_no_private_identifiers():
     assert all(a[0] <= b[0] for a, b in zip(events, events[1:]))
     assert 30 <= events[-1][0] <= 90
     output = ''.join(e[2] for e in events if e[1] == 'o')
-    for expected in ('Uso de ls', 'Búsqueda:', 'Opciones de GREP', 'Conectar comandos con tuberías',
-                     'Contar líneas de un archivo', 'ls reference'):
+    for expected in ('ls reference', 'Búsqueda: espacio disco', 'CHMOD Options',
+                     'Conectar comandos con tuberías', 'Practice', 'Find errors in a log', 'Uso de ls'):
         assert expected in output
     assert not re.search(r'/home/(?!demo(?:/|\b))[^/\s\x1b]+', output)
     assert 'Traceback' not in output
-    assert 'demo' in output and 'lh practice wc --hint' in output
+    assert 'demo' in output
+    for index, (command, _) in enumerate(SCENES):
+        assert command.startswith(f"lh --lang {'en' if index % 2 == 0 else 'es'} ")
+        assert command in output
 
 
 def test_gif_is_animated_sized_and_embedded():
@@ -32,3 +37,5 @@ def test_gif_is_animated_sized_and_embedded():
     assert len(data) < 2 * 1024 * 1024
     readme = (ROOT / 'README.md').read_text()
     assert 'src="docs/demo.gif"' in readme and 'previous compact reference' not in readme
+    for spanish in ('Aprende Linux', 'Empieza aquí', 'Reproducir', 'Fichas disponibles', ' / fichas', 'Contribuir'):
+        assert spanish not in readme

@@ -17,12 +17,12 @@ from scripts.castrec import Session
 
 # Small, read-only real commands. head deliberately previews the long explanation.
 SCENES = (
-    ('lh ls --quick', 3),
-    ("lh -s 'copiar archivos'", 4),
-    ('lh grep --explain | head -n 23', 5),
-    ('lh learn pipes', 6),
-    ('lh practice wc --hint', 7),
     ('lh --lang en ls --quick', 3),
+    ("lh --lang es -s 'espacio disco'", 4),
+    ('lh --lang en chmod --explain | head -n 23', 5),
+    ('lh --lang es learn pipes', 6),
+    ('lh --lang en practice', 5),
+    ('lh --lang es ls --quick', 3),
 )
 
 
@@ -55,13 +55,13 @@ def main():
                    '--unshare-net', '--hostname', 'demo', '--chdir', '/home/demo',
                    '--die-with-parent', 'bash', '--noprofile', '--norc', '-i']
         env = {'HOME': '/home/demo', 'USER': 'demo', 'LOGNAME': 'demo', 'SHELL': '/bin/bash',
-               'TERM': 'xterm-256color', 'LANG': 'es_ES.UTF-8',
+               'TERM': 'xterm-256color', 'LANG': 'C.UTF-8',
                'PATH': '/home/demo/.local/bin:/tmp/tools/bin:/usr/bin:/bin',
                'PS1': r'\[\e[38;5;244m\]demo\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]$ ',
                'INPUTRC': '/home/demo/.inputrc', 'HISTFILE': '/dev/null',
                'PYTHONDONTWRITEBYTECODE': '1', 'FORCE_COLOR': '1'}
         with Session(str(cast), cols=96, rows=36, env=env, cmd=sandbox,
-                     title='lh: referencia, búsqueda, explicación y práctica', type_delay=0.04) as session:
+                     title='lh: quick reference, task search, explanations and practice', type_delay=0.04) as session:
             for index, (command, hold) in enumerate(SCENES):
                 if index:
                     session.clear()
