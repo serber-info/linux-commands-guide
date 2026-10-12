@@ -63,7 +63,7 @@ If you already use [pipx](https://pipx.pypa.io/stable/), the published release c
 pipx install linux-commands-guide
 ```
 
-The published release may not yet include the changes in this checkout.
+Version 2.2.0 includes the beginner references, lessons, practice plans and installer.
 
 For an existing virtual environment:
 
