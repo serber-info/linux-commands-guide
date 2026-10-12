@@ -1,4 +1,4 @@
-__version__ = "2.2.0"
+__version__ = "2.2.1"
 
 def main(argv=None):
     """Backward-compatible entry without loading content on package import."""

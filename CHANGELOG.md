@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.2.1 — 2026-10-13
+
+### Fixed
+- Source packaging uses project files only. No CLI or catalogue changes.
+
 ## 2.2.0 — 2026-10-13
 
 ### Added
