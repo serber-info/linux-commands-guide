@@ -1,0 +1,26 @@
+{
+  "name": "processes",
+  "title": {
+    "es": "Procesos y trabajos",
+    "en": "Processes and jobs"
+  },
+  "body": {
+    "es": "ps muestra procesos; jobs muestra trabajos gestionados por tu shell. Ctrl+C envía SIGINT al grupo en primer plano, no garantiza que el programa termine. Ctrl+Z suele suspenderlo; fg lo reanuda delante y bg detrás.\nkill envía señales: TERM permite limpieza; KILL no. Verifica el PID antes. No uses procesos importantes para practicar.",
+    "en": "ps shows processes; jobs shows jobs managed by your shell. Ctrl+C sends SIGINT to the foreground group and does not guarantee exit. Ctrl+Z usually suspends it; fg resumes in front and bg behind.\nkill sends signals: TERM allows cleanup; KILL does not. Verify the PID first. Do not practice on important processes."
+  },
+  "commands": [
+    "ps",
+    "jobs",
+    "kill -l"
+  ],
+  "related": [
+    "ps",
+    "jobs",
+    "fg",
+    "bg",
+    "kill"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

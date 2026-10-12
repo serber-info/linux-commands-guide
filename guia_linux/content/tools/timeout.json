@@ -1,0 +1,46 @@
+{
+  "name": "timeout",
+  "title": {
+    "es": "Uso de timeout",
+    "en": "timeout reference"
+  },
+  "brief": {
+    "es": "Limita la duración de un comando",
+    "en": "Limit a command’s duration"
+  },
+  "category": "processes",
+  "level": "beginner",
+  "notes": {
+    "es": "GNU timeout envía TERM al cumplirse el tiempo. 124 suele indicar que venció el límite. No lo uses para interrumpir actualizaciones o escrituras críticas: puede dejar trabajo incompleto.",
+    "en": "GNU timeout sends TERM when the duration expires. 124 usually indicates expiry. Do not use it to interrupt updates or critical writes: work may be left incomplete."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "related": [
+    "kill"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "timeout.01",
+      "text": "timeout 2s sleep 5",
+      "description": {
+        "es": "Limita una espera inocua a dos segundos",
+        "en": "Limit a harmless wait to two seconds"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "timeout.02",
+      "text": "timeout --help",
+      "description": {
+        "es": "Consulta opciones de la versión instalada",
+        "en": "Read installed-version options"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

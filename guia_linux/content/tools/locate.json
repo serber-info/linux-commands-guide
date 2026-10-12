@@ -1,0 +1,25 @@
+{
+  "name": "locate",
+  "title": {
+    "es": "Uso de locate",
+    "en": "locate reference"
+  },
+  "brief": {
+    "es": "Busca archivos usando la base de datos de locate",
+    "en": "Find files using the locate database"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://plocate.sesse.net/"
+  ],
+  "examples": [
+    {
+      "ref": "system.17"
+    }
+  ]
+}

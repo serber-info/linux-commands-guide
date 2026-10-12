@@ -1,0 +1,187 @@
+{
+  "name": "ps",
+  "title": {
+    "es": "Opciones de PS",
+    "en": "PS Options"
+  },
+  "brief": {
+    "es": "Información sobre procesos en ejecución",
+    "en": "Information about running processes"
+  },
+  "category": "processes",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://gitlab.com/procps-ng/procps/-/blob/master/man/ps.1"
+  ],
+  "examples": [
+    {
+      "id": "ps.01",
+      "text": "ps",
+      "description": {
+        "es": "Muestra procesos de la terminal actual",
+        "en": "Show processes for the current terminal"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ps.02",
+      "text": "ps aux",
+      "description": {
+        "es": "Muestra todos los procesos (estilo BSD)",
+        "en": "Show all processes (BSD style)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ps.03",
+      "text": "ps -A",
+      "description": {
+        "es": "Muestra todos los procesos del sistema",
+        "en": "Show all system processes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ps.04",
+      "text": "ps -e",
+      "description": {
+        "es": "Similar a -A; todos los procesos",
+        "en": "Same as -A; all processes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ps.05",
+      "text": "ps -f",
+      "description": {
+        "es": "Formato detallado con relaciones padre-hijo (PPID)",
+        "en": "Full format showing parent-child relationships"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ps.06",
+      "text": "ps -u <user>",
+      "description": {
+        "es": "Procesos de un usuario específico",
+        "en": "Processes of a specific user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.07",
+      "text": "ps -p <pid>",
+      "description": {
+        "es": "Información de un proceso por PID",
+        "en": "Information for a specific PID"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.08",
+      "text": "ps -C <command>",
+      "description": {
+        "es": "Procesos ejecutados por el comando dado",
+        "en": "Processes running the given command"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.09",
+      "text": "ps -o pid,user,%cpu,%mem",
+      "description": {
+        "es": "Columnas personalizadas en la salida",
+        "en": "Custom output columns"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.10",
+      "text": "ps -H",
+      "description": {
+        "es": "Muestra procesos en formato jerárquico",
+        "en": "Show processes in hierarchical format"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.11",
+      "text": "ps --sort=%cpu",
+      "description": {
+        "es": "Ordena por uso de CPU",
+        "en": "Sort by CPU usage"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.12",
+      "text": "ps --sort=-%mem",
+      "description": {
+        "es": "Ordena por memoria (descendente)",
+        "en": "Sort by memory usage (descending)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.13",
+      "text": "ps --forest",
+      "description": {
+        "es": "Vista en árbol de procesos",
+        "en": "Tree view of processes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.14",
+      "text": "ps -L",
+      "description": {
+        "es": "Muestra los hilos de los procesos",
+        "en": "Show process threads"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ps.15",
+      "text": "ps -eo pid,user,pcpu,pmem,comm",
+      "description": {
+        "es": "Salida personalizada de todos los procesos",
+        "en": "Custom output for all processes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

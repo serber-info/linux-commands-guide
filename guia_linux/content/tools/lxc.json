@@ -1,0 +1,220 @@
+{
+  "name": "lxc",
+  "title": {
+    "es": "Opciones de LXC",
+    "en": "LXC Options"
+  },
+  "brief": {
+    "es": "Gestión de contenedores LXC",
+    "en": "LXC container management"
+  },
+  "category": "advanced",
+  "level": "advanced",
+  "notes": {
+    "es": "Estas fichas son para LXC clásico (lxc-*), no para el cliente lxc de LXD/Incus. destroy elimina el contenedor y su sistema de archivos.",
+    "en": "These entries cover classic LXC (lxc-*), not the LXD/Incus lxc client. destroy removes the container and its filesystem."
+  },
+  "sources": [
+    "https://linuxcontainers.org/lxc/manpages/"
+  ],
+  "examples": [
+    {
+      "id": "lxc.01",
+      "text": "lxc-ls -f",
+      "description": {
+        "es": "Lista los contenedores con estado, IP y tipo",
+        "en": "List containers with state, IP and type"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lxc.02",
+      "text": "lxc-create -n name -t download",
+      "description": {
+        "es": "Crea un contenedor desde una imagen (asistente interactivo)",
+        "en": "Create a container from an image (interactive)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "lxc.03",
+      "text": "lxc-create -n name -t download -- -d debian -r bookworm -a amd64",
+      "description": {
+        "es": "Crea un contenedor Debian sin preguntas",
+        "en": "Create a Debian container non-interactively"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "lxc.04",
+      "text": "lxc-start -n name",
+      "description": {
+        "es": "Inicia un contenedor en segundo plano",
+        "en": "Start a container in the background"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "lxc.05",
+      "text": "lxc-stop -n name",
+      "description": {
+        "es": "Detiene un contenedor",
+        "en": "Stop a container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "lxc.06",
+      "text": "lxc-stop -n name -r",
+      "description": {
+        "es": "Reinicia un contenedor",
+        "en": "Reboot a container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "lxc.07",
+      "text": "lxc-attach -n name",
+      "description": {
+        "es": "Abre una shell dentro del contenedor",
+        "en": "Open a shell inside the container"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lxc.08",
+      "text": "lxc-attach -n name -- command",
+      "description": {
+        "es": "Ejecuta un comando dentro del contenedor",
+        "en": "Run a command inside the container"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lxc.09",
+      "text": "lxc-console -n name",
+      "description": {
+        "es": "Conecta a la consola (salir: Ctrl+A Q)",
+        "en": "Attach to the console (exit: Ctrl+A Q)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lxc.10",
+      "text": "lxc-info -n name",
+      "description": {
+        "es": "Muestra estado, PID, IP y uso de recursos",
+        "en": "Show state, PID, IP and resource usage"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lxc.11",
+      "text": "lxc-freeze -n name",
+      "description": {
+        "es": "Congela todos los procesos del contenedor",
+        "en": "Freeze all processes in the container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "lxc.12",
+      "text": "lxc-unfreeze -n name",
+      "description": {
+        "es": "Descongela el contenedor",
+        "en": "Unfreeze the container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "lxc.13",
+      "text": "lxc-copy -n name -N new_name",
+      "description": {
+        "es": "Clona un contenedor",
+        "en": "Clone a container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "lxc.14",
+      "text": "lxc-snapshot -n name",
+      "description": {
+        "es": "Crea un snapshot (el contenedor debe estar parado)",
+        "en": "Create a snapshot (container must be stopped)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "lxc.15",
+      "text": "lxc-snapshot -n name -L",
+      "description": {
+        "es": "Lista los snapshots",
+        "en": "List snapshots"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "lxc.16",
+      "text": "lxc-destroy -n name",
+      "description": {
+        "es": "Elimina un contenedor y su sistema de archivos",
+        "en": "Delete a container and its filesystem"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "lxc.17",
+      "text": "lxc-config lxc.lxcpath",
+      "description": {
+        "es": "Muestra dónde se guardan los contenedores",
+        "en": "Show where containers are stored"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lxc.18",
+      "text": "lxc-checkconfig",
+      "description": {
+        "es": "Comprueba el soporte del kernel para LXC",
+        "en": "Check kernel support for LXC"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

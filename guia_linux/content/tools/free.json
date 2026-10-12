@@ -1,0 +1,143 @@
+{
+  "name": "free",
+  "title": {
+    "es": "Opciones de FREE",
+    "en": "FREE Options"
+  },
+  "brief": {
+    "es": "Muestra el uso de memoria del sistema",
+    "en": "Display system memory usage"
+  },
+  "category": "processes",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://gitlab.com/procps-ng/procps/-/blob/master/man/free.1"
+  ],
+  "examples": [
+    {
+      "id": "free.01",
+      "text": "free",
+      "description": {
+        "es": "Muestra el uso de memoria y swap",
+        "en": "Show memory and swap usage"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "free.02",
+      "text": "free -b",
+      "description": {
+        "es": "Muestra el uso de memoria en bytes",
+        "en": "Show memory in bytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "free.03",
+      "text": "free -k",
+      "description": {
+        "es": "Muestra el uso de memoria en kilobytes",
+        "en": "Show memory in kilobytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "free.04",
+      "text": "free -m",
+      "description": {
+        "es": "Muestra el uso de memoria en megabytes",
+        "en": "Show memory in megabytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "free.05",
+      "text": "free -g",
+      "description": {
+        "es": "Muestra el uso de memoria en gigabytes",
+        "en": "Show memory in gigabytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "free.06",
+      "text": "free -h",
+      "description": {
+        "es": "Formato legible por humanos",
+        "en": "Human-readable format"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "free.07",
+      "text": "free --si",
+      "description": {
+        "es": "Usa potencias de 1000 en lugar de 1024",
+        "en": "Use powers of 1000 instead of 1024"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "free.08",
+      "text": "free -t",
+      "description": {
+        "es": "Muestra una línea con el total (memoria + swap)",
+        "en": "Show a total line (memory + swap)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "free.09",
+      "text": "free -s N",
+      "description": {
+        "es": "Actualiza la salida cada N segundos",
+        "en": "Refresh output every N seconds"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "free.10",
+      "text": "free -c N",
+      "description": {
+        "es": "Especifica el número de actualizaciones antes de salir",
+        "en": "Number of updates before exiting (use with -s)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "free.11",
+      "text": "free -w",
+      "description": {
+        "es": "Muestra columnas de buffers y caché por separado",
+        "en": "Show buffers and cache in separate columns"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+name: New beginner reference / Nueva ficha
+description: Suggest a useful task, not just more options / Proponer una tarea útil
+title: "[Reference]: "
+body:
+  - type: input
+    id: tool
+    attributes:
+      label: Tool or topic / Herramienta o tema
+    validations:
+      required: true
+  - type: textarea
+    id: learner
+    attributes:
+      label: What beginner task does it solve? / ¿Qué tarea resuelve?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources, requirements and effects / Fuentes, requisitos y efectos

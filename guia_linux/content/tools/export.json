@@ -1,0 +1,47 @@
+{
+  "name": "export",
+  "title": {
+    "es": "Uso de export",
+    "en": "export reference"
+  },
+  "brief": {
+    "es": "Pasa variables a procesos hijos",
+    "en": "Pass variables to child processes"
+  },
+  "category": "shell",
+  "level": "beginner",
+  "notes": {
+    "es": "export marca variables para procesos hijos de esta shell. No cambia otras terminales ni guarda configuración permanente. Protege las comillas y no publiques valores secretos.",
+    "en": "export marks variables for children of this shell. It neither changes other terminals nor saves permanent settings. Quote values and do not publish secrets."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "env",
+    "printf"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "export.01",
+      "text": "export NOMBRE='hola mundo'",
+      "description": {
+        "es": "Define una variable para procesos hijos",
+        "en": "Define a variable for child processes"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "export.02",
+      "text": "export NOMBRE",
+      "description": {
+        "es": "Exporta una variable ya definida",
+        "en": "Export an existing variable"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

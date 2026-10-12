@@ -1,0 +1,39 @@
+{
+  "name": "ls",
+  "title": {
+    "es": "Uso de ls",
+    "en": "ls reference"
+  },
+  "brief": {
+    "es": "Lista el contenido del directorio actual",
+    "en": "List the current directory contents"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.31"
+    },
+    {
+      "ref": "system.32"
+    },
+    {
+      "ref": "system.33"
+    },
+    {
+      "ref": "system.34"
+    }
+  ],
+  "keywords": [
+    "listar archivos",
+    "ver archivos ocultos",
+    "list files"
+  ]
+}

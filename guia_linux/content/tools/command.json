@@ -1,0 +1,56 @@
+{
+  "name": "command",
+  "title": {
+    "es": "Uso de command",
+    "en": "command reference"
+  },
+  "brief": {
+    "es": "Comprueba cómo se resuelve un comando",
+    "en": "Check command resolution"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "command -v muestra la resolución disponible; no garantiza que sea un archivo porque también hay builtins, funciones y alias. command nombre evita funciones con ese nombre.",
+    "en": "command -v shows available resolution; it need not be a file because builtins, functions and aliases exist too. command name bypasses functions with that name."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "type"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "command.01",
+      "text": "command -v python3",
+      "description": {
+        "es": "Comprueba si python3 está disponible",
+        "en": "Check whether python3 is available"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "command.02",
+      "text": "command -v lh",
+      "description": {
+        "es": "Comprueba cómo se encuentra lh",
+        "en": "Check how lh is found"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "command.03",
+      "text": "command ls",
+      "description": {
+        "es": "Invoca ls evitando una función llamada ls",
+        "en": "Invoke ls bypassing a function named ls"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

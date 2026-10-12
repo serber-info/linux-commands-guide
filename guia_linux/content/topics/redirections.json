@@ -1,0 +1,24 @@
+{
+  "name": "redirections",
+  "title": {
+    "es": "Redirigir entrada y salida",
+    "en": "Redirect input and output"
+  },
+  "body": {
+    "es": "> escribe stdout en un archivo y sobrescribe su contenido; >> añade al final. < usa un archivo como stdin. 2> redirige stderr.\nEl orden importa: comando > archivo 2>&1 junta ambas salidas en el archivo; comando 2>&1 > archivo no hace lo mismo. Estos ejemplos escriben archivos: úsalos solo en un directorio de práctica.",
+    "en": "> writes stdout to a file and overwrites its contents; >> appends. < uses a file as stdin. 2> redirects stderr.\nOrder matters: command > file 2>&1 sends both outputs into the file; command 2>&1 > file does not do the same. These examples write files: use them only in a practice directory."
+  },
+  "commands": [
+    "printf '%s\\n' primera > notas.txt",
+    "printf '%s\\n' segunda >> notas.txt",
+    "wc -l < notas.txt"
+  ],
+  "related": [
+    "descriptors",
+    "tee",
+    "wc"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

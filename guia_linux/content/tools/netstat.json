@@ -1,0 +1,165 @@
+{
+  "name": "netstat",
+  "title": {
+    "es": "Opciones de NETSTAT",
+    "en": "NETSTAT Options"
+  },
+  "brief": {
+    "es": "Estadísticas de conexiones de red",
+    "en": "Network connection statistics"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "Herramienta heredada de net-tools; prefiere lh ss para consultas nuevas de sockets. La visibilidad de procesos depende de los permisos.",
+    "en": "Legacy net-tools utility; prefer lh ss for new socket queries. Process visibility depends on permissions."
+  },
+  "sources": [
+    "https://net-tools.sourceforge.io/"
+  ],
+  "examples": [
+    {
+      "id": "netstat.01",
+      "text": "netstat",
+      "description": {
+        "es": "Muestra todas las conexiones de red activas",
+        "en": "Show all active network connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "netstat.02",
+      "text": "netstat -a",
+      "description": {
+        "es": "Muestra todas las conexiones y puertos en escucha",
+        "en": "Show all connections and listening ports"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "netstat.03",
+      "text": "netstat -t",
+      "description": {
+        "es": "Muestra solo conexiones TCP",
+        "en": "Show only TCP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "netstat.04",
+      "text": "netstat -u",
+      "description": {
+        "es": "Muestra solo conexiones UDP",
+        "en": "Show only UDP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "netstat.05",
+      "text": "netstat -l",
+      "description": {
+        "es": "Muestra solo puertos en escucha",
+        "en": "Show only listening ports"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "netstat.06",
+      "text": "netstat -p",
+      "description": {
+        "es": "Muestra el proceso (PID) de cada conexión",
+        "en": "Show the process (PID) for each connection"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.07",
+      "text": "netstat -n",
+      "description": {
+        "es": "Muestra IPs y puertos en formato numérico",
+        "en": "Show IPs and ports in numeric format"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.08",
+      "text": "netstat -r",
+      "description": {
+        "es": "Muestra la tabla de enrutamiento",
+        "en": "Show the routing table"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.09",
+      "text": "netstat -i",
+      "description": {
+        "es": "Muestra estadísticas de interfaz de red",
+        "en": "Show network interface statistics"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.10",
+      "text": "netstat -c",
+      "description": {
+        "es": "Actualiza la información en intervalos continuos",
+        "en": "Continuously update output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.11",
+      "text": "netstat -s",
+      "description": {
+        "es": "Muestra estadísticas por protocolo",
+        "en": "Show per-protocol statistics"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.12",
+      "text": "netstat -g",
+      "description": {
+        "es": "Muestra la tabla de membresía multicast",
+        "en": "Show multicast group membership"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "netstat.13",
+      "text": "netstat -tulnp",
+      "description": {
+        "es": "Combinación común: TCP/UDP puertos en escucha con PID",
+        "en": "Common combo: TCP/UDP listening ports with PID"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

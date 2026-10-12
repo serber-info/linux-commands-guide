@@ -1,0 +1,121 @@
+{
+  "name": "uname",
+  "title": {
+    "es": "Opciones de UNAME",
+    "en": "UNAME Options"
+  },
+  "brief": {
+    "es": "Información del sistema y kernel",
+    "en": "System and kernel information"
+  },
+  "category": "system",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "uname.01",
+      "text": "uname",
+      "description": {
+        "es": "Muestra el nombre del kernel",
+        "en": "Show the kernel name"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uname.02",
+      "text": "uname -a",
+      "description": {
+        "es": "Muestra toda la información del sistema",
+        "en": "Show all system information"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uname.03",
+      "text": "uname -s",
+      "description": {
+        "es": "Muestra el nombre del kernel",
+        "en": "Show the kernel name"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uname.04",
+      "text": "uname -n",
+      "description": {
+        "es": "Muestra el nombre de red del host",
+        "en": "Show the network hostname"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uname.05",
+      "text": "uname -r",
+      "description": {
+        "es": "Muestra la versión del kernel",
+        "en": "Show the kernel release"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uname.06",
+      "text": "uname -v",
+      "description": {
+        "es": "Muestra la fecha de compilación del kernel",
+        "en": "Show the kernel build date"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "uname.07",
+      "text": "uname -m",
+      "description": {
+        "es": "Muestra el tipo de hardware de la máquina",
+        "en": "Show the machine hardware type"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "uname.08",
+      "text": "uname -p",
+      "description": {
+        "es": "Muestra el tipo de procesador",
+        "en": "Show the processor type"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "uname.09",
+      "text": "uname -o",
+      "description": {
+        "es": "Muestra el sistema operativo",
+        "en": "Show the operating system"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "name": "df",
+  "title": {
+    "es": "Opciones de DF",
+    "en": "DF Options"
+  },
+  "brief": {
+    "es": "Muestra el uso de espacio en disco",
+    "en": "Display disk space usage"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "df.01",
+      "text": "df",
+      "description": {
+        "es": "Muestra el espacio en disco de todos los sistemas de archivos",
+        "en": "Show disk space for all filesystems"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Consulta espacio del sistema de archivos: disponible y utilizado. -h adapta las unidades. du responde otra pregunta: cuánto ocupan archivos y directorios.",
+        "en": "Query filesystem space: available and used. -h adjusts units. du answers a different question: how much files and directories occupy."
+      }
+    },
+    {
+      "id": "df.02",
+      "text": "df -h",
+      "description": {
+        "es": "Formato legible (KB, MB, GB)",
+        "en": "Human-readable format (KB, MB, GB)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "df.03",
+      "text": "df -H",
+      "description": {
+        "es": "Formato legible usando potencias de 1000",
+        "en": "Human-readable using powers of 1000"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "df.04",
+      "text": "df -a",
+      "description": {
+        "es": "Incluye sistemas de archivos de tamaño 0",
+        "en": "Include 0-block filesystems"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "df.05",
+      "text": "df -T",
+      "description": {
+        "es": "Muestra el tipo de sistema de archivos",
+        "en": "Show filesystem type"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "df.06",
+      "text": "df -t TYPE",
+      "description": {
+        "es": "Muestra solo sistemas de archivos del tipo indicado",
+        "en": "Show only filesystems of the given type"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.07",
+      "text": "df -x TYPE",
+      "description": {
+        "es": "Excluye sistemas de archivos del tipo indicado",
+        "en": "Exclude filesystems of the given type"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.08",
+      "text": "df -i",
+      "description": {
+        "es": "Muestra uso de inodos en lugar de bloques",
+        "en": "Show inode usage instead of blocks"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.09",
+      "text": "df --total",
+      "description": {
+        "es": "Añade una línea con el total al final",
+        "en": "Add a grand total line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.10",
+      "text": "df -l",
+      "description": {
+        "es": "Muestra solo sistemas de archivos locales",
+        "en": "Show only local filesystems"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.11",
+      "text": "df --output=source,size,used,avail",
+      "description": {
+        "es": "Muestra solo los campos especificados",
+        "en": "Show only the specified fields"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.12",
+      "text": "df --block-size=1M",
+      "description": {
+        "es": "Muestra tamaños en bloques de 1 MB",
+        "en": "Show sizes in 1 MB blocks"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.13",
+      "text": "df -k",
+      "description": {
+        "es": "Muestra tamaños en bloques de 1024 bytes",
+        "en": "Show sizes in 1024-byte blocks"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.14",
+      "text": "df -m",
+      "description": {
+        "es": "Muestra tamaños en megabytes",
+        "en": "Show sizes in megabytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "df.15",
+      "text": "df --inodes",
+      "description": {
+        "es": "Muestra información de inodos",
+        "en": "Show inode information"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "espacio en disco",
+    "disk space"
+  ]
+}

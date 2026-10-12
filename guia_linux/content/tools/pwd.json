@@ -1,0 +1,25 @@
+{
+  "name": "pwd",
+  "title": {
+    "es": "Uso de pwd",
+    "en": "pwd reference"
+  },
+  "brief": {
+    "es": "Imprime el directorio de trabajo actual",
+    "en": "Print the current working directory"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.03"
+    }
+  ]
+}

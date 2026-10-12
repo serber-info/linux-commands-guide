@@ -1,0 +1,57 @@
+{
+  "name": "file",
+  "title": {
+    "es": "Uso de file",
+    "en": "file reference"
+  },
+  "brief": {
+    "es": "Identifica tipos de archivos",
+    "en": "Identify file types"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Analiza el contenido, no solo la extensión. Una extensión .txt no garantiza texto. file no modifica los archivos; -L sigue enlaces simbólicos.",
+    "en": "Inspect contents, not just extensions. A .txt extension does not guarantee text. file does not modify files; -L follows symlinks."
+  },
+  "sources": [
+    "https://www.darwinsys.com/file/"
+  ],
+  "related": [
+    "stat",
+    "less"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "file.01",
+      "text": "file ejemplo.txt",
+      "description": {
+        "es": "Identifica el tipo de un archivo",
+        "en": "Identify a file type"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "file.02",
+      "text": "file -b ejemplo.txt",
+      "description": {
+        "es": "Muestra el tipo sin el nombre",
+        "en": "Show type without the filename"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "file.03",
+      "text": "file --mime-type ejemplo.txt",
+      "description": {
+        "es": "Muestra el tipo MIME",
+        "en": "Show the MIME type"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

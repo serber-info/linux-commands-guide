@@ -1,0 +1,209 @@
+{
+  "name": "descriptors",
+  "title": {
+    "es": "Descriptores de Archivo y Redirecciones",
+    "en": "File Descriptors and Redirections"
+  },
+  "brief": {
+    "es": "Redirecciones de stdin, stdout y stderr",
+    "en": "stdin, stdout and stderr redirections"
+  },
+  "category": "shell",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/html_node/Redirections.html"
+  ],
+  "examples": [
+    {
+      "id": "descriptors.01",
+      "text": "command > file",
+      "description": {
+        "es": "Redirige stdout a un archivo (sobreescribe)",
+        "en": "Redirect stdout to file (overwrite)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "descriptors.02",
+      "text": "command >> file",
+      "description": {
+        "es": "Agrega stdout al final de un archivo",
+        "en": "Append stdout to file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "descriptors.03",
+      "text": "command 2> file",
+      "description": {
+        "es": "Redirige stderr a un archivo",
+        "en": "Redirect stderr to file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "descriptors.04",
+      "text": "command 2>> file",
+      "description": {
+        "es": "Agrega stderr al final de un archivo",
+        "en": "Append stderr to file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "descriptors.05",
+      "text": "command > file 2>&1",
+      "description": {
+        "es": "Redirige stdout y stderr al mismo archivo",
+        "en": "Redirect both stdout and stderr to file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "descriptors.06",
+      "text": "command &> file",
+      "description": {
+        "es": "Redirige stdout y stderr (forma corta)",
+        "en": "Redirect stdout and stderr (shorthand)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.07",
+      "text": "command < file",
+      "description": {
+        "es": "Usa un archivo como stdin",
+        "en": "Use file as stdin"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.08",
+      "text": "command 2> /dev/null",
+      "description": {
+        "es": "Descarta stderr",
+        "en": "Discard stderr"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.09",
+      "text": "command > /dev/null",
+      "description": {
+        "es": "Descarta stdout",
+        "en": "Discard stdout"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "descriptors.10",
+      "text": "command > /dev/null 2>&1",
+      "description": {
+        "es": "Descarta stdout y stderr",
+        "en": "Discard both stdout and stderr"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "descriptors.11",
+      "text": "command 3> file",
+      "description": {
+        "es": "Redirige el descriptor 3 a un archivo",
+        "en": "Redirect file descriptor 3 to file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.12",
+      "text": "command 3>&-",
+      "description": {
+        "es": "Cierra el descriptor de archivo 3",
+        "en": "Close file descriptor 3"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.13",
+      "text": "exec 3> file",
+      "description": {
+        "es": "Abre el descriptor 3 para escritura",
+        "en": "Open fd 3 for writing"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.14",
+      "text": "exec 3< file",
+      "description": {
+        "es": "Abre el descriptor 3 para lectura",
+        "en": "Open fd 3 for reading"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.15",
+      "text": "command1 | command2",
+      "description": {
+        "es": "Conecta stdout de command1 a stdin de command2",
+        "en": "Pipe stdout of command1 to stdin of command2"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "descriptors.16",
+      "text": "command | tee file",
+      "description": {
+        "es": "Escribe stdout en un archivo y en pantalla",
+        "en": "Write stdout to file and screen simultaneously"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "descriptors.17",
+      "text": "command | tee -a file",
+      "description": {
+        "es": "Agrega stdout al archivo y lo muestra en pantalla",
+        "en": "Append stdout to file and display on screen"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    }
+  ]
+}

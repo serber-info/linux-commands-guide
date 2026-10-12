@@ -1,0 +1,187 @@
+{
+  "name": "iptables",
+  "title": {
+    "es": "Opciones de IPTABLES",
+    "en": "IPTABLES Options"
+  },
+  "brief": {
+    "es": "Gestión de reglas de firewall del kernel",
+    "en": "Kernel firewall rule management"
+  },
+  "category": "advanced",
+  "level": "advanced",
+  "notes": {
+    "es": "Cambiar reglas puede desconectar SSH o exponer servicios. No ejecutes -F o políticas DROP sin un plan de recuperación. Consulta las reglas antes de modificarlas.",
+    "en": "Changing rules can disconnect SSH or expose services. Do not use -F or DROP policies without a recovery plan. Inspect rules before changing them."
+  },
+  "sources": [
+    "https://www.netfilter.org/projects/iptables/index.html"
+  ],
+  "examples": [
+    {
+      "id": "iptables.01",
+      "text": "iptables -L",
+      "description": {
+        "es": "Lista todas las reglas de las cadenas",
+        "en": "List all rules in all chains"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "iptables.02",
+      "text": "iptables -F",
+      "description": {
+        "es": "Limpia todas las reglas de las cadenas",
+        "en": "Flush all rules from all chains"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.03",
+      "text": "iptables -A INPUT -s IP -j ACCEPT",
+      "description": {
+        "es": "Permite tráfico de una IP en INPUT",
+        "en": "Allow traffic from an IP in INPUT"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.04",
+      "text": "iptables -A INPUT -p tcp --dport 80 -j ACCEPT",
+      "description": {
+        "es": "Permite tráfico HTTP entrante (puerto 80)",
+        "en": "Allow incoming HTTP traffic (port 80)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.05",
+      "text": "iptables -A INPUT -p tcp --dport 443 -j ACCEPT",
+      "description": {
+        "es": "Permite tráfico HTTPS entrante (puerto 443)",
+        "en": "Allow incoming HTTPS traffic (port 443)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.06",
+      "text": "iptables -A OUTPUT -d IP -j DROP",
+      "description": {
+        "es": "Bloquea el tráfico saliente hacia una IP",
+        "en": "Block outgoing traffic to an IP"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.07",
+      "text": "iptables -A INPUT -p icmp --icmp-type 8 -j ACCEPT",
+      "description": {
+        "es": "Permite ping (ICMP tipo 8)",
+        "en": "Allow ping (ICMP type 8)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.08",
+      "text": "iptables -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT",
+      "description": {
+        "es": "Permite el tráfico de conexiones ya establecidas",
+        "en": "Allow traffic from established connections"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.09",
+      "text": "iptables -P INPUT DROP",
+      "description": {
+        "es": "Política por defecto DROP en INPUT",
+        "en": "Set default DROP policy for INPUT"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.10",
+      "text": "iptables -P OUTPUT ACCEPT",
+      "description": {
+        "es": "Política por defecto ACCEPT en OUTPUT",
+        "en": "Set default ACCEPT policy for OUTPUT"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.11",
+      "text": "iptables -D INPUT -s IP -j ACCEPT",
+      "description": {
+        "es": "Elimina una regla específica de INPUT",
+        "en": "Delete a specific rule from INPUT"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.12",
+      "text": "iptables -I INPUT 1 -s IP -j ACCEPT",
+      "description": {
+        "es": "Inserta una regla al inicio de INPUT",
+        "en": "Insert a rule at the top of INPUT"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.13",
+      "text": "iptables -A INPUT -p udp --dport 53 -j ACCEPT",
+      "description": {
+        "es": "Permite DNS entrante (UDP 53)",
+        "en": "Allow incoming DNS (UDP port 53)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.14",
+      "text": "iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE",
+      "description": {
+        "es": "Habilita NAT en la interfaz de salida",
+        "en": "Enable NAT on the outgoing interface"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "iptables.15",
+      "text": "iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080",
+      "description": {
+        "es": "Redirige el puerto 80 al 8080",
+        "en": "Redirect port 80 to 8080"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    }
+  ]
+}

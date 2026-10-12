@@ -1,0 +1,176 @@
+{
+  "name": "cat",
+  "title": {
+    "es": "Opciones de CAT",
+    "en": "CAT Options"
+  },
+  "brief": {
+    "es": "Muestra y concatena contenido de archivos",
+    "en": "Display and concatenate file contents"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "bat es otra herramienta y puede llamarse batcat según la distribución. Usa lh bat para su ficha. Redirigir con > sobrescribe el destino.",
+    "en": "bat is a separate tool and may be named batcat in your distribution. Use lh bat for its own entry. Redirecting with > overwrites the destination."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "cat.01",
+      "text": "cat filename",
+      "description": {
+        "es": "Muestra el contenido del archivo",
+        "en": "Display file contents"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cat.02",
+      "text": "cat file1 file2 > output",
+      "description": {
+        "es": "Concatena file1 y file2 en output",
+        "en": "Concatenate file1 and file2 into output"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "cat.03",
+      "text": "cat -n filename",
+      "description": {
+        "es": "Muestra el contenido con números de línea",
+        "en": "Show content with line numbers"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cat.04",
+      "text": "cat -b filename",
+      "description": {
+        "es": "Numera solo las líneas no vacías",
+        "en": "Number only non-empty lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cat.05",
+      "text": "cat -s filename",
+      "description": {
+        "es": "Suprime líneas vacías consecutivas",
+        "en": "Squeeze consecutive blank lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cat.06",
+      "text": "cat -T filename",
+      "description": {
+        "es": "Muestra tabulaciones como ^I",
+        "en": "Show tabs as ^I"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.07",
+      "text": "cat -E filename",
+      "description": {
+        "es": "Muestra $ al final de cada línea",
+        "en": "Show $ at end of each line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.08",
+      "text": "cat -v filename",
+      "description": {
+        "es": "Muestra caracteres no imprimibles",
+        "en": "Show non-printable characters"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.09",
+      "text": "cat -A filename",
+      "description": {
+        "es": "Muestra todos los caracteres especiales",
+        "en": "Show all special characters"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.10",
+      "text": "bat -r N:M filename",
+      "description": {
+        "es": "Muestra solo las líneas N a M (bat/batcat)",
+        "en": "Show only lines N to M (bat/batcat)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cat.11",
+      "text": "bat --theme=<theme> filename",
+      "description": {
+        "es": "Resalta la sintaxis con el tema indicado (bat)",
+        "en": "Highlight syntax with the given theme (bat)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.12",
+      "text": "bat --paging=never filename",
+      "description": {
+        "es": "Muestra el archivo sin paginador (bat)",
+        "en": "Print the file without a pager (bat)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.13",
+      "text": "cat -u filename",
+      "description": {
+        "es": "Ignorada por GNU cat (se mantiene por compatibilidad POSIX)",
+        "en": "Ignored by GNU cat (kept for POSIX compatibility)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "cat.14",
+      "text": "bat --list-languages",
+      "description": {
+        "es": "Lista los lenguajes con resaltado de sintaxis (bat)",
+        "en": "List languages with syntax highlighting (bat)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

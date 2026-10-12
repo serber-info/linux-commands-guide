@@ -1,0 +1,231 @@
+{
+  "name": "systemctl",
+  "title": {
+    "es": "Opciones de SYSTEMCTL",
+    "en": "SYSTEMCTL Options"
+  },
+  "brief": {
+    "es": "Gestión de servicios con systemd",
+    "en": "Manage services with systemd"
+  },
+  "category": "system",
+  "level": "intermediate",
+  "notes": {
+    "es": "Solo aplica a sistemas con systemd. start/stop/restart pueden afectar servicios; isolate puede cerrar la sesión gráfica. enable no inicia un servicio por sí solo.",
+    "en": "Only applies to systems with systemd. start/stop/restart affect services; isolate can end the desktop session. enable does not start a service by itself."
+  },
+  "sources": [
+    "https://www.freedesktop.org/software/systemd/man/latest/systemctl.html"
+  ],
+  "examples": [
+    {
+      "id": "systemctl.01",
+      "text": "systemctl start service",
+      "description": {
+        "es": "Inicia el servicio",
+        "en": "Start the service"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.02",
+      "text": "systemctl stop service",
+      "description": {
+        "es": "Detiene el servicio",
+        "en": "Stop the service"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.03",
+      "text": "systemctl restart service",
+      "description": {
+        "es": "Reinicia el servicio",
+        "en": "Restart the service"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.04",
+      "text": "systemctl reload service",
+      "description": {
+        "es": "Recarga la configuración sin detenerlo",
+        "en": "Reload configuration without stopping"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.05",
+      "text": "systemctl enable service",
+      "description": {
+        "es": "Habilita el inicio automático al arranque",
+        "en": "Enable automatic start at boot"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.06",
+      "text": "systemctl disable service",
+      "description": {
+        "es": "Deshabilita el inicio automático al arranque",
+        "en": "Disable automatic start at boot"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.07",
+      "text": "systemctl status service",
+      "description": {
+        "es": "Muestra el estado actual del servicio",
+        "en": "Show current service status"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "systemctl.08",
+      "text": "systemctl is-active service",
+      "description": {
+        "es": "Verifica si el servicio está activo",
+        "en": "Check if the service is active"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "systemctl.09",
+      "text": "systemctl is-enabled service",
+      "description": {
+        "es": "Verifica si el servicio está habilitado",
+        "en": "Check if the service is enabled"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "systemctl.10",
+      "text": "systemctl list-units --type=service",
+      "description": {
+        "es": "Lista unidades de servicio cargadas (incluye las fallidas)",
+        "en": "List loaded service units (including failed ones)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "systemctl.11",
+      "text": "systemctl list-unit-files --type=service",
+      "description": {
+        "es": "Lista todos los archivos de unidad de servicios",
+        "en": "List all service unit files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "systemctl.12",
+      "text": "systemctl daemon-reload",
+      "description": {
+        "es": "Recarga el gestor systemd tras cambios en archivos",
+        "en": "Reload systemd after unit file changes"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.13",
+      "text": "systemctl mask service",
+      "description": {
+        "es": "Enmascara el servicio para evitar que se inicie",
+        "en": "Mask service to prevent it from starting"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.14",
+      "text": "systemctl unmask service",
+      "description": {
+        "es": "Desenmascara un servicio bloqueado",
+        "en": "Unmask a previously masked service"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.15",
+      "text": "systemctl show service",
+      "description": {
+        "es": "Muestra los detalles de configuración del servicio",
+        "en": "Show service configuration details"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "systemctl.16",
+      "text": "systemctl cat service",
+      "description": {
+        "es": "Muestra el archivo de unidad del servicio",
+        "en": "Show the service unit file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "systemctl.17",
+      "text": "systemctl edit service",
+      "description": {
+        "es": "Edita el archivo de unidad del servicio",
+        "en": "Edit the service unit file"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.18",
+      "text": "systemctl isolate multi-user.target",
+      "description": {
+        "es": "Cambia al modo multiusuario (sin GUI)",
+        "en": "Switch to multi-user mode (no GUI)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "systemctl.19",
+      "text": "systemctl isolate graphical.target",
+      "description": {
+        "es": "Cambia al modo gráfico",
+        "en": "Switch to graphical mode"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    }
+  ]
+}

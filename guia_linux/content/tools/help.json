@@ -1,0 +1,58 @@
+{
+  "name": "help",
+  "title": {
+    "es": "Uso de help",
+    "en": "help reference"
+  },
+  "brief": {
+    "es": "Ayuda para builtins de Bash",
+    "en": "Help for Bash builtins"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "help es un builtin de Bash, no de zsh. En Bash: help cd. En zsh usa man zshbuiltins. No confundir help con lh o con una función personal llamada Help.",
+    "en": "help is a Bash builtin, not a zsh builtin. In Bash: help cd. In zsh use man zshbuiltins. Do not confuse help with lh or a personal Help function."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "man",
+    "cd",
+    "export"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "help.01",
+      "text": "help cd",
+      "description": {
+        "es": "Bash: explica cómo cambiar de directorio",
+        "en": "Bash: explain directory changes"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "help.02",
+      "text": "help export",
+      "description": {
+        "es": "Bash: explica variables de entorno",
+        "en": "Bash: explain environment variables"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "help.03",
+      "text": "man zshbuiltins",
+      "description": {
+        "es": "zsh: consulta sus comandos internos",
+        "en": "zsh: read builtin documentation"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "pipes",
+  "title": {
+    "es": "Contar colores repetidos",
+    "en": "Count repeated colors"
+  },
+  "task": {
+    "es": "Ordena colores.txt y cuenta cuántas veces aparece cada color.",
+    "en": "Sort colores.txt and count how often each color occurs."
+  },
+  "fixtures": {
+    "colores.txt": "rojo\nazul\nrojo\nverde\nazul\nrojo\n"
+  },
+  "solution": "sort colores.txt | uniq -c",
+  "expected": "      2 azul\n      3 rojo\n      1 verde\n",
+  "hint": {
+    "es": "uniq solo agrupa líneas consecutivas: ordena antes.",
+    "en": "uniq only groups adjacent lines: sort first."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

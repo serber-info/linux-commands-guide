@@ -1,0 +1,311 @@
+{
+  "name": "grep",
+  "title": {
+    "es": "Opciones de GREP",
+    "en": "GREP Options"
+  },
+  "brief": {
+    "es": "Busca patrones en archivos",
+    "en": "Search for patterns in files"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/grep/manual/grep.html"
+  ],
+  "examples": [
+    {
+      "id": "grep.basic-1",
+      "text": "grep -nF 'error' ejemplo.log",
+      "description": {
+        "es": "Busca texto literal con números de línea",
+        "en": "Find literal text with line numbers"
+      },
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "-n muestra el número de línea. -F busca texto literal, no regex. ejemplo.log es el archivo de entrada. No modifica el archivo.",
+        "en": "-n shows the line number. -F searches literal text, not regex. ejemplo.log is the input file. The file is not modified."
+      },
+      "output": "2:error al abrir\n4:error al guardar"
+    },
+    {
+      "id": "grep.01",
+      "text": "grep 'word' filename",
+      "description": {
+        "es": "Busca líneas que contengan 'word' en el archivo",
+        "en": "Search lines containing 'word' in the file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "grep busca patrones en líneas. -n muestra el número de línea; -i ignora mayúsculas; -F busca texto literal. Pon el patrón entre comillas para que el shell no lo expanda. grep no edita el archivo. Sin coincidencias devuelve 1, no necesariamente un error.",
+        "en": "grep searches for patterns in lines. -n shows the line number; -i ignores case; -F searches literal text. Quote the pattern so the shell does not expand it. grep does not edit the file. No matches returns 1, not necessarily an error."
+      }
+    },
+    {
+      "id": "grep.02",
+      "text": "grep -i 'word' filename",
+      "description": {
+        "es": "Busca ignorando mayúsculas/minúsculas",
+        "en": "Case-insensitive search"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "grep.03",
+      "text": "grep -v 'word' filename",
+      "description": {
+        "es": "Muestra líneas que NO contienen 'word'",
+        "en": "Show lines that do NOT contain 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "grep.04",
+      "text": "grep -w 'word' filename",
+      "description": {
+        "es": "Busca 'word' como palabra completa",
+        "en": "Match 'word' as a whole word"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "grep.05",
+      "text": "grep -x 'word' filename",
+      "description": {
+        "es": "Muestra líneas que coinciden exactamente con 'word'",
+        "en": "Match lines that exactly equal 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "grep.06",
+      "text": "grep -c 'word' filename",
+      "description": {
+        "es": "Cuenta las líneas que contienen 'word'",
+        "en": "Count lines containing 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.07",
+      "text": "grep -l 'word' *",
+      "description": {
+        "es": "Lista archivos que contienen 'word'",
+        "en": "List files containing 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.08",
+      "text": "grep -L 'word' *",
+      "description": {
+        "es": "Lista archivos que NO contienen 'word'",
+        "en": "List files NOT containing 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.09",
+      "text": "grep -n 'word' filename",
+      "description": {
+        "es": "Muestra número de línea junto a cada coincidencia",
+        "en": "Show line numbers alongside matches"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.10",
+      "text": "grep -A N 'word' filename",
+      "description": {
+        "es": "Muestra N líneas después de la coincidencia",
+        "en": "Print N lines after each match"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.11",
+      "text": "grep -B N 'word' filename",
+      "description": {
+        "es": "Muestra N líneas antes de la coincidencia",
+        "en": "Print N lines before each match"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.12",
+      "text": "grep -C N 'word' filename",
+      "description": {
+        "es": "Muestra N líneas alrededor de la coincidencia",
+        "en": "Print N lines around each match"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.13",
+      "text": "grep --color 'word' filename",
+      "description": {
+        "es": "Resalta 'word' en color en la salida",
+        "en": "Highlight 'word' in color"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.14",
+      "text": "grep -E 'w1|w2' filename",
+      "description": {
+        "es": "Expresiones regulares extendidas (OR lógico)",
+        "en": "Extended regex — logical OR"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.15",
+      "text": "grep -f patterns.txt filename",
+      "description": {
+        "es": "Lee los patrones de búsqueda desde un archivo",
+        "en": "Read search patterns from a file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.16",
+      "text": "grep -o 'word' filename",
+      "description": {
+        "es": "Muestra solo la parte coincidente, no la línea entera",
+        "en": "Print only the matching part, not the full line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.17",
+      "text": "grep -q 'word' filename",
+      "description": {
+        "es": "Modo silencioso — devuelve código de salida sin imprimir",
+        "en": "Quiet mode — return exit code without printing"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.18",
+      "text": "grep -R 'word' directory",
+      "description": {
+        "es": "Busca recursivamente en todos los archivos del directorio",
+        "en": "Recursively search all files in directory"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.19",
+      "text": "grep -m N 'word' filename",
+      "description": {
+        "es": "Muestra solo las primeras N coincidencias",
+        "en": "Stop after N matches"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.20",
+      "text": "grep -r --exclude='*.log' 'word' dir",
+      "description": {
+        "es": "Excluye archivos que coincidan con el patrón",
+        "en": "Exclude files matching pattern"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.21",
+      "text": "grep -r --include='*.txt' 'word' dir",
+      "description": {
+        "es": "Incluye solo archivos que coincidan con el patrón",
+        "en": "Include only files matching pattern"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.22",
+      "text": "grep -P 'word' filename",
+      "description": {
+        "es": "Usa expresiones regulares Perl (PCRE)",
+        "en": "Use Perl-compatible regular expressions (PCRE)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.23",
+      "text": "grep '^word' filename",
+      "description": {
+        "es": "Busca líneas que comiencen con 'word'",
+        "en": "Match lines starting with 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "grep.24",
+      "text": "grep 'word$' filename",
+      "description": {
+        "es": "Busca líneas que terminen con 'word'",
+        "en": "Match lines ending with 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "buscar texto",
+    "filtrar líneas",
+    "search text",
+    "buscar dentro de archivos"
+  ]
+}

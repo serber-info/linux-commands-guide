@@ -1,0 +1,28 @@
+{
+  "name": "mkdir",
+  "title": {
+    "es": "Uso de mkdir",
+    "en": "mkdir reference"
+  },
+  "brief": {
+    "es": "Crea un nuevo directorio",
+    "en": "Create a new directory"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.09"
+    },
+    {
+      "ref": "system.10"
+    }
+  ]
+}

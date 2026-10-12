@@ -1,0 +1,25 @@
+{
+  "name": "ln",
+  "title": {
+    "es": "Uso de ln",
+    "en": "ln reference"
+  },
+  "brief": {
+    "es": "Crea un enlace simbólico",
+    "en": "Create a symbolic link"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.16"
+    }
+  ]
+}

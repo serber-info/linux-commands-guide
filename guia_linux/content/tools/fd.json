@@ -1,0 +1,58 @@
+{
+  "name": "fd",
+  "title": {
+    "es": "Uso de fd",
+    "en": "fd reference"
+  },
+  "brief": {
+    "es": "Busca archivos con fd",
+    "en": "Find files with fd"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Herramienta opcional, a veces llamada fdfind. El patrón es una regex por defecto; -g usa comodines. Omite archivos ocultos e ignorados salvo que se solicite lo contrario.",
+    "en": "Optional tool, sometimes named fdfind. Patterns are regex by default; -g uses globs. Hidden and ignored files are omitted unless requested."
+  },
+  "sources": [
+    "https://github.com/sharkdp/fd"
+  ],
+  "related": [
+    "find"
+  ],
+  "aliases": [
+    "fdfind"
+  ],
+  "examples": [
+    {
+      "id": "fd.01",
+      "text": "fd -g '*.txt' .",
+      "description": {
+        "es": "Busca nombres .txt usando comodines",
+        "en": "Find .txt names using globs"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "fd.02",
+      "text": "fd -t d .",
+      "description": {
+        "es": "Lista directorios",
+        "en": "List directories"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "fd.03",
+      "text": "fd -H -g \".*\" .",
+      "description": {
+        "es": "Incluye nombres ocultos",
+        "en": "Include hidden names"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

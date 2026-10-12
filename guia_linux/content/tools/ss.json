@@ -1,0 +1,209 @@
+{
+  "name": "ss",
+  "title": {
+    "es": "Opciones de SS",
+    "en": "SS Options"
+  },
+  "brief": {
+    "es": "Estadísticas de sockets (reemplaza netstat)",
+    "en": "Socket statistics (replaces netstat)"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://man7.org/linux/man-pages/man8/ss.8.html"
+  ],
+  "examples": [
+    {
+      "id": "ss.01",
+      "text": "ss",
+      "description": {
+        "es": "Muestra todos los sockets abiertos",
+        "en": "Show all open sockets"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ss.02",
+      "text": "ss -a",
+      "description": {
+        "es": "Muestra todos los sockets (en escucha y conectados)",
+        "en": "Show all sockets (listening and connected)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ss.03",
+      "text": "ss -t",
+      "description": {
+        "es": "Muestra solo conexiones TCP",
+        "en": "Show only TCP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ss.04",
+      "text": "ss -u",
+      "description": {
+        "es": "Muestra solo conexiones UDP",
+        "en": "Show only UDP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ss.05",
+      "text": "ss -l",
+      "description": {
+        "es": "Muestra solo puertos en escucha",
+        "en": "Show only listening ports"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ss.06",
+      "text": "ss -p",
+      "description": {
+        "es": "Muestra el proceso asociado a cada socket",
+        "en": "Show the process associated with each socket"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.07",
+      "text": "ss -n",
+      "description": {
+        "es": "Muestra IPs y puertos en formato numérico",
+        "en": "Show IPs and ports in numeric format"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.08",
+      "text": "ss -tulnp",
+      "description": {
+        "es": "Combinación común: TCP/UDP puertos en escucha con PID",
+        "en": "Common combo: TCP/UDP listening ports with PID"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.09",
+      "text": "ss -s",
+      "description": {
+        "es": "Muestra un resumen de estadísticas",
+        "en": "Show a statistics summary"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.10",
+      "text": "ss -4",
+      "description": {
+        "es": "Muestra solo sockets IPv4",
+        "en": "Show only IPv4 sockets"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.11",
+      "text": "ss -6",
+      "description": {
+        "es": "Muestra solo sockets IPv6",
+        "en": "Show only IPv6 sockets"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.12",
+      "text": "ss -x",
+      "description": {
+        "es": "Muestra sockets de dominio Unix",
+        "en": "Show Unix domain sockets"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.13",
+      "text": "ss -o",
+      "description": {
+        "es": "Muestra información de tiempo de los sockets",
+        "en": "Show socket timer information"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.14",
+      "text": "ss sport = :80",
+      "description": {
+        "es": "Filtra sockets por puerto de origen",
+        "en": "Filter sockets by source port"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.15",
+      "text": "ss dport = :443",
+      "description": {
+        "es": "Filtra sockets por puerto de destino",
+        "en": "Filter sockets by destination port"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.16",
+      "text": "ss -t state established",
+      "description": {
+        "es": "Muestra solo conexiones TCP establecidas",
+        "en": "Show only established TCP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "ss.17",
+      "text": "ss -t state time-wait",
+      "description": {
+        "es": "Muestra conexiones en estado TIME-WAIT",
+        "en": "Show connections in TIME-WAIT state"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

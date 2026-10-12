@@ -1,0 +1,57 @@
+{
+  "name": "gzip",
+  "title": {
+    "es": "Uso de gzip",
+    "en": "gzip reference"
+  },
+  "brief": {
+    "es": "Comprime archivos individuales",
+    "en": "Compress individual files"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Por defecto gzip sustituye el archivo por uno .gz. -k conserva el original y -c escribe en stdout. No empaqueta varios archivos: para eso usa tar.",
+    "en": "By default gzip replaces the file with a .gz file. -k keeps the original and -c writes to stdout. It does not archive multiple files: use tar for that."
+  },
+  "sources": [
+    "https://www.gnu.org/software/gzip/manual/gzip.html"
+  ],
+  "related": [
+    "tar",
+    "zip"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "gzip.01",
+      "text": "gzip -k notas.txt",
+      "description": {
+        "es": "Comprime conservando el original",
+        "en": "Compress while keeping the original"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "gzip.02",
+      "text": "gzip -l notas.txt.gz",
+      "description": {
+        "es": "Consulta tamaños del archivo comprimido",
+        "en": "Inspect compressed-file sizes"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "gzip.03",
+      "text": "gzip -dk notas.txt.gz",
+      "description": {
+        "es": "Descomprime conservando el .gz",
+        "en": "Decompress while keeping the .gz"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "help",
+  "title": {
+    "es": "Cómo encontrar ayuda y salir",
+    "en": "Find help and exit programs"
+  },
+  "body": {
+    "es": "lh ofrece ejemplos elegidos; man documenta tu versión instalada. comando --help suele resumir opciones, pero no todos los programas lo admiten. Bash tiene help para builtins; zsh tiene man zshbuiltins.\nEn man y less, q sale. En nano, Ctrl+X; en Vim, Esc y :q (o :q! para descartar cambios). Ctrl+D señala EOF cuando no hay texto pendiente; Ctrl+Z suspende, no cierra.",
+    "en": "lh provides curated examples; man documents your installed version. command --help often summarizes options, but not every program supports it. Bash has help for builtins; zsh has man zshbuiltins.\nq exits man and less. Ctrl+X exits nano; in Vim use Esc and :q (or :q! to discard changes). Ctrl+D signals EOF when no text is pending; Ctrl+Z suspends rather than exits."
+  },
+  "commands": [
+    "lh ls --quick",
+    "man ls",
+    "type cd"
+  ],
+  "related": [
+    "man",
+    "help",
+    "less",
+    "nano",
+    "vim",
+    "shortcuts"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

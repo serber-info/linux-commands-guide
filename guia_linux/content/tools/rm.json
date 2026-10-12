@@ -1,0 +1,47 @@
+{
+  "name": "rm",
+  "title": {
+    "es": "Uso de rm",
+    "en": "rm reference"
+  },
+  "brief": {
+    "es": "Elimina un archivo",
+    "en": "Remove a file"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "rm.basic-1",
+      "text": "rm -i -- archivo.txt",
+      "description": {
+        "es": "Pide confirmación antes de borrar un archivo de ejemplo",
+        "en": "Ask before deleting an example file"
+      },
+      "effect": "delete",
+      "quick": true,
+      "explanation": {
+        "es": "Pide confirmación antes de borrar un archivo de ejemplo. Sustituye los nombres de archivo cuando corresponda.",
+        "en": "Ask before deleting an example file. Replace filenames where appropriate."
+      }
+    },
+    {
+      "ref": "system.11"
+    },
+    {
+      "ref": "system.12"
+    }
+  ],
+  "keywords": [
+    "borrar archivos",
+    "eliminar carpetas",
+    "delete files"
+  ]
+}

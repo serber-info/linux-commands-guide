@@ -1,0 +1,48 @@
+{
+  "name": "ping",
+  "title": {
+    "es": "Uso de ping",
+    "en": "ping reference"
+  },
+  "brief": {
+    "es": "Comprueba respuesta ICMP",
+    "en": "Check ICMP responses"
+  },
+  "category": "network",
+  "level": "beginner",
+  "notes": {
+    "es": "Genera tráfico. -c limita peticiones. Una falta de respuesta no prueba que el host esté apagado: puede bloquear ICMP. Empieza por localhost y separa fallos de DNS de conectividad.",
+    "en": "Generate traffic. -c limits requests. No response does not prove the host is down: it may block ICMP. Start with localhost and separate DNS failures from connectivity."
+  },
+  "sources": [
+    "https://github.com/iputils/iputils/blob/master/doc/ping.xml"
+  ],
+  "related": [
+    "getent",
+    "dig",
+    "ip"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "ping.01",
+      "text": "ping -c 3 127.0.0.1",
+      "description": {
+        "es": "Comprueba el propio equipo con tres peticiones",
+        "en": "Check this machine with three requests"
+      },
+      "quick": true,
+      "effect": "network"
+    },
+    {
+      "id": "ping.02",
+      "text": "ping -c 3 example.com",
+      "description": {
+        "es": "Consulta DNS y envía tres peticiones ICMP",
+        "en": "Resolve DNS and send three ICMP requests"
+      },
+      "quick": true,
+      "effect": "network"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "pushd",
+  "title": {
+    "es": "Uso de pushd",
+    "en": "pushd reference"
+  },
+  "brief": {
+    "es": "Guarda el directorio actual y cambia al indicado",
+    "en": "Save current directory and switch to the given one"
+  },
+  "category": "shell",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.04"
+    }
+  ]
+}

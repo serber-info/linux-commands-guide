@@ -1,0 +1,229 @@
+{
+  "name": "top",
+  "title": {
+    "es": "Opciones de TOP",
+    "en": "TOP Options"
+  },
+  "brief": {
+    "es": "Monitor de procesos en tiempo real",
+    "en": "Real-time process monitor"
+  },
+  "category": "processes",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://gitlab.com/procps-ng/procps/-/blob/master/man/top.1"
+  ],
+  "examples": [
+    {
+      "id": "top.01",
+      "text": "top",
+      "description": {
+        "es": "Inicia top con configuración predeterminada",
+        "en": "Start top with default settings"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "top.02",
+      "text": "top -b",
+      "description": {
+        "es": "Modo batch (no interactivo), útil para scripts",
+        "en": "Batch mode (non-interactive), useful for scripts"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "top.03",
+      "text": "top -d N",
+      "description": {
+        "es": "Actualiza cada N segundos",
+        "en": "Update every N seconds"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "top.04",
+      "text": "top -n N",
+      "description": {
+        "es": "Sale tras N iteraciones",
+        "en": "Exit after N iterations"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "top.05",
+      "text": "top -p pid1,pid2",
+      "description": {
+        "es": "Muestra solo los PIDs especificados",
+        "en": "Monitor only the specified PIDs"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "top.06",
+      "text": "top -u user",
+      "description": {
+        "es": "Muestra solo procesos del usuario indicado",
+        "en": "Show only processes of the given user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.07",
+      "text": "top -i",
+      "description": {
+        "es": "Omite los procesos inactivos",
+        "en": "Omit idle processes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.08",
+      "text": "top -c",
+      "description": {
+        "es": "Muestra la línea completa de comando",
+        "en": "Show full command line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.09",
+      "text": "top -o %CPU",
+      "description": {
+        "es": "Ordena por la columna especificada",
+        "en": "Sort by the specified column"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.10",
+      "text": "top -H",
+      "description": {
+        "es": "Muestra cada hilo por separado",
+        "en": "Show individual threads"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.11",
+      "text": "top -1",
+      "description": {
+        "es": "Muestra cada CPU por separado",
+        "en": "Show each CPU individually"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.12",
+      "text": "Teclas interactivas",
+      "description": {
+        "es": "Teclas interactivas",
+        "en": "Interactive Keys"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "top.13",
+      "text": "q",
+      "description": {
+        "es": "Salir de top",
+        "en": "Quit top"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.14",
+      "text": "M",
+      "description": {
+        "es": "Ordenar por uso de memoria",
+        "en": "Sort by memory usage"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.15",
+      "text": "P",
+      "description": {
+        "es": "Ordenar por uso de CPU",
+        "en": "Sort by CPU usage"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.16",
+      "text": "k",
+      "description": {
+        "es": "Envía una señal a un proceso",
+        "en": "Send a signal to a process"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "top.17",
+      "text": "r",
+      "description": {
+        "es": "Cambia la prioridad (renice) de un proceso",
+        "en": "Change process priority (renice)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "top.18",
+      "text": "V",
+      "description": {
+        "es": "Activa/desactiva la vista en árbol",
+        "en": "Toggle tree view"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "top.19",
+      "text": "W",
+      "description": {
+        "es": "Guarda la configuración actual",
+        "en": "Save current settings"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

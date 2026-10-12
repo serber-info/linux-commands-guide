@@ -1,0 +1,24 @@
+{
+  "name": "navigation",
+  "title": {
+    "es": "Encontrar el archivo con espacios",
+    "en": "Find the file with spaces"
+  },
+  "task": {
+    "es": "Lista los archivos .txt de esta carpeta, sin separar los nombres que contienen espacios.",
+    "en": "List .txt files in this folder without splitting names containing spaces."
+  },
+  "fixtures": {
+    "mi archivo.txt": "hola\n",
+    "otro.txt": "mundo\n"
+  },
+  "solution": "find . -type f -name '*.txt'",
+  "expected": "./mi archivo.txt\n./otro.txt\n",
+  "hint": {
+    "es": "Pon el patrón de find entre comillas; el orden de salida puede variar.",
+    "en": "Quote the find pattern; output order may vary."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

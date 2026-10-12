@@ -1,0 +1,286 @@
+{
+  "name": "docker",
+  "title": {
+    "es": "Opciones de DOCKER",
+    "en": "DOCKER Options"
+  },
+  "brief": {
+    "es": "Gestión de contenedores Docker",
+    "en": "Docker container management"
+  },
+  "category": "advanced",
+  "level": "advanced",
+  "notes": {
+    "es": "Publicar puertos puede exponer servicios fuera del equipo. prune elimina recursos no usados. Acceso al daemon de Docker puede equivaler a privilegios de root.",
+    "en": "Published ports can expose services beyond this machine. prune deletes unused resources. Access to the Docker daemon can be equivalent to root privileges."
+  },
+  "sources": [
+    "https://docs.docker.com/reference/cli/docker/"
+  ],
+  "examples": [
+    {
+      "id": "docker.01",
+      "text": "docker ps",
+      "description": {
+        "es": "Lista los contenedores en ejecución",
+        "en": "List running containers"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "docker.02",
+      "text": "docker ps -a",
+      "description": {
+        "es": "Lista todos los contenedores (incluidos detenidos)",
+        "en": "List all containers (including stopped)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "docker.03",
+      "text": "docker images",
+      "description": {
+        "es": "Lista todas las imágenes disponibles",
+        "en": "List all available images"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "docker.04",
+      "text": "docker run image_name",
+      "description": {
+        "es": "Inicia un contenedor desde la imagen",
+        "en": "Start a container from an image"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "docker.05",
+      "text": "docker run -d image_name",
+      "description": {
+        "es": "Inicia un contenedor en segundo plano",
+        "en": "Start a container in background (detached)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "docker.06",
+      "text": "docker run -it image_name bash",
+      "description": {
+        "es": "Inicia un contenedor interactivo con shell",
+        "en": "Start an interactive container with shell"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.07",
+      "text": "docker run -p 8080:80 image_name",
+      "description": {
+        "es": "Mapea puerto del host al contenedor",
+        "en": "Map host port to container port"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.08",
+      "text": "docker start container_id",
+      "description": {
+        "es": "Inicia un contenedor detenido",
+        "en": "Start a stopped container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.09",
+      "text": "docker stop container_id",
+      "description": {
+        "es": "Detiene un contenedor en ejecución",
+        "en": "Stop a running container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.10",
+      "text": "docker restart container_id",
+      "description": {
+        "es": "Reinicia un contenedor",
+        "en": "Restart a container"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.11",
+      "text": "docker rm container_id",
+      "description": {
+        "es": "Elimina un contenedor detenido",
+        "en": "Remove a stopped container"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "docker.12",
+      "text": "docker rmi image_id",
+      "description": {
+        "es": "Elimina una imagen",
+        "en": "Remove an image"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "docker.13",
+      "text": "docker pull image_name",
+      "description": {
+        "es": "Descarga una imagen desde Docker Hub",
+        "en": "Pull an image from Docker Hub"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.14",
+      "text": "docker build -t name .",
+      "description": {
+        "es": "Construye una imagen desde un Dockerfile",
+        "en": "Build an image from a Dockerfile"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.15",
+      "text": "docker exec -it container_id bash",
+      "description": {
+        "es": "Ejecuta un shell interactivo en el contenedor",
+        "en": "Run an interactive shell inside a container"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.16",
+      "text": "docker logs container_id",
+      "description": {
+        "es": "Muestra los logs de un contenedor",
+        "en": "Show container logs"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.17",
+      "text": "docker logs -f container_id",
+      "description": {
+        "es": "Sigue los logs en tiempo real",
+        "en": "Follow container logs in real time"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.18",
+      "text": "docker inspect container_id",
+      "description": {
+        "es": "Muestra información detallada del contenedor",
+        "en": "Show detailed container information"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.19",
+      "text": "docker network ls",
+      "description": {
+        "es": "Lista las redes de Docker",
+        "en": "List Docker networks"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.20",
+      "text": "docker volume ls",
+      "description": {
+        "es": "Lista los volúmenes de Docker",
+        "en": "List Docker volumes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.21",
+      "text": "docker system prune",
+      "description": {
+        "es": "Limpia recursos no utilizados",
+        "en": "Remove unused containers, images, and networks"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "docker.22",
+      "text": "docker stats",
+      "description": {
+        "es": "Muestra el uso de recursos en tiempo real",
+        "en": "Show live resource usage stats"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "docker.23",
+      "text": "docker compose up -d",
+      "description": {
+        "es": "Lanza servicios definidos en docker-compose.yml",
+        "en": "Start services defined in docker-compose.yml"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "docker.24",
+      "text": "docker compose down",
+      "description": {
+        "es": "Detiene y elimina los servicios de compose",
+        "en": "Stop and remove compose services"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    }
+  ]
+}

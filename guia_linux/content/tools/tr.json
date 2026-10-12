@@ -1,0 +1,110 @@
+{
+  "name": "tr",
+  "title": {
+    "es": "Opciones de TR",
+    "en": "TR Options"
+  },
+  "brief": {
+    "es": "Traduce o elimina caracteres",
+    "en": "Translate or delete characters"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "tr.01",
+      "text": "tr 'a-z' 'A-Z' < filename",
+      "description": {
+        "es": "Convierte minúsculas a mayúsculas",
+        "en": "Convert lowercase to uppercase"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tr.02",
+      "text": "tr 'A-Z' 'a-z' < filename",
+      "description": {
+        "es": "Convierte mayúsculas a minúsculas",
+        "en": "Convert uppercase to lowercase"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tr.03",
+      "text": "tr -d '[:digit:]' < filename",
+      "description": {
+        "es": "Elimina todos los dígitos",
+        "en": "Delete all digits"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tr.04",
+      "text": "tr ' ' '_' < filename",
+      "description": {
+        "es": "Reemplaza espacios con guiones bajos",
+        "en": "Replace spaces with underscores"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tr.05",
+      "text": "tr -s ' ' < filename",
+      "description": {
+        "es": "Comprime secuencias de espacios en uno",
+        "en": "Squeeze consecutive spaces into one"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tr.06",
+      "text": "tr -c '[:alnum:]' '_' < filename",
+      "description": {
+        "es": "Reemplaza todo lo que no sea alfanumérico con '_'",
+        "en": "Replace non-alphanumeric characters with '_'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tr.07",
+      "text": "tr -d '\\n' < filename",
+      "description": {
+        "es": "Elimina los saltos de línea",
+        "en": "Remove newline characters"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tr.08",
+      "text": "tr -d '[:space:]' < filename",
+      "description": {
+        "es": "Elimina todos los espacios en blanco",
+        "en": "Delete all whitespace characters"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

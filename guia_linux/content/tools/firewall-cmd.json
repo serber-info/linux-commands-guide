@@ -1,0 +1,176 @@
+{
+  "name": "firewall-cmd",
+  "title": {
+    "es": "Opciones de FIREWALL-CMD",
+    "en": "FIREWALL-CMD Options"
+  },
+  "brief": {
+    "es": "Gestión del firewall firewalld",
+    "en": "Manage the firewalld firewall"
+  },
+  "category": "advanced",
+  "level": "advanced",
+  "notes": {
+    "es": "Cambiar reglas puede cortar conexiones o exponer servicios. Los cambios --permanent requieren recarga para aplicarse al estado actual.",
+    "en": "Rule changes may disconnect sessions or expose services. --permanent changes require a reload to affect the current state."
+  },
+  "sources": [
+    "https://firewalld.org/documentation/man-pages/firewall-cmd.html"
+  ],
+  "examples": [
+    {
+      "id": "firewall-cmd.01",
+      "text": "firewall-cmd --state",
+      "description": {
+        "es": "Muestra el estado del firewall",
+        "en": "Show firewall state"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "firewall-cmd.02",
+      "text": "firewall-cmd --get-default-zone",
+      "description": {
+        "es": "Muestra la zona por defecto",
+        "en": "Show the default zone"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "firewall-cmd.03",
+      "text": "firewall-cmd --list-all",
+      "description": {
+        "es": "Lista todas las reglas de la zona por defecto",
+        "en": "List all rules in the default zone"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "firewall-cmd.04",
+      "text": "firewall-cmd --list-all-zones",
+      "description": {
+        "es": "Lista todas las zonas y sus configuraciones",
+        "en": "List all zones and their settings"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "firewall-cmd.05",
+      "text": "firewall-cmd --zone=zone --add-port=80/tcp --permanent",
+      "description": {
+        "es": "Abre el puerto 80 TCP de forma permanente",
+        "en": "Permanently open TCP port 80"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.06",
+      "text": "firewall-cmd --zone=zone --remove-port=80/tcp --permanent",
+      "description": {
+        "es": "Cierra el puerto 80 TCP de forma permanente",
+        "en": "Permanently close TCP port 80"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.07",
+      "text": "firewall-cmd --zone=zone --add-service=http --permanent",
+      "description": {
+        "es": "Permite el servicio HTTP de forma permanente",
+        "en": "Permanently allow the HTTP service"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.08",
+      "text": "firewall-cmd --zone=zone --remove-service=http --permanent",
+      "description": {
+        "es": "Bloquea el servicio HTTP de forma permanente",
+        "en": "Permanently block the HTTP service"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.09",
+      "text": "firewall-cmd --reload",
+      "description": {
+        "es": "Recarga la configuración del firewall",
+        "en": "Reload firewall configuration"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.10",
+      "text": "firewall-cmd --runtime-to-permanent",
+      "description": {
+        "es": "Guarda los cambios en tiempo real como permanentes",
+        "en": "Save runtime changes as permanent"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.11",
+      "text": "firewall-cmd --zone=zone --add-interface=eth0",
+      "description": {
+        "es": "Asocia eth0 a una zona",
+        "en": "Bind eth0 to a zone"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.12",
+      "text": "firewall-cmd --get-zones",
+      "description": {
+        "es": "Lista todas las zonas disponibles",
+        "en": "List all available zones"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "firewall-cmd.13",
+      "text": "firewall-cmd --new-zone=custom --permanent",
+      "description": {
+        "es": "Crea una nueva zona personalizada",
+        "en": "Create a new custom zone"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "firewall-cmd.14",
+      "text": "firewall-cmd --delete-zone=custom --permanent",
+      "description": {
+        "es": "Elimina una zona personalizada",
+        "en": "Delete a custom zone"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    }
+  ]
+}

@@ -1,5 +1,27 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Beginner quick/explained views, grouped categories, direct basic-command references and additional tools.
+- Ten bilingual terminal lessons and five fixture-based practice plans with opt-in hints/solutions.
+- Isolated user installer (`install.sh`), dry-run, guarded managed upgrades and offline wheelhouse support.
+- Content/contribution/compatibility/release guides, issue templates and generated README catalogue.
+
+### Changed
+- Validated JSON catalogue and immutable models replace the Python content wrappers; existing CLI/shim entries remain.
+- Stream-local shellcolorize presentation removes import-time ANSI and global color mutation.
+- A tool plus `-s` now searches that tool; multiword searches require all words, ignoring accents/case.
+- Narrow terminals use stacked descriptions. Quick/explained views select at most eight examples.
+- CI checks minimum/published shellcolorize and an installed wheel outside the checkout.
+
+### Fixed
+- grep directory include/exclude examples now use recursion.
+- chmod guidance accounts for umask; regex examples identify their dialect.
+- find/xargs filename recipes use NUL separators; xargs -I receives one filename per line.
+- Dangerous examples include effects and warnings; SSH/TLS bypasses are not routine fixes.
+
+
 ## 2.1.1
 
 ### Changed

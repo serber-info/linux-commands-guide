@@ -1,0 +1,43 @@
+{
+  "name": "less",
+  "title": {
+    "es": "Uso de less",
+    "en": "less reference"
+  },
+  "brief": {
+    "es": "Muestra el contenido de forma interactiva",
+    "en": "Display file contents interactively"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.greenwoodsoftware.com/less/"
+  ],
+  "examples": [
+    {
+      "id": "less.basic-1",
+      "text": "less ejemplo.log",
+      "description": {
+        "es": "Lee un log; / busca y q sale",
+        "en": "Read a log; / searches and q exits"
+      },
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Lee un log; / busca y q sale. Sustituye los nombres de archivo cuando corresponda.",
+        "en": "Read a log; / searches and q exits. Replace filenames where appropriate."
+      }
+    },
+    {
+      "ref": "system.20"
+    }
+  ],
+  "keywords": [
+    "leer archivos",
+    "read files"
+  ]
+}

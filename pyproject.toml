@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "linux-commands-guide"
 dynamic = ["version"]
-description = "Bilingual ES/EN interactive Linux command reference — 50+ tools with keyword search"
+description = "Learn Linux in your terminal: bilingual quick reference, lessons and safe practice plans"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Sergio Berruetta" }]
 requires-python = ">=3.9"
-dependencies = ["shellcolorize>=1.1.0"]
+dependencies = ["shellcolorize>=1.1.1"]
 keywords = ["linux", "cheatsheet", "commands", "reference", "sysadmin", "bilingual", "cli"]
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -40,6 +40,10 @@ include = ["guia_linux*"]
 
 [tool.setuptools.dynamic]
 version = { attr = "guia_linux.__version__" }
+
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[tool.setuptools.package-data]
+guia_linux = ["content/tools/*.json", "content/topics/*.json", "content/exercises/*.json"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

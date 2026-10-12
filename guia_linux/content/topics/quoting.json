@@ -1,0 +1,24 @@
+{
+  "name": "quoting",
+  "title": {
+    "es": "Comillas y argumentos",
+    "en": "Quotes and arguments"
+  },
+  "body": {
+    "es": "La shell interpreta el comando antes de ejecutarlo. Las comillas simples conservan texto literal; las dobles permiten variables, pero mantienen espacios en un argumento. Comillas sin cerrar suelen provocar un prompt secundario: Ctrl+C cancela la entrada.\nNunca construyas rutas sin comillas a partir de variables; una ruta con espacios puede convertirse en varios argumentos.",
+    "en": "The shell interprets a command before running it. Single quotes preserve literal text; double quotes allow variables while keeping spaces in one argument. Unclosed quotes often cause a secondary prompt: Ctrl+C cancels input.\nAlways quote variable-based paths; a path containing spaces may otherwise become several arguments."
+  },
+  "commands": [
+    "printf '%s\\n' '$HOME'",
+    "printf '%s\\n' \"$HOME\"",
+    "printf '%s\\n' 'mi archivo.txt'"
+  ],
+  "related": [
+    "printf",
+    "echo",
+    "xargs"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "tree",
+  "title": {
+    "es": "Uso de tree",
+    "en": "tree reference"
+  },
+  "brief": {
+    "es": "Muestra directorios en forma de árbol",
+    "en": "Display directories as a tree"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://gitlab.com/OldManProgrammer/unix-tree"
+  ],
+  "examples": [
+    {
+      "ref": "system.35"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "tee",
+  "title": {
+    "es": "Opciones de TEE",
+    "en": "TEE Options"
+  },
+  "brief": {
+    "es": "Lee stdin y escribe en stdout y archivos",
+    "en": "Read stdin and write to stdout and files"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "tee.01",
+      "text": "ls | tee output.txt",
+      "description": {
+        "es": "Guarda la salida en un archivo y la muestra en pantalla",
+        "en": "Save output to file and display on screen"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tee.02",
+      "text": "ls | tee -a output.txt",
+      "description": {
+        "es": "Agrega la salida al final del archivo",
+        "en": "Append output to file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tee.03",
+      "text": "cmd | tee /dev/tty output.txt",
+      "description": {
+        "es": "Envía la salida tanto a la consola como al archivo",
+        "en": "Send output to both console and file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tee.04",
+      "text": "cmd | tee file1.txt file2.txt",
+      "description": {
+        "es": "Escribe la salida en múltiples archivos a la vez",
+        "en": "Write output to multiple files at once"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tee.05",
+      "text": "cmd | tee >(other_cmd)",
+      "description": {
+        "es": "Redirige la salida a otro comando con sustitución de proceso",
+        "en": "Redirect output to another command via process substitution"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    }
+  ]
+}

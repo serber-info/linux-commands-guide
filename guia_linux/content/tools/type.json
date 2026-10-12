@@ -1,0 +1,57 @@
+{
+  "name": "type",
+  "title": {
+    "es": "Uso de type",
+    "en": "type reference"
+  },
+  "brief": {
+    "es": "Identifica comandos, alias y funciones",
+    "en": "Identify commands, aliases and functions"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Un nombre puede resolver a un alias, una función, un builtin o un archivo ejecutable. type muestra esa resolución en Bash/zsh.",
+    "en": "A name can resolve to an alias, function, builtin or executable file. type shows how Bash/zsh resolves it."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "command",
+    "help"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "type.01",
+      "text": "type cd",
+      "description": {
+        "es": "Comprueba que cd es un comando interno",
+        "en": "Check that cd is a builtin"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "type.02",
+      "text": "type ls",
+      "description": {
+        "es": "Comprueba qué significa ls en tu shell",
+        "en": "Check what ls means in your shell"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "type.03",
+      "text": "type -a python",
+      "description": {
+        "es": "Muestra todas las resoluciones de python",
+        "en": "Show all resolutions of python"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

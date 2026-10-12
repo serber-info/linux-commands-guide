@@ -1,0 +1,47 @@
+{
+  "name": "unzip",
+  "title": {
+    "es": "Uso de unzip",
+    "en": "unzip reference"
+  },
+  "brief": {
+    "es": "Inspecciona y extrae ZIP",
+    "en": "Inspect and extract ZIP archives"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Lista con -l antes de extraer. Usa un directorio nuevo para no mezclar archivos y -n para evitar sobrescribir. No extraigas archivos de origen desconocido sobre rutas sensibles.",
+    "en": "List with -l before extraction. Use a new directory to avoid mixing files and -n to avoid overwrites. Do not extract untrusted archives over sensitive paths."
+  },
+  "sources": [
+    "https://infozip.sourceforge.net/UnZip.html"
+  ],
+  "related": [
+    "zip",
+    "tar"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "unzip.01",
+      "text": "unzip -l archivo.zip",
+      "description": {
+        "es": "Lista el contenido sin extraer",
+        "en": "List contents without extracting"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "unzip.02",
+      "text": "unzip -n archivo.zip -d destino/",
+      "description": {
+        "es": "Extrae sin sobrescribir en destino",
+        "en": "Extract into destination without overwriting"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

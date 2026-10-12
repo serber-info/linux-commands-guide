@@ -1,0 +1,23 @@
+{
+  "name": "grep",
+  "title": {
+    "es": "Buscar errores en un log",
+    "en": "Find errors in a log"
+  },
+  "task": {
+    "es": "Encuentra las líneas con error en ejemplo.log e incluye el número de línea. No edites el archivo.",
+    "en": "Find lines containing error in ejemplo.log and include line numbers. Do not edit the file."
+  },
+  "fixtures": {
+    "ejemplo.log": "inicio correcto\nerror al abrir\nconexion lista\nerror al guardar\n"
+  },
+  "solution": "grep -n 'error' ejemplo.log",
+  "expected": "2:error al abrir\n4:error al guardar\n",
+  "hint": {
+    "es": "Combina grep con -n.",
+    "en": "Combine grep with -n."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

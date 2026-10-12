@@ -1,0 +1,47 @@
+{
+  "name": "bg",
+  "title": {
+    "es": "Uso de bg",
+    "en": "bg reference"
+  },
+  "brief": {
+    "es": "Reanuda trabajos en segundo plano",
+    "en": "Resume jobs in the background"
+  },
+  "category": "processes",
+  "level": "beginner",
+  "notes": {
+    "es": "Consulta jobs antes. bg reanuda un trabajo suspendido sin darle el control de la terminal. Puede seguir produciendo salida.",
+    "en": "Check jobs first. bg resumes a stopped job without giving it the terminal. It may still produce output."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "jobs",
+    "fg"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "bg.01",
+      "text": "bg",
+      "description": {
+        "es": "Reanuda el trabajo actual en segundo plano",
+        "en": "Resume the current job in the background"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "bg.02",
+      "text": "bg %1",
+      "description": {
+        "es": "Reanuda el trabajo número 1",
+        "en": "Resume job number 1"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

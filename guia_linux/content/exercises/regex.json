@@ -1,0 +1,23 @@
+{
+  "name": "regex",
+  "title": {
+    "es": "Elegir una regex compatible",
+    "en": "Choose a compatible regex"
+  },
+  "task": {
+    "es": "Muestra solo las líneas formadas por uno o más dígitos. Usa grep -E, no PCRE.",
+    "en": "Show only lines made of one or more digits. Use grep -E, not PCRE."
+  },
+  "fixtures": {
+    "valores.txt": "123\nabc\n45\n5x\n"
+  },
+  "solution": "grep -E '^[0-9]+$' valores.txt",
+  "expected": "123\n45\n",
+  "hint": {
+    "es": "^ y $ anclan la línea; [0-9] es compatible con ERE.",
+    "en": "^ and $ anchor the line; [0-9] is compatible with ERE."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

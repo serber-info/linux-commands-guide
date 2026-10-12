@@ -1,0 +1,23 @@
+{
+  "name": "globs",
+  "title": {
+    "es": "Comodines no son regex",
+    "en": "Globs are not regex"
+  },
+  "body": {
+    "es": "La shell expande *.txt a nombres de archivo antes de llamar al comando. find -name necesita recibir el patrón sin expandir: ponlo entre comillas. grep busca dentro del texto con otro lenguaje: expresiones regulares.\nBash y zsh difieren cuando un comodín no coincide: zsh suele dar no matches found; Bash suele conservarlo literal según sus opciones.",
+    "en": "The shell expands *.txt into filenames before calling a command. find -name must receive an unexpanded pattern: quote it. grep searches inside text using a different language: regular expressions.\nBash and zsh differ when a glob has no matches: zsh usually reports no matches found; Bash usually leaves it literal depending on options."
+  },
+  "commands": [
+    "find . -type f -name '*.txt'",
+    "grep -n '^error' ejemplo.log"
+  ],
+  "related": [
+    "find",
+    "grep",
+    "regex"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "name": "nc",
+  "title": {
+    "es": "Opciones de NC (Netcat)",
+    "en": "NC (Netcat) Options"
+  },
+  "brief": {
+    "es": "Navaja suiza de TCP/IP",
+    "en": "TCP/IP Swiss army knife"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "Las opciones dependen de la variante de netcat. -e ejecuta un programa y puede exponer una shell: no lo uses con hosts no fiables. No todas las variantes soportan -e, -q o -x.",
+    "en": "Options depend on the netcat variant. -e runs a program and may expose a shell: never use it with untrusted hosts. Not every variant supports -e, -q or -x."
+  },
+  "sources": [
+    "https://man.openbsd.org/nc"
+  ],
+  "examples": [
+    {
+      "id": "nc.01",
+      "text": "nc -l -p <port>",
+      "description": {
+        "es": "Escucha en el puerto (netcat tradicional; en OpenBSD: nc -l <port>)",
+        "en": "Listen on a port (traditional netcat; OpenBSD: nc -l <port>)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nc.02",
+      "text": "nc <host> <port>",
+      "description": {
+        "es": "Conecta al host y puerto (modo cliente)",
+        "en": "Connect to host and port (client mode)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nc.03",
+      "text": "nc -z <host> <port>",
+      "description": {
+        "es": "Escanea puertos sin enviar datos",
+        "en": "Port scan without sending data"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nc.04",
+      "text": "nc -z <host> 20-80",
+      "description": {
+        "es": "Escanea un rango de puertos",
+        "en": "Scan a port range"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nc.05",
+      "text": "nc -v",
+      "description": {
+        "es": "Modo verbose — salida detallada",
+        "en": "Verbose mode — detailed output"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nc.06",
+      "text": "nc -u",
+      "description": {
+        "es": "Usa UDP en lugar de TCP",
+        "en": "Use UDP instead of TCP"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nc.07",
+      "text": "nc -n",
+      "description": {
+        "es": "Omite la resolución DNS",
+        "en": "Skip DNS resolution"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nc.08",
+      "text": "nc -k",
+      "description": {
+        "es": "Mantiene la conexión abierta tras desconexión",
+        "en": "Keep listening after client disconnects"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nc.09",
+      "text": "nc -w <timeout>",
+      "description": {
+        "es": "Tiempo de espera en segundos",
+        "en": "Connection timeout in seconds"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nc.10",
+      "text": "nc -e <command>",
+      "description": {
+        "es": "Ejecuta un comando tras la conexión (solo netcat tradicional/ncat)",
+        "en": "Execute a command after connecting (traditional netcat/ncat only)"
+      },
+      "kind": "command",
+      "effect": "sensitive",
+      "quick": false
+    },
+    {
+      "id": "nc.11",
+      "text": "nc -x <proxy>",
+      "description": {
+        "es": "Usa un proxy SOCKS para la conexión",
+        "en": "Use a SOCKS proxy for the connection"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nc.12",
+      "text": "nc -q <seconds>",
+      "description": {
+        "es": "Espera N segundos tras EOF antes de cerrar",
+        "en": "Wait N seconds after EOF before closing"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    }
+  ]
+}

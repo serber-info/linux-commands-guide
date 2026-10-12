@@ -1,0 +1,286 @@
+{
+  "name": "awk",
+  "title": {
+    "es": "Opciones de AWK",
+    "en": "AWK Options"
+  },
+  "brief": {
+    "es": "Procesamiento de texto por columnas",
+    "en": "Column-based text processing"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/gawk/manual/html_node/index.html"
+  ],
+  "examples": [
+    {
+      "id": "awk.01",
+      "text": "awk '{print $1}' filename",
+      "description": {
+        "es": "Imprime la primera columna de cada línea",
+        "en": "Print the first column of each line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "awk.02",
+      "text": "awk '{print $1, $3}' filename",
+      "description": {
+        "es": "Imprime la primera y tercera columna",
+        "en": "Print the first and third columns"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "awk.03",
+      "text": "awk '$3 > 100' filename",
+      "description": {
+        "es": "Imprime líneas donde la tercera columna > 100",
+        "en": "Print lines where the third column > 100"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "awk.04",
+      "text": "awk -F',' '{print $1}' filename",
+      "description": {
+        "es": "Usa ',' como delimitador de campo",
+        "en": "Use ',' as field delimiter"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "awk.05",
+      "text": "awk 'NR==5' filename",
+      "description": {
+        "es": "Imprime solo la quinta línea",
+        "en": "Print only the fifth line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "awk.06",
+      "text": "awk 'NR>5 && NR<10' filename",
+      "description": {
+        "es": "Imprime las líneas del 6 al 9",
+        "en": "Print lines 6 through 9"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.07",
+      "text": "awk '/word/' filename",
+      "description": {
+        "es": "Imprime líneas que contienen 'word'",
+        "en": "Print lines containing 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.08",
+      "text": "awk '!/word/' filename",
+      "description": {
+        "es": "Imprime líneas que NO contienen 'word'",
+        "en": "Print lines NOT containing 'word'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.09",
+      "text": "awk '{sum+=$1} END {print sum}' filename",
+      "description": {
+        "es": "Suma la primera columna",
+        "en": "Sum the first column"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.10",
+      "text": "awk '{count++} END {print count}' filename",
+      "description": {
+        "es": "Cuenta el número de líneas",
+        "en": "Count the number of lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.11",
+      "text": "awk 'BEGIN {print \"Start\"}' filename",
+      "description": {
+        "es": "Imprime texto antes de procesar",
+        "en": "Print text before processing"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.12",
+      "text": "awk 'END {print \"End\"}' filename",
+      "description": {
+        "es": "Imprime texto después de procesar",
+        "en": "Print text after processing"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.13",
+      "text": "awk '{print NR, $0}' filename",
+      "description": {
+        "es": "Imprime número de línea seguido de la línea completa",
+        "en": "Print line number followed by full line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.14",
+      "text": "awk '{print NF}' filename",
+      "description": {
+        "es": "Imprime el número de campos de cada línea",
+        "en": "Print the number of fields per line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.15",
+      "text": "awk '$1 ~ /regex/' filename",
+      "description": {
+        "es": "Imprime líneas donde el campo 1 coincide con regex",
+        "en": "Print lines where field 1 matches regex"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.16",
+      "text": "awk 'length($0) > 20' filename",
+      "description": {
+        "es": "Imprime líneas con más de 20 caracteres",
+        "en": "Print lines longer than 20 characters"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "awk.17",
+      "text": "awk '{print tolower($0)}' filename",
+      "description": {
+        "es": "Convierte a minúsculas",
+        "en": "Convert to lowercase"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.18",
+      "text": "awk '{print toupper($0)}' filename",
+      "description": {
+        "es": "Convierte a mayúsculas",
+        "en": "Convert to uppercase"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.19",
+      "text": "awk '{sub(/old/,\"new\"); print}' filename",
+      "description": {
+        "es": "Reemplaza la primera ocurrencia de 'old' por 'new'",
+        "en": "Replace first occurrence of 'old' with 'new'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.20",
+      "text": "awk '{gsub(/old/,\"new\"); print}' filename",
+      "description": {
+        "es": "Reemplaza todas las ocurrencias de 'old' por 'new'",
+        "en": "Replace all occurrences of 'old' with 'new'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.21",
+      "text": "awk '{if ($1>50) print $1}' filename",
+      "description": {
+        "es": "Imprime campo 1 solo si es mayor a 50",
+        "en": "Print field 1 only if greater than 50"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.22",
+      "text": "awk 'BEGIN {OFS=\",\"} {print $1,$2}' filename",
+      "description": {
+        "es": "Usa ',' como separador de salida",
+        "en": "Use ',' as output field separator"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.23",
+      "text": "awk '{total+=$3} END {print total/NR}' filename",
+      "description": {
+        "es": "Calcula el promedio de la tercera columna",
+        "en": "Calculate the average of the third column"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "awk.24",
+      "text": "awk '{if ($2>max) max=$2} END {print max}' filename",
+      "description": {
+        "es": "Encuentra el valor máximo de la segunda columna",
+        "en": "Find the maximum value of the second column"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

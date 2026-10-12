@@ -1,0 +1,165 @@
+{
+  "name": "ifconfig",
+  "title": {
+    "es": "Opciones de IFCONFIG",
+    "en": "IFCONFIG Options"
+  },
+  "brief": {
+    "es": "Configuración de interfaces de red (legacy)",
+    "en": "Network interface configuration (legacy)"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "Herramienta heredada de net-tools; para consultas nuevas prefiere lh ip. Configurar una interfaz puede cortar conexiones y requiere privilegios.",
+    "en": "Legacy net-tools utility; prefer lh ip for new queries. Interface configuration may disconnect sessions and requires privileges."
+  },
+  "sources": [
+    "https://net-tools.sourceforge.io/"
+  ],
+  "examples": [
+    {
+      "id": "ifconfig.01",
+      "text": "ifconfig",
+      "description": {
+        "es": "Muestra el estado de todas las interfaces activas",
+        "en": "Show all active network interfaces"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ifconfig.02",
+      "text": "ifconfig <iface>",
+      "description": {
+        "es": "Muestra el estado de la interfaz especificada",
+        "en": "Show the specified interface"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ifconfig.03",
+      "text": "ifconfig <iface> up",
+      "description": {
+        "es": "Activa la interfaz de red",
+        "en": "Bring the interface up"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.04",
+      "text": "ifconfig <iface> down",
+      "description": {
+        "es": "Desactiva la interfaz de red",
+        "en": "Bring the interface down"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.05",
+      "text": "ifconfig <iface> <ip> netmask <mask>",
+      "description": {
+        "es": "Asigna IP y máscara a la interfaz",
+        "en": "Assign IP and netmask to the interface"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.06",
+      "text": "ifconfig <iface> broadcast <addr>",
+      "description": {
+        "es": "Establece la dirección de broadcast",
+        "en": "Set the broadcast address"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ifconfig.07",
+      "text": "ifconfig <iface> mtu <size>",
+      "description": {
+        "es": "Define el tamaño de MTU",
+        "en": "Set the MTU size"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.08",
+      "text": "ifconfig <iface> promisc",
+      "description": {
+        "es": "Activa el modo promiscuo",
+        "en": "Enable promiscuous mode"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.09",
+      "text": "ifconfig <iface> -promisc",
+      "description": {
+        "es": "Desactiva el modo promiscuo",
+        "en": "Disable promiscuous mode"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.10",
+      "text": "ifconfig <iface> hw ether <mac>",
+      "description": {
+        "es": "Cambia la dirección MAC",
+        "en": "Change the MAC address"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ifconfig.11",
+      "text": "ifconfig <iface> add <ipv6>/<prefix>",
+      "description": {
+        "es": "Añade una dirección IPv6 (en IPv4 se usan alias <iface>:N)",
+        "en": "Add an IPv6 address (IPv4 uses <iface>:N aliases)"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.12",
+      "text": "ifconfig <iface> del <ip>",
+      "description": {
+        "es": "Elimina una dirección IP secundaria",
+        "en": "Remove a secondary IP address"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ifconfig.13",
+      "text": "ifconfig -a",
+      "description": {
+        "es": "Muestra todas las interfaces, activas e inactivas",
+        "en": "Show all interfaces, active and inactive"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    }
+  ]
+}

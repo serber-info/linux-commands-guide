@@ -1,0 +1,121 @@
+{
+  "name": "watch",
+  "title": {
+    "es": "Opciones de WATCH",
+    "en": "WATCH Options"
+  },
+  "brief": {
+    "es": "Ejecuta un comando periódicamente",
+    "en": "Execute a command periodically"
+  },
+  "category": "processes",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://gitlab.com/procps-ng/procps/-/blob/master/man/watch.1"
+  ],
+  "examples": [
+    {
+      "id": "watch.01",
+      "text": "watch command",
+      "description": {
+        "es": "Ejecuta el comando cada 2 segundos (por defecto)",
+        "en": "Execute command every 2 seconds (default)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "watch.02",
+      "text": "watch -n N command",
+      "description": {
+        "es": "Ejecuta el comando cada N segundos",
+        "en": "Execute command every N seconds"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "watch.03",
+      "text": "watch -d command",
+      "description": {
+        "es": "Resalta los cambios entre actualizaciones",
+        "en": "Highlight changes between updates"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "watch.04",
+      "text": "watch -t command",
+      "description": {
+        "es": "Oculta el encabezado de watch",
+        "en": "Hide the watch header"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "watch.05",
+      "text": "watch -p command",
+      "description": {
+        "es": "Intenta ejecutar el comando con precisión periódica",
+        "en": "Attempt precise period execution"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "watch.06",
+      "text": "watch -e command",
+      "description": {
+        "es": "Sale si el comando devuelve un error",
+        "en": "Exit if command returns an error"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "watch.07",
+      "text": "watch -g command",
+      "description": {
+        "es": "Sale cuando la salida del comando cambia",
+        "en": "Exit when the command output changes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "watch.08",
+      "text": "watch -n 1 df -h",
+      "description": {
+        "es": "Ejemplo: monitoriza el disco cada segundo",
+        "en": "Example: monitor disk usage every second"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "watch.09",
+      "text": "watch -n 2 'ps aux | grep nginx'",
+      "description": {
+        "es": "Ejemplo: monitoriza el proceso nginx",
+        "en": "Example: monitor the nginx process"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

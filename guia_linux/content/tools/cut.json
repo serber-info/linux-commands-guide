@@ -1,0 +1,88 @@
+{
+  "name": "cut",
+  "title": {
+    "es": "Opciones de CUT",
+    "en": "CUT Options"
+  },
+  "brief": {
+    "es": "Extrae secciones de cada línea",
+    "en": "Extract sections from each line"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "cut.01",
+      "text": "cut -d',' -f2 filename",
+      "description": {
+        "es": "Extrae la 2ª columna usando ',' como delimitador",
+        "en": "Extract 2nd column using ',' as delimiter"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cut.02",
+      "text": "cut -f1,3 filename",
+      "description": {
+        "es": "Extrae la 1ª y 3ª columna (tabulación)",
+        "en": "Extract 1st and 3rd column (tab-delimited)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cut.03",
+      "text": "cut -c1-5 filename",
+      "description": {
+        "es": "Extrae los primeros 5 caracteres de cada línea",
+        "en": "Extract the first 5 characters of each line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cut.04",
+      "text": "cut -d':' -f1 /etc/passwd",
+      "description": {
+        "es": "Extrae el primer campo de /etc/passwd",
+        "en": "Extract the first field from /etc/passwd"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cut.05",
+      "text": "cut -d' ' -f1-3 filename",
+      "description": {
+        "es": "Extrae los tres primeros campos separados por espacio",
+        "en": "Extract the first three space-separated fields"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "cut.06",
+      "text": "cut -s -d',' -f2 filename",
+      "description": {
+        "es": "Muestra solo líneas que contienen el delimitador",
+        "en": "Show only lines containing the delimiter"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,446 @@
+{
+  "name": "git",
+  "title": {
+    "es": "Opciones de GIT",
+    "en": "GIT Options"
+  },
+  "brief": {
+    "es": "Control de versiones con Git",
+    "en": "Version control with Git"
+  },
+  "category": "development",
+  "level": "intermediate",
+  "notes": {
+    "es": "reset --hard y restore descartan trabajo local. Antes de deshacer, revisa git status y git diff. commit -am no incluye archivos nuevos sin seguimiento.",
+    "en": "reset --hard and restore discard local work. Before undoing, inspect git status and git diff. commit -am does not include new untracked files."
+  },
+  "sources": [
+    "https://git-scm.com/docs"
+  ],
+  "examples": [
+    {
+      "id": "git.01",
+      "text": "Gestión del repositorio",
+      "description": {
+        "es": "Gestión del repositorio",
+        "en": "Repository Management"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.02",
+      "text": "git init",
+      "description": {
+        "es": "Crea un nuevo repositorio Git",
+        "en": "Create a new Git repository"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "git.03",
+      "text": "git clone URL",
+      "description": {
+        "es": "Clona un repositorio desde la URL",
+        "en": "Clone a repository from URL"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "git.04",
+      "text": "git remote add origin URL",
+      "description": {
+        "es": "Asocia el remoto 'origin' a la URL",
+        "en": "Associate remote 'origin' with URL"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "git.05",
+      "text": "git remote -v",
+      "description": {
+        "es": "Muestra los remotos asociados",
+        "en": "Show associated remotes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "git.06",
+      "text": "Staging y commits",
+      "description": {
+        "es": "Staging y commits",
+        "en": "Staging and Commits"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.07",
+      "text": "git add filename",
+      "description": {
+        "es": "Añade un archivo al área de staging",
+        "en": "Add a file to the staging area"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "git.08",
+      "text": "git add .",
+      "description": {
+        "es": "Añade todos los cambios al staging",
+        "en": "Stage all current changes"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.09",
+      "text": "git commit -m 'message'",
+      "description": {
+        "es": "Realiza un commit con el mensaje dado",
+        "en": "Commit with the given message"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.10",
+      "text": "git commit -am 'message'",
+      "description": {
+        "es": "Añade cambios de archivos ya seguidos y hace commit; no incluye archivos nuevos",
+        "en": "Stage tracked-file changes and commit; does not include new files"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.11",
+      "text": "git commit --amend",
+      "description": {
+        "es": "Modifica el último commit",
+        "en": "Amend the last commit"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.12",
+      "text": "Ramas",
+      "description": {
+        "es": "Ramas",
+        "en": "Branching"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.13",
+      "text": "git branch branch_name",
+      "description": {
+        "es": "Crea una nueva rama",
+        "en": "Create a new branch"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.14",
+      "text": "git branch -d branch_name",
+      "description": {
+        "es": "Elimina una rama",
+        "en": "Delete a branch"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "git.15",
+      "text": "git branch -a",
+      "description": {
+        "es": "Lista ramas locales y remotas",
+        "en": "List all local and remote branches"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.16",
+      "text": "git checkout branch_name",
+      "description": {
+        "es": "Cambia a la rama especificada",
+        "en": "Switch to the specified branch"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.17",
+      "text": "git checkout -b new_branch",
+      "description": {
+        "es": "Crea y cambia a una nueva rama",
+        "en": "Create and switch to a new branch"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.18",
+      "text": "git switch branch_name",
+      "description": {
+        "es": "Cambia de rama (comando moderno)",
+        "en": "Switch branches (modern command)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.19",
+      "text": "Merge y Rebase",
+      "description": {
+        "es": "Merge y Rebase",
+        "en": "Merge and Rebase"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.20",
+      "text": "git merge branch_name",
+      "description": {
+        "es": "Fusiona la rama en la rama actual",
+        "en": "Merge branch into current branch"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.21",
+      "text": "git rebase branch_name",
+      "description": {
+        "es": "Reaplica commits sobre la rama base",
+        "en": "Reapply commits onto base branch"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.22",
+      "text": "git rebase --continue",
+      "description": {
+        "es": "Continúa un rebase tras resolver conflictos",
+        "en": "Continue rebase after resolving conflicts"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.23",
+      "text": "git rebase --abort",
+      "description": {
+        "es": "Cancela un rebase en curso",
+        "en": "Abort an in-progress rebase"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.24",
+      "text": "Remotos",
+      "description": {
+        "es": "Remotos",
+        "en": "Working with Remotes"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.25",
+      "text": "git push origin branch_name",
+      "description": {
+        "es": "Envía commits al remoto",
+        "en": "Push commits to remote"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.26",
+      "text": "git pull origin branch_name",
+      "description": {
+        "es": "Actualiza la rama desde el remoto",
+        "en": "Pull and merge from remote"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.27",
+      "text": "git fetch origin",
+      "description": {
+        "es": "Descarga cambios del remoto sin fusionarlos",
+        "en": "Fetch remote changes without merging"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.28",
+      "text": "Stash",
+      "description": {
+        "es": "Stash",
+        "en": "Stashing"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.29",
+      "text": "git stash",
+      "description": {
+        "es": "Guarda los cambios actuales sin commit",
+        "en": "Save current changes without committing"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.30",
+      "text": "git stash pop",
+      "description": {
+        "es": "Aplica y elimina el último stash",
+        "en": "Apply and remove the last stash"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.31",
+      "text": "git stash list",
+      "description": {
+        "es": "Lista todos los stashes guardados",
+        "en": "List all saved stashes"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "git.32",
+      "text": "Historial y estado",
+      "description": {
+        "es": "Historial y estado",
+        "en": "Log and Status"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.33",
+      "text": "git status",
+      "description": {
+        "es": "Muestra el estado del repositorio",
+        "en": "Show repository status"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.34",
+      "text": "git log --oneline",
+      "description": {
+        "es": "Muestra el historial en una línea por commit",
+        "en": "Show one-line commit history"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.35",
+      "text": "git diff",
+      "description": {
+        "es": "Muestra cambios sin commit",
+        "en": "Show uncommitted changes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.36",
+      "text": "git show commit_id",
+      "description": {
+        "es": "Muestra detalles de un commit específico",
+        "en": "Show details of a specific commit"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.37",
+      "text": "Deshacer cambios",
+      "description": {
+        "es": "Deshacer cambios",
+        "en": "Undoing Changes"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "git.38",
+      "text": "git reset --soft HEAD~1",
+      "description": {
+        "es": "Deshace el último commit manteniendo los cambios en staging",
+        "en": "Undo last commit, keep changes staged"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "git.39",
+      "text": "git reset --hard HEAD~1",
+      "description": {
+        "es": "Deshace el último commit y elimina los cambios",
+        "en": "Undo last commit and discard changes"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "git.40",
+      "text": "git restore filename",
+      "description": {
+        "es": "Descarta cambios en el archivo de trabajo",
+        "en": "Discard working-tree changes in file"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    }
+  ]
+}

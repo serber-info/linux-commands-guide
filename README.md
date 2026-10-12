@@ -3,183 +3,316 @@
 [![CI](https://github.com/serber-info/linux-commands-guide/actions/workflows/ci.yml/badge.svg)](https://github.com/serber-info/linux-commands-guide/actions/workflows/ci.yml)
 [![PyPI version](https://badge.fury.io/py/linux-commands-guide.svg)](https://badge.fury.io/py/linux-commands-guide)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/serber-info/linux-commands-guide?style=social)](https://github.com/serber-info/linux-commands-guide/stargazers)
 
-**Bilingual ES/EN Linux command reference for the terminal.** 51 tools covered, keyword search across all of
-them, one short command: `lh`. Like a cheat sheet that is always one keystroke away — and works over SSH.
+**Learn Linux from your terminal. Find a command, understand it, then practice.**
 
-*Guía de comandos Linux bilingüe (español / inglés) para la terminal.*
+**Aprende Linux desde tu terminal. Encuentra un comando, entiéndelo y practica.**
+
+`lh` is an offline Spanish/English quick reference for beginners, with advanced entries when you
+need them. It displays examples; **it never executes them**. No account, telemetry or network
+connection is needed after installation. It also works over SSH.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/serber-info/linux-commands-guide/main/docs/demo.gif" alt="lh demo: ssh reference, keyword search and Spanish output" width="820">
+  <img src="docs/demo.gif" alt="Real terminal demo: quick reference, task search, explanations, lessons, practice hints and English output" width="1000">
 </p>
 
----
+*Real CLI output / Salida real de la CLI. [Reproduce this recording / Reproducir la grabación](docs/demo.md).*
 
-## ✨ Features
-
-- 🌐 **Bilingual** — Spanish or English, picked from your locale (`--lang es|en` to force it)
-- 🔍 **Cross-tool search** — `lh -s port` finds every command mentioning "port", in both languages
-- 📦 **51 tools** — awk, grep, find, git, docker, ssh, tmux, jq, ss, rsync, tar, systemctl, iptables and more
-- ✅ **Checked content** — every entry is tested for both translations; examples are real, working commands
-- 🔇 **Pipe-friendly** — plain text when piped (`lh tar | less`), honours `NO_COLOR`
-
----
-
-## 📥 Installation
+## Start here / Empieza aquí
 
 ```bash
-pip install linux-commands-guide
+lh ls --quick                 # A short reference / Referencia corta
+lh grep --explain             # Explanation and sources / Explicación y fuentes
+lh learn pipes                # Understand pipelines / Entiende las tuberías
+lh practice grep              # A challenge with sample data / Reto con datos de ejemplo
+lh practice grep --hint       # Hint / Pista
+lh practice grep --solution   # Solution / Solución
 ```
 
-Or from source:
+Language follows your locale. Use `--lang es` or `--lang en` to choose explicitly.
+El idioma se elige por tu locale. Puedes forzarlo con `--lang es` o `--lang en`.
+
+## Install / Instalar
+
+### From a checkout: one command / Desde el repo: un comando
+
+Requires Linux, Python 3.9+ with `venv`/pip, and Internet access during installation.
+Requiere Linux, Python 3.9+ con `venv`/pip y conexión durante la instalación.
 
 ```bash
 git clone https://github.com/serber-info/linux-commands-guide.git
 cd linux-commands-guide
-pip install -e .
+./install.sh
 ```
 
----
+The installer creates an isolated environment in `~/.local/share/linux-commands-guide/venv`
+and a launcher in `~/.local/bin/lh`. **Do not use sudo.** It does not change system Python or shell
+configuration, and refuses to overwrite an unrelated `lh` or reuse an unknown installation directory.
+If `~/.local/bin` is not on PATH, it prints the command to enable it for your current terminal.
+On Debian/Ubuntu you may need the distribution's `python3-venv` package first.
 
-## 🛠 Usage
+El instalador no toca el Python del sistema ni tus archivos de Bash/zsh. Si falla, no borra archivos
+para intentar recuperarse: informa del error y conserva el estado para inspección.
 
 ```bash
-lh <tool>                  # Show commands for a tool
-lh -s <keyword>            # Search across all tools
-lh --lang en <tool>        # Force English (or --lang es for Spanish)
-lh --help                  # Help and the full tool list
+./install.sh --dry-run         # Inspect paths without writes / Ver rutas sin cambios
+./install.sh --upgrade         # Update a managed install / Actualizar una instalación propia
+./install.sh --help            # Custom paths and offline wheelhouse / Rutas y modo offline
+```
+
+### Published version / Versión publicada
+
+If you already use [pipx](https://pipx.pypa.io/stable/), the published release can be installed with:
+Si ya usas pipx, instala la versión publicada con:
+
+```bash
+pipx install linux-commands-guide
+```
+
+The published release may not yet include the changes in this checkout.
+La versión publicada puede no incluir todavía los cambios de este checkout.
+
+For an existing virtual environment / En un entorno virtual existente:
+
+```bash
+python -m pip install linux-commands-guide
+```
+
+`shellcolorize` is the author's separate project, published on PyPI, and remains the color dependency.
+Its repository does not need to be cloned for installation.
+
+## Reference / Referencia
+
+```bash
+lh awk                            # Full reference / Referencia completa
+lh ls --quick                     # Up to 8 curated examples / Hasta 8 ejemplos elegidos
+lh grep --explain                 # Curated examples, explanation, notes and sources
+lh -s 'disk space'                # Search both languages / Buscar en ambos idiomas
+lh grep -s recursive              # Search only grep / Buscar solo en grep
+lh list                           # Browse categories / Explorar categorías
+lh list --category files          # Filter a category / Filtrar una categoría
+lh --lang en ssh                  # Force English / Forzar inglés
+lh --help
 lh --version
+python -m guia_linux awk           # Same CLI / La misma interfaz
+python helper.py awk              # Legacy shim remains / Compatibilidad anterior
 ```
 
-### Examples
+Search is case/accent-insensitive and requires every query word to match an entry's text, tool
+summary or curated task keywords. It is local, not AI or natural-language reasoning. Use a few specific words.
+La búsqueda no interpreta preguntas: prueba términos concretos como `disco`, `directory` o `permiso`.
+
+Long references can be piped into `less`. `NO_COLOR=1` disables color; redirected output is plain
+unless you explicitly set `FORCE_COLOR`. Commands are never reflowed, so copying preserves their
+syntax; descriptions stack on narrow terminals.
 
 ```bash
-lh ssh
+lh tar | less
+NO_COLOR=1 lh grep
 ```
 
-```
-  ╔══════════════════════════════════════════════╗
-  ║  SSH Options                                 ║
-  ╚══════════════════════════════════════════════╝
+`--explain` focuses on selected examples, not every advanced option. The most detailed explanations
+are in foundational entries; advanced entries retain notes, effect warnings and source links.
+`--explain` no pretende sustituir el manual completo de cada programa.
 
-  Command                                             Description
-  ──────────────────────────────────────────────────────────────────────────────────────────────
-  ssh user@host                                       Connect to host as the given user
-  ssh -p <port> user@host                             Connect using the specified port
-  ssh -i key.pem user@host                            Use a private key for authentication
-  ssh -L 8080:localhost:80 user@host                  Local tunnel: forward local port 8080 to host port 80
-  ssh -R 9090:localhost:8080 user@host                Remote tunnel: forward host port 9090 to local port 8080
-  …
-```
+## Learn and practice / Aprender y practicar
 
 ```bash
-lh -s port
+lh learn
+lh practice
 ```
 
-```
-  ╔══════════════════════════════════════════════════╗
-  ║  Search: port                                    ║
-  ╚══════════════════════════════════════════════════╝
+Suggested route / Ruta sugerida:
 
-  34 results
+1. `navigation` — paths, directories / rutas y directorios
+2. `quoting` — quotes and arguments / comillas y argumentos
+3. `globs` — filename globs versus regex / comodines frente a regex
+4. `pipes` — stdin, stdout and stderr
+5. `redirections` — input/output and overwrite risk / entrada, salida y sobrescritura
+6. `exit-status` — exit codes, `&&` and `||`
+7. `environment`, `permissions`, `processes`, `help`
 
-  ▶  docker
-    docker run -p 8080:80 image_name
-    Map host port to container port
-  ▶  firewall-cmd
-    firewall-cmd --zone=zone --add-port=80/tcp --permanent
-    Permanently open TCP port 80
-    firewall-cmd --zone=zone --remove-port=80/tcp --permanent
-  …
-```
+Practices currently cover `grep`, `pipes`, `navigation`, `wc` and `regex`. They print fixture setup,
+a challenge and expected output; hints and solutions are opt-in. **No commands run and no files
+are created by lh.** If you copy the setup, it creates a fresh temporary directory. Use only that
+directory; root is not required. There is no automatic assessment or cleanup of your files.
 
----
+Las prácticas son guiadas: tú ejecutas y comparas resultados. `lh` no inspecciona tus documentos,
+no ejecuta tu entrada y no guarda tu progreso.
 
-## 🔧 Available Tools
+## Safety and compatibility / Seguridad y compatibilidad
 
-| Tool | Description |
-|------|-------------|
-| `awk` | Column-based text processing |
-| `cat` | Display and concatenate file contents |
-| `chmod` | Change file permissions |
-| `chown` | Change file owner and group |
-| `crontab` | Periodic task scheduling |
-| `curl` | Transfer data with URLs |
-| `cut` | Extract sections from each line |
-| `df` | Display disk space usage |
-| `docker` | Docker container management |
-| `du` | Display directory space usage |
-| `descriptors` | File descriptors and redirections |
-| `find` | Search for files and directories |
-| `firewall-cmd` | Manage the firewalld firewall |
-| `free` | Display system memory usage |
-| `git` | Version control with Git |
-| `grep` | Search for patterns in files |
-| `head` | Display the beginning of a file |
-| `htop` | Interactive process monitor |
-| `ifconfig` | Network interface configuration (legacy) |
-| `ip` | Modern network interface and routing management |
-| `iptables` | Kernel firewall rule management |
-| `jq` | Command-line JSON processor |
-| `logs` | Important log file paths in Linux |
-| `lsblk` | List block devices |
-| `lsof` | List open files by processes |
-| `lxc` | LXC container management |
-| `nc` | TCP/IP Swiss army knife |
-| `netstat` | Network connection statistics |
-| `nmap` | Network and port scanner |
-| `ps` | Information about running processes |
-| `regex` | Regular expression patterns |
-| `rsync` | Efficient file synchronization |
-| `scp` | Secure file copy over SSH |
-| `sed` | Stream text editor |
-| `shortcuts` | Terminal keyboard shortcuts |
-| `sort` | Sort lines of text |
-| `ss` | Socket statistics (replaces netstat) |
-| `ssh` | Secure Shell client |
-| `system` | Basic system commands |
-| `systemctl` | Manage services with systemd |
-| `tail` | Display the end of a file |
-| `tar` | File archiving and compression |
-| `tee` | Read stdin and write to stdout and files |
-| `tmux` | Terminal multiplexer |
-| `top` | Real-time process monitor |
-| `tr` | Translate or delete characters |
-| `uname` | System and kernel information |
-| `uniq` | Filter adjacent duplicate lines |
-| `vim` | Modal terminal text editor |
-| `watch` | Execute a command periodically |
-| `xargs` | Build and execute commands from stdin |
+- Examples may **write, delete, change system state, generate traffic or expose sensitive data**.
+  Such effects are labeled. An unlabelled reference is not a guarantee of safety.
+- Never copy placeholders such as `<file>` literally. Replace them, omit the angle brackets and
+  quote paths with spaces. Do not copy shell prompts (`$`/`#`) as commands.
+- Read notes before using `sudo`, destructive options, recursive permissions or network changes.
+- Scan only systems you own or have permission to test.
+- The reference primarily covers GNU/Linux. Shell builtins, regex engines, netcat variants,
+  distributions and installed versions can differ. systemd entries require systemd.
+- Structural tests cover all content. Behavioral tests cover **selected** safe examples and practice
+  fixtures, not every command or every Linux distribution.
 
----
+See [compatibility](docs/compatibility.md) and [learning path](docs/learning-path.md).
 
-## 🧪 Development
+## Available references / Fichas disponibles
+
+<!-- BEGIN GENERATED CATALOG -->
+
+114 references / fichas. Categories and aliases are available through `lh list`.
+
+| Tool | Description | Category |
+|------|-------------|----------|
+| `apropos` | Find manuals by topic | basics |
+| `apt` | Packages on Debian/Ubuntu | system |
+| `awk` | Column-based text processing | text |
+| `bat` | Read files with syntax highlighting | files |
+| `bg` | Resume jobs in the background | processes |
+| `cat` | Display and concatenate file contents | files |
+| `cd` | Change to the specified directory | basics |
+| `chmod` | Change file and directory permissions | files |
+| `chown` | Change file owner and group | files |
+| `command` | Check command resolution | basics |
+| `cp` | Copy a file | files |
+| `crontab` | Periodic task scheduling | system |
+| `curl` | Transfer data with URLs | network |
+| `cut` | Extract sections from each line | text |
+| `date` | Show current date and time | system |
+| `descriptors` | stdin, stdout and stderr redirections | shell |
+| `df` | Display disk space usage | files |
+| `diff` | Compare text files | files |
+| `dig` | Query DNS records | network |
+| `dirs` | Show the directory stack | shell |
+| `dnf` | Packages on compatible Fedora/RHEL systems | system |
+| `docker` | Docker container management | advanced |
+| `du` | Display directory space usage | files |
+| `echo` | Display text or variables | text |
+| `env` | Inspect or pass environment variables | shell |
+| `export` | Pass variables to child processes | shell |
+| `fd` | Find files with fd | files |
+| `fg` | Bring jobs to the foreground | processes |
+| `file` | Identify file types | files |
+| `find` | Search for files and directories | files |
+| `firewall-cmd` | Manage the firewalld firewall | advanced |
+| `free` | Display system memory usage | processes |
+| `fzf` | Select text interactively | shell |
+| `getent` | Query system name resolution | network |
+| `git` | Version control with Git | development |
+| `grep` | Search for patterns in files | text |
+| `gzip` | Compress individual files | files |
+| `head` | Display the beginning of a file | text |
+| `help` | Help for Bash builtins | basics |
+| `history` | Inspect your shell history | shell |
+| `hostname` | Show or set the hostname | system |
+| `htop` | Interactive process monitor | processes |
+| `id` | Show UID, GID and groups of current user | system |
+| `ifconfig` | Network interface configuration (legacy) | network |
+| `ip` | Modern network interface and routing management | network |
+| `iptables` | Kernel firewall rule management | advanced |
+| `jobs` | Inspect jobs in your shell | processes |
+| `journalctl` | Read systemd logs | system |
+| `jq` | Command-line JSON processor | text |
+| `kill` | Send signals to processes | processes |
+| `less` | Display file contents interactively | files |
+| `ln` | Create a symbolic link | files |
+| `locate` | Find files using the locate database | files |
+| `logs` | Important log file paths in Linux | system |
+| `ls` | List the current directory contents | basics |
+| `lsblk` | List block devices | files |
+| `lsof` | List open files by processes | processes |
+| `lxc` | LXC container management | advanced |
+| `man` | Read command manuals | basics |
+| `mkdir` | Create a new directory | files |
+| `more` | Display file contents page by page | files |
+| `mv` | Move or rename a file or directory | files |
+| `nano` | Edit files in the terminal | files |
+| `nc` | TCP/IP Swiss army knife | network |
+| `ncdu` | Explore disk usage interactively | files |
+| `netstat` | Network connection statistics | network |
+| `nl` | Display file contents with line numbers | files |
+| `nmap` | Network and port scanner | advanced |
+| `pacman` | Packages on Arch-based systems | system |
+| `pgrep` | Find PIDs by name | processes |
+| `ping` | Check ICMP responses | network |
+| `popd` | Return to the previously saved directory | shell |
+| `printf` | Print predictably formatted text | text |
+| `ps` | Information about running processes | processes |
+| `pushd` | Save current directory and switch to the given one | shell |
+| `pwd` | Print the current working directory | basics |
+| `readlink` | Inspect symbolic links | files |
+| `realpath` | Resolve absolute paths | files |
+| `regex` | Regex search patterns | text |
+| `rg` | Search text with ripgrep | text |
+| `rm` | Remove a file | files |
+| `rsync` | Efficient file synchronization | files |
+| `scp` | Secure file copy over SSH | files |
+| `sed` | Stream text editor | text |
+| `sha256sum` | Check integrity with SHA-256 | files |
+| `shortcuts` | Bash/zsh keyboard shortcuts | basics |
+| `sort` | Sort lines of text | text |
+| `ss` | Socket statistics (replaces netstat) | network |
+| `ssh` | Secure Shell client | network |
+| `stat` | Show file details (timestamps, permissions) | files |
+| `sudo` | Understand and inspect privileges | system |
+| `system` | Navigation, files and system management | basics |
+| `systemctl` | Manage services with systemd | system |
+| `tail` | Display the end of a file | text |
+| `tar` | File archiving and compression | files |
+| `tee` | Read stdin and write to stdout and files | text |
+| `timeout` | Limit a command’s duration | processes |
+| `tmux` | Terminal multiplexer | shell |
+| `top` | Real-time process monitor | processes |
+| `touch` | Create an empty file or update its timestamp | files |
+| `tr` | Translate or delete characters | text |
+| `tree` | Display directories as a tree | files |
+| `type` | Identify commands, aliases and functions | basics |
+| `umask` | Understand new-file permissions | shell |
+| `uname` | System and kernel information | system |
+| `uniq` | Filter adjacent duplicate lines | text |
+| `unzip` | Inspect and extract ZIP archives | files |
+| `uptime` | Show how long the system has been running | system |
+| `vim` | Modal terminal text editor | shell |
+| `watch` | Execute a command periodically | processes |
+| `wc` | Count lines, words and bytes | text |
+| `whoami` | Show the current user | system |
+| `xargs` | Build and execute commands from stdin | text |
+| `zip` | Create ZIP archives | files |
+
+<!-- END GENERATED CATALOG -->
+
+## Development / Desarrollo
 
 ```bash
-pip install -e ".[dev]"
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -e '.[dev]'
 ruff check .
-pytest
+python -m scripts.update_catalog_docs --check
+pytest -q
+python -m build
 ```
 
-Each tool is a small module in `guia_linux/tools/` with a `COMMANDS` list. To add one, copy an existing
-module, register it in `guia_linux/tools/__init__.py`, add it to the table above, and run `pytest` —
-the test suite checks that every entry has both translations and that the README lists every tool.
+Content lives in validated bilingual JSON under `guia_linux/content/`, not in executable Python or
+ANSI-colored strings. References can share example IDs without duplicating definitions.
 
-See [CHANGELOG.md](CHANGELOG.md) for release notes.
+- `catalog.py` loads/validates content and handles lookup/search.
+- `render.py` presents it using stream-local `shellcolorize` colors, without global color mutation.
+- `learning.py` displays lessons and practice plans without executing commands.
+- `cli.py` parses requests; `models.py` holds immutable reference data.
 
----
+The CI tests the declared minimum and published `shellcolorize` versions, builds a wheel and
+checks installation outside the checkout. There is no automatic publication.
 
-## 📝 License
+## Contribute / Contribuir
 
-MIT — see [LICENSE](LICENSE).
+Found an incorrect example or confusing explanation? Open an issue; please remove private paths,
+credentials and personal information from output. New contributors can improve a translation,
+add a tested beginner example or clarify an error message.
 
----
+See [CONTRIBUTING.md](CONTRIBUTING.md) and the [content guide](docs/content-guide.md).
+For releases, see the [release checklist](docs/releasing.md). The [demo](docs/demo.gif) shows the
+current beginner journey with real terminal output; its [recording](docs/demo.cast) is also included.
 
-## 💬 Feedback
+## License
 
-Open an issue or reach out via GitHub.
-
-## 🌐 Connect
-
-[![GitHub](https://img.shields.io/badge/GitHub-@serber--info-181717?style=flat-square&logo=github)](https://github.com/serber-info)
+[MIT](LICENSE). [Changelog](CHANGELOG.md).

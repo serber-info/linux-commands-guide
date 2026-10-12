@@ -1,0 +1,445 @@
+{
+  "name": "vim",
+  "title": {
+    "es": "Comandos de VIM",
+    "en": "VIM Commands"
+  },
+  "brief": {
+    "es": "Editor de texto modal en terminal",
+    "en": "Modal terminal text editor"
+  },
+  "category": "shell",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://vimhelp.org/"
+  ],
+  "examples": [
+    {
+      "id": "vim.01",
+      "text": "Archivos",
+      "description": {
+        "es": "Archivos",
+        "en": "Files"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "vim.02",
+      "text": ":w",
+      "description": {
+        "es": "Guarda el archivo actual",
+        "en": "Save the current file"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "vim.03",
+      "text": ":q",
+      "description": {
+        "es": "Cierra si no hay cambios sin guardar",
+        "en": "Close if no unsaved changes"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "vim.04",
+      "text": ":q!",
+      "description": {
+        "es": "Fuerza la salida sin guardar",
+        "en": "Force quit without saving"
+      },
+      "kind": "shortcut",
+      "effect": "delete",
+      "quick": true
+    },
+    {
+      "id": "vim.05",
+      "text": ":wq",
+      "description": {
+        "es": "Guarda y cierra el archivo",
+        "en": "Save and quit"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "vim.06",
+      "text": ":e filename",
+      "description": {
+        "es": "Abre un archivo para editar",
+        "en": "Open a file for editing"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "vim.07",
+      "text": ":w filename",
+      "description": {
+        "es": "Guarda con un nombre de archivo diferente",
+        "en": "Save with a different filename"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "vim.08",
+      "text": "Modos",
+      "description": {
+        "es": "Modos",
+        "en": "Modes"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "vim.09",
+      "text": "i",
+      "description": {
+        "es": "Entra en modo inserción en la posición actual",
+        "en": "Enter insert mode at cursor position"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.10",
+      "text": "I",
+      "description": {
+        "es": "Entra en modo inserción al inicio de la línea",
+        "en": "Enter insert mode at line start"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.11",
+      "text": "a",
+      "description": {
+        "es": "Entra en modo inserción después del cursor",
+        "en": "Enter insert mode after cursor"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.12",
+      "text": "A",
+      "description": {
+        "es": "Entra en modo inserción al final de la línea",
+        "en": "Enter insert mode at line end"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.13",
+      "text": "o",
+      "description": {
+        "es": "Abre una nueva línea debajo y entra en inserción",
+        "en": "Open new line below and enter insert mode"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.14",
+      "text": "O",
+      "description": {
+        "es": "Abre una nueva línea arriba y entra en inserción",
+        "en": "Open new line above and enter insert mode"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.15",
+      "text": "v",
+      "description": {
+        "es": "Entra en modo visual (selección)",
+        "en": "Enter visual mode (selection)"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.16",
+      "text": "V",
+      "description": {
+        "es": "Entra en modo visual de línea completa",
+        "en": "Enter visual line mode"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.17",
+      "text": "ESC",
+      "description": {
+        "es": "Regresa al modo normal",
+        "en": "Return to normal mode"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.18",
+      "text": "Navegación",
+      "description": {
+        "es": "Navegación",
+        "en": "Navigation"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "vim.19",
+      "text": "gg",
+      "description": {
+        "es": "Va al inicio del archivo",
+        "en": "Go to beginning of file"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.20",
+      "text": "G",
+      "description": {
+        "es": "Va al final del archivo",
+        "en": "Go to end of file"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.21",
+      "text": ":N",
+      "description": {
+        "es": "Va a la línea N",
+        "en": "Go to line N"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.22",
+      "text": "0",
+      "description": {
+        "es": "Va al inicio de la línea",
+        "en": "Go to start of line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.23",
+      "text": "$",
+      "description": {
+        "es": "Va al final de la línea",
+        "en": "Go to end of line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.24",
+      "text": "w",
+      "description": {
+        "es": "Salta al inicio de la siguiente palabra",
+        "en": "Jump to start of next word"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.25",
+      "text": "b",
+      "description": {
+        "es": "Salta al inicio de la palabra anterior",
+        "en": "Jump to start of previous word"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.26",
+      "text": "Edición",
+      "description": {
+        "es": "Edición",
+        "en": "Editing"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "vim.27",
+      "text": "dd",
+      "description": {
+        "es": "Elimina (corta) la línea actual",
+        "en": "Delete (cut) current line"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "vim.28",
+      "text": "yy",
+      "description": {
+        "es": "Copia la línea actual",
+        "en": "Yank (copy) current line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.29",
+      "text": "p",
+      "description": {
+        "es": "Pega después del cursor",
+        "en": "Paste after cursor"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "vim.30",
+      "text": "u",
+      "description": {
+        "es": "Deshace el último cambio",
+        "en": "Undo last change"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.31",
+      "text": "CTRL+r",
+      "description": {
+        "es": "Rehace el último cambio deshecho",
+        "en": "Redo last undone change"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.32",
+      "text": "x",
+      "description": {
+        "es": "Elimina el carácter bajo el cursor",
+        "en": "Delete character under cursor"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "vim.33",
+      "text": "Búsqueda y sustitución",
+      "description": {
+        "es": "Búsqueda y sustitución",
+        "en": "Search and Replace"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "vim.34",
+      "text": "/word",
+      "description": {
+        "es": "Busca 'word' hacia adelante",
+        "en": "Search for 'word' forward"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.35",
+      "text": "?word",
+      "description": {
+        "es": "Busca 'word' hacia atrás",
+        "en": "Search for 'word' backward"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.36",
+      "text": "n",
+      "description": {
+        "es": "Va a la siguiente coincidencia",
+        "en": "Go to next match"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.37",
+      "text": "N",
+      "description": {
+        "es": "Va a la coincidencia anterior",
+        "en": "Go to previous match"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "vim.38",
+      "text": ":%s/old/new/g",
+      "description": {
+        "es": "Reemplaza 'old' por 'new' en todo el archivo",
+        "en": "Replace 'old' with 'new' throughout the file"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "vim.39",
+      "text": ":%s/old/new/gc",
+      "description": {
+        "es": "Reemplaza con confirmación",
+        "en": "Replace with confirmation"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "editar archivos",
+    "edit files"
+  ]
+}

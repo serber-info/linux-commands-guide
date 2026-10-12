@@ -1,0 +1,23 @@
+{
+  "name": "exit-status",
+  "title": {
+    "es": "Resultados, errores y operadores",
+    "en": "Exit status and operators"
+  },
+  "body": {
+    "es": "echo \"$?\" consulta el código del comando anterior: 0 suele significar éxito. Algunos programas usan otros códigos para resultados normales: grep devuelve 1 si no hay coincidencias, y diff 1 si hay diferencias.\nA && B ejecuta B solo si A termina con 0. A || B ejecuta B si A termina con un código distinto de 0. A ; B ejecuta ambos en orden sin condicionar B al resultado de A.",
+    "en": "echo \"$?\" inspects the previous command’s status: 0 usually means success. Some programs use other codes for normal results: grep returns 1 for no matches, and diff 1 for differences.\nA && B runs B only if A returns 0. A || B runs B if A returns nonzero. A ; B runs both in order regardless of A’s status."
+  },
+  "commands": [
+    "printf '%s\\n' hola | grep -q hola && printf '%s\\n' encontrado",
+    "echo \"$?\""
+  ],
+  "related": [
+    "grep",
+    "diff",
+    "echo"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

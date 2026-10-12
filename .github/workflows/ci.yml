@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   python:
     runs-on: ubuntu-latest
@@ -12,14 +15,43 @@ jobs:
       fail-fast: false
       matrix:
         python-version: ["3.9", "3.12", "3.14"]
+        shellcolorize: [minimum, published]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      # Test against the latest shellcolorize (sibling project).
-      - run: pip install "shellcolorize @ git+https://github.com/serber-info/shell-colorize.git"
-      - run: pip install -e ".[dev]"
+      - if: matrix.shellcolorize == 'minimum'
+        run: python -m pip install "shellcolorize==1.1.1"
+      # Install from PyPI, like users. No dependency on an unreleased Git branch.
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m pip check
       - run: ruff check .
+      - run: python -m scripts.update_catalog_docs --check
       - run: pytest -q
 
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install build
+      - run: python -m build
+      - name: Test installed wheel outside checkout
+        shell: bash
+        run: |
+          python -m venv /tmp/lh-wheel-test
+          cd /tmp
+          /tmp/lh-wheel-test/bin/python -m pip install "$GITHUB_WORKSPACE"/dist/*.whl
+          PATH="/tmp/lh-wheel-test/bin:$PATH" /tmp/lh-wheel-test/bin/python "$GITHUB_WORKSPACE/scripts/smoke_installed.py"
+          /tmp/lh-wheel-test/bin/python -m pip check
+      - name: Test guarded installer end-to-end
+        shell: bash
+        run: |
+          ./install.sh --prefix /tmp/lh-installer-test --bin-dir /tmp/lh-installer-bin
+          /tmp/lh-installer-bin/lh ls --quick
+          ./install.sh --upgrade --prefix /tmp/lh-installer-test --bin-dir /tmp/lh-installer-bin
+      - name: Verify source archive includes installer
+        run: python -c "import glob, tarfile; names=tarfile.open(glob.glob('dist/*.tar.gz')[0]).getnames(); assert any(n.endswith('/install.sh') for n in names); assert any(n.endswith('/scripts/install.py') for n in names)"

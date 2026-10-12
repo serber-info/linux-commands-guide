@@ -1,0 +1,57 @@
+{
+  "name": "realpath",
+  "title": {
+    "es": "Uso de realpath",
+    "en": "realpath reference"
+  },
+  "brief": {
+    "es": "Resuelve rutas absolutas",
+    "en": "Resolve absolute paths"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Convierte rutas relativas a absolutas y resuelve enlaces simbólicos. Comprueba existencia con -e en GNU. No mueve ni crea archivos.",
+    "en": "Convert relative paths to absolute ones and resolve symlinks. Use -e to require existence on GNU. It does not move or create files."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "related": [
+    "pwd",
+    "readlink"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "realpath.01",
+      "text": "realpath .",
+      "description": {
+        "es": "Muestra la ruta absoluta actual",
+        "en": "Show the current absolute path"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "realpath.02",
+      "text": "realpath ejemplo.txt",
+      "description": {
+        "es": "Resuelve una ruta de archivo",
+        "en": "Resolve a file path"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "realpath.03",
+      "text": "realpath -e ejemplo.txt",
+      "description": {
+        "es": "Exige que todos los componentes existan",
+        "en": "Require all path components to exist"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

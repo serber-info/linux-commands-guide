@@ -1,0 +1,125 @@
+{
+  "name": "sort",
+  "title": {
+    "es": "Opciones de SORT",
+    "en": "SORT Options"
+  },
+  "brief": {
+    "es": "Ordena líneas de texto",
+    "en": "Sort lines of text"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "sort.01",
+      "text": "sort filename",
+      "description": {
+        "es": "Ordena las líneas alfabéticamente",
+        "en": "Sort lines alphabetically"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Ordena líneas; -n compara números y -r invierte el orden. Escribe en stdout, no modifica el archivo salvo que elijas opciones de salida.",
+        "en": "Sort lines; -n compares numbers and -r reverses the order. It writes to stdout, not back to the input file unless you choose output options."
+      }
+    },
+    {
+      "id": "sort.02",
+      "text": "sort -n filename",
+      "description": {
+        "es": "Ordena las líneas numéricamente",
+        "en": "Sort lines numerically"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sort.03",
+      "text": "sort -r filename",
+      "description": {
+        "es": "Ordena en orden inverso",
+        "en": "Sort in reverse order"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sort.04",
+      "text": "sort -u filename",
+      "description": {
+        "es": "Elimina duplicados y ordena",
+        "en": "Remove duplicates and sort"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sort.05",
+      "text": "sort -k2,2 -n filename",
+      "description": {
+        "es": "Ordena numéricamente por la segunda columna",
+        "en": "Sort numerically by the second column"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sort.06",
+      "text": "sort -t',' -k1,1 filename",
+      "description": {
+        "es": "Ordena por el primer campo con ',' como delimitador",
+        "en": "Sort by first field using ',' as delimiter"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sort.07",
+      "text": "sort -m file1 file2",
+      "description": {
+        "es": "Combina y ordena archivos ya ordenados",
+        "en": "Merge already-sorted files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sort.08",
+      "text": "sort -h filename",
+      "description": {
+        "es": "Ordena tamaños legibles (1K, 2M, 3G)",
+        "en": "Sort human-readable sizes (1K, 2M, 3G)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sort.09",
+      "text": "sort -f filename",
+      "description": {
+        "es": "Ignora mayúsculas/minúsculas en el ordenamiento",
+        "en": "Ignore case when sorting"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

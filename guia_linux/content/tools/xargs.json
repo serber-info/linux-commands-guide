@@ -1,0 +1,110 @@
+{
+  "name": "xargs",
+  "title": {
+    "es": "Opciones de XARGS",
+    "en": "XARGS Options"
+  },
+  "brief": {
+    "es": "Construye y ejecuta comandos desde stdin",
+    "en": "Build and execute commands from stdin"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Los nombres con espacios o saltos de línea necesitan separadores NUL: find -print0 y xargs -0. Inspecciona los resultados antes de borrar. -r es una opción de GNU.",
+    "en": "Names containing spaces or newlines need NUL separators: find -print0 and xargs -0. Inspect matches before deleting. -r is a GNU option."
+  },
+  "sources": [
+    "https://www.gnu.org/software/findutils/manual/html_node/find_html/index.html"
+  ],
+  "examples": [
+    {
+      "id": "xargs.01",
+      "text": "find /path -type f -name '*.log' -print0 | xargs -0 -r rm --",
+      "description": {
+        "es": "Elimina todos los archivos .log encontrados",
+        "en": "Delete all found .log files"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "xargs.02",
+      "text": "cat list.txt | xargs mkdir",
+      "description": {
+        "es": "Crea directorios a partir de una lista",
+        "en": "Create directories from a list"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "xargs.03",
+      "text": "echo 'a b c' | xargs -n 1 echo",
+      "description": {
+        "es": "Procesa un argumento por vez",
+        "en": "Process one argument at a time"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "xargs.04",
+      "text": "find /path -print0 | xargs -0 -r ls --",
+      "description": {
+        "es": "Maneja nombres con espacios usando NUL como separador",
+        "en": "Handle filenames with spaces using NUL separator"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "xargs.05",
+      "text": "printf '%s\\n' f1 f2 f3 | xargs -I{} cp -- {} /dest/",
+      "description": {
+        "es": "Sustituye {} por cada argumento",
+        "en": "Replace {} with each argument"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "xargs.06",
+      "text": "find /path -name '*.py' -print0 | xargs -0 -r -n 1 -P 4 python3",
+      "description": {
+        "es": "Ejecuta un archivo por proceso, hasta 4 en paralelo",
+        "en": "Run one file per process, up to 4 in parallel"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "xargs.07",
+      "text": "cat urls.txt | xargs -n 1 curl -O",
+      "description": {
+        "es": "Descarga URLs de una en una",
+        "en": "Download URLs one at a time"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "xargs.08",
+      "text": "find . -name '*.txt' -print0 | xargs -0 -r grep 'word'",
+      "description": {
+        "es": "Busca 'word' en todos los .txt encontrados",
+        "en": "Search for 'word' in all found .txt files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

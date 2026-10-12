@@ -1,0 +1,47 @@
+{
+  "name": "fg",
+  "title": {
+    "es": "Uso de fg",
+    "en": "fg reference"
+  },
+  "brief": {
+    "es": "Recupera trabajos en primer plano",
+    "en": "Bring jobs to the foreground"
+  },
+  "category": "processes",
+  "level": "beginner",
+  "notes": {
+    "es": "Consulta jobs antes. %1 significa el trabajo 1, no el PID 1. fg reanuda el trabajo y entrega la terminal al proceso.",
+    "en": "Check jobs first. %1 means job 1, not PID 1. fg resumes the job and gives the terminal to the process."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "jobs",
+    "bg"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "fg.01",
+      "text": "fg",
+      "description": {
+        "es": "Recupera el trabajo actual",
+        "en": "Bring the current job forward"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "fg.02",
+      "text": "fg %1",
+      "description": {
+        "es": "Recupera el trabajo número 1",
+        "en": "Bring job number 1 forward"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

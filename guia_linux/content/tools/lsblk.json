@@ -1,0 +1,176 @@
+{
+  "name": "lsblk",
+  "title": {
+    "es": "Opciones de LSBLK",
+    "en": "LSBLK Options"
+  },
+  "brief": {
+    "es": "Lista dispositivos de bloque del sistema",
+    "en": "List block devices"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://man7.org/linux/man-pages/man8/lsblk.8.html"
+  ],
+  "examples": [
+    {
+      "id": "lsblk.01",
+      "text": "lsblk",
+      "description": {
+        "es": "Lista todos los dispositivos de bloque",
+        "en": "List all block devices"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsblk.02",
+      "text": "lsblk -a",
+      "description": {
+        "es": "Incluye dispositivos vacíos",
+        "en": "Include empty devices"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsblk.03",
+      "text": "lsblk -b",
+      "description": {
+        "es": "Muestra tamaños en bytes",
+        "en": "Show sizes in bytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsblk.04",
+      "text": "lsblk -d",
+      "description": {
+        "es": "Muestra solo discos, sin particiones",
+        "en": "Show only disks, no partitions"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsblk.05",
+      "text": "lsblk -f",
+      "description": {
+        "es": "Muestra sistema de archivos, UUID y etiqueta",
+        "en": "Show filesystem, UUID and label"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsblk.06",
+      "text": "lsblk -J",
+      "description": {
+        "es": "Salida en formato JSON",
+        "en": "JSON format output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.07",
+      "text": "lsblk -l",
+      "description": {
+        "es": "Formato de lista plana (sin árbol)",
+        "en": "Flat list format (no tree)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.08",
+      "text": "lsblk -m",
+      "description": {
+        "es": "Incluye información de permisos",
+        "en": "Include permission information"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.09",
+      "text": "lsblk -n",
+      "description": {
+        "es": "Suprime la fila de encabezado",
+        "en": "Suppress header row"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.10",
+      "text": "lsblk -o NAME,SIZE,TYPE,MOUNTPOINT",
+      "description": {
+        "es": "Muestra solo las columnas especificadas",
+        "en": "Show only the specified columns"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.11",
+      "text": "lsblk -P",
+      "description": {
+        "es": "Salida en formato clave=valor",
+        "en": "Key=value format output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.12",
+      "text": "lsblk --output-all",
+      "description": {
+        "es": "Muestra todas las columnas disponibles",
+        "en": "Show all available columns"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.13",
+      "text": "lsblk --paths",
+      "description": {
+        "es": "Muestra rutas completas en la columna NAME",
+        "en": "Show full device paths in NAME column"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsblk.14",
+      "text": "lsblk --scsi",
+      "description": {
+        "es": "Incluye información SCSI del dispositivo",
+        "en": "Include SCSI device information"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

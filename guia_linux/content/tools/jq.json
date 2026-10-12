@@ -1,0 +1,209 @@
+{
+  "name": "jq",
+  "title": {
+    "es": "Opciones de JQ",
+    "en": "JQ Options"
+  },
+  "brief": {
+    "es": "Procesador de JSON en línea de comandos",
+    "en": "Command-line JSON processor"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://jqlang.org/manual/"
+  ],
+  "examples": [
+    {
+      "id": "jq.01",
+      "text": "jq '.' file.json",
+      "description": {
+        "es": "Formatea y colorea el JSON de entrada",
+        "en": "Pretty-print and colorize JSON input"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "jq.02",
+      "text": "jq '.key' file.json",
+      "description": {
+        "es": "Extrae el valor de una clave",
+        "en": "Extract the value of a key"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "jq.03",
+      "text": "jq '.key.nested' file.json",
+      "description": {
+        "es": "Accede a una clave anidada",
+        "en": "Access a nested key"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "jq.04",
+      "text": "jq '.array[]' file.json",
+      "description": {
+        "es": "Itera sobre los elementos de un array",
+        "en": "Iterate over array elements"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "jq.05",
+      "text": "jq '.array[0]' file.json",
+      "description": {
+        "es": "Accede al primer elemento de un array",
+        "en": "Access the first array element"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "jq.06",
+      "text": "jq '.[] | .name' file.json",
+      "description": {
+        "es": "Extrae 'name' de cada objeto del array",
+        "en": "Extract 'name' from each array object"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.07",
+      "text": "jq 'keys' file.json",
+      "description": {
+        "es": "Lista las claves del objeto JSON",
+        "en": "List the keys of the JSON object"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.08",
+      "text": "jq 'length' file.json",
+      "description": {
+        "es": "Devuelve la longitud del array u objeto",
+        "en": "Return the length of array or object"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.09",
+      "text": "jq 'select(.age > 18)' file.json",
+      "description": {
+        "es": "Filtra objetos por condición",
+        "en": "Filter objects by condition"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "jq.10",
+      "text": "jq '{name, age}' file.json",
+      "description": {
+        "es": "Proyecta solo los campos seleccionados",
+        "en": "Project only selected fields"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.11",
+      "text": "jq '.[] | .name' file.json | sort",
+      "description": {
+        "es": "Extrae y ordena valores",
+        "en": "Extract and sort values"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.12",
+      "text": "jq -r '.name' file.json",
+      "description": {
+        "es": "Salida en texto plano (sin comillas)",
+        "en": "Raw string output (no quotes)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.13",
+      "text": "jq -c '.' file.json",
+      "description": {
+        "es": "Salida compacta en una sola línea",
+        "en": "Compact single-line output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.14",
+      "text": "jq -n '{a: 1, b: 2}'",
+      "description": {
+        "es": "Crea un objeto JSON sin entrada",
+        "en": "Create a JSON object without input"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.15",
+      "text": "curl -s URL | jq '.data'",
+      "description": {
+        "es": "Procesa la respuesta JSON de una API",
+        "en": "Process JSON response from an API"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.16",
+      "text": "jq '. + {\"new_key\": \"value\"}' file.json",
+      "description": {
+        "es": "Añade un campo nuevo al objeto",
+        "en": "Add a new field to the object"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "jq.17",
+      "text": "jq 'del(.key)' file.json",
+      "description": {
+        "es": "Elimina un campo del objeto",
+        "en": "Remove a field from the object"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "name": "tail",
+  "title": {
+    "es": "Opciones de TAIL",
+    "en": "TAIL Options"
+  },
+  "brief": {
+    "es": "Muestra el final de un archivo",
+    "en": "Display the end of a file"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "tail.01",
+      "text": "tail filename",
+      "description": {
+        "es": "Muestra las últimas 10 líneas del archivo",
+        "en": "Show the last 10 lines of the file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tail.02",
+      "text": "tail -n N filename",
+      "description": {
+        "es": "Muestra las últimas N líneas",
+        "en": "Show the last N lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tail.03",
+      "text": "tail -c N filename",
+      "description": {
+        "es": "Muestra los últimos N bytes",
+        "en": "Show the last N bytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tail.04",
+      "text": "tail -f filename",
+      "description": {
+        "es": "Sigue el archivo en tiempo real",
+        "en": "Follow the file in real time"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tail.05",
+      "text": "tail -F filename",
+      "description": {
+        "es": "Sigue el archivo, reconectándose si cambia de nombre",
+        "en": "Follow file, reconnecting if renamed"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tail.06",
+      "text": "tail --follow=descriptor filename",
+      "description": {
+        "es": "Sigue por descriptor de archivo",
+        "en": "Follow by file descriptor"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tail.07",
+      "text": "tail --pid=PID filename",
+      "description": {
+        "es": "Sigue hasta que el proceso PID finalice",
+        "en": "Follow until process PID exits"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tail.08",
+      "text": "tail --retry -f filename",
+      "description": {
+        "es": "Sigue intentando acceder si el archivo no existe",
+        "en": "Keep retrying if file is not accessible"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tail.09",
+      "text": "tail -q file1 file2",
+      "description": {
+        "es": "Suprime los encabezados en la salida",
+        "en": "Suppress file headers in output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tail.10",
+      "text": "tail -v filename",
+      "description": {
+        "es": "Muestra siempre el encabezado del archivo",
+        "en": "Always show file header"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

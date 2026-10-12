@@ -1,0 +1,143 @@
+{
+  "name": "sed",
+  "title": {
+    "es": "Opciones de SED",
+    "en": "SED Options"
+  },
+  "brief": {
+    "es": "Editor de flujo de texto",
+    "en": "Stream text editor"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sin -i escribe en stdout, no modifica el archivo. -i edita directamente; usa -i.bak para conservar una copia. GNU sed y otras variantes pueden diferir. -E activa regex extendidas.",
+    "en": "Without -i, writes to stdout rather than changing the file. -i edits in place; use -i.bak to keep a backup. GNU sed and other variants can differ. -E enables extended regex."
+  },
+  "sources": [
+    "https://www.gnu.org/software/sed/manual/sed.html"
+  ],
+  "examples": [
+    {
+      "id": "sed.01",
+      "text": "sed 's/old/new/g' filename",
+      "description": {
+        "es": "Reemplaza todas las ocurrencias de 'old' por 'new'",
+        "en": "Replace all occurrences of 'old' with 'new'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sed.02",
+      "text": "sed -i 's/old/new/g' filename",
+      "description": {
+        "es": "Edita el archivo directamente (in-place)",
+        "en": "Edit file in-place"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "sed.03",
+      "text": "sed '1d' filename",
+      "description": {
+        "es": "Elimina la primera línea",
+        "en": "Delete the first line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sed.04",
+      "text": "sed '$d' filename",
+      "description": {
+        "es": "Elimina la última línea",
+        "en": "Delete the last line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sed.05",
+      "text": "sed -n '5,10p' filename",
+      "description": {
+        "es": "Muestra solo las líneas de la 5 a la 10",
+        "en": "Print only lines 5 through 10"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "sed.06",
+      "text": "sed 's/^/# /' filename",
+      "description": {
+        "es": "Añade '#' al inicio de cada línea",
+        "en": "Add '#' at the beginning of every line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sed.07",
+      "text": "sed '/pattern/d' filename",
+      "description": {
+        "es": "Elimina líneas que coinciden con 'pattern'",
+        "en": "Delete lines matching 'pattern'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sed.08",
+      "text": "sed -e 's/a/b/' -e 's/c/d/' filename",
+      "description": {
+        "es": "Aplica múltiples sustituciones",
+        "en": "Apply multiple substitutions"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sed.09",
+      "text": "sed -r 's/[0-9]+/num/g' filename",
+      "description": {
+        "es": "Usa regex extendida para reemplazar números",
+        "en": "Use extended regex to replace numbers"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sed.10",
+      "text": "sed -n '/pattern/p' filename",
+      "description": {
+        "es": "Imprime solo las líneas que coinciden con 'pattern'",
+        "en": "Print only lines matching 'pattern'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "sed.11",
+      "text": "sed '2,5s/old/new/' filename",
+      "description": {
+        "es": "Reemplaza 'old' por 'new' solo en las líneas 2-5",
+        "en": "Replace 'old' with 'new' only on lines 2-5"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

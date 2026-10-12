@@ -1,0 +1,62 @@
+{
+  "name": "man",
+  "title": {
+    "es": "Uso de man",
+    "en": "man reference"
+  },
+  "brief": {
+    "es": "Consulta manuales de comandos",
+    "en": "Read command manuals"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "man abre el manual instalado. /palabra busca y q sale. La sección 1 contiene comandos; la 5, formatos de archivos. No todos los paquetes instalan sus manuales.",
+    "en": "man opens installed documentation. /word searches and q exits. Section 1 covers commands; section 5 covers file formats. Not every package installs manuals."
+  },
+  "sources": [
+    "https://gitlab.com/man-db/man-db"
+  ],
+  "related": [
+    "apropos",
+    "help",
+    "type"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "man.01",
+      "text": "man ls",
+      "description": {
+        "es": "Abre el manual de ls",
+        "en": "Open the ls manual"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "man.02",
+      "text": "man 5 passwd",
+      "description": {
+        "es": "Consulta el formato de /etc/passwd",
+        "en": "Read the /etc/passwd format"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "man.03",
+      "text": "man -k directory",
+      "description": {
+        "es": "Busca resúmenes relacionados con directorios",
+        "en": "Search summaries about directories"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ],
+  "keywords": [
+    "ayuda comandos",
+    "command help"
+  ]
+}

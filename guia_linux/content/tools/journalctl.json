@@ -1,0 +1,73 @@
+{
+  "name": "journalctl",
+  "title": {
+    "es": "Uso de journalctl",
+    "en": "journalctl reference"
+  },
+  "brief": {
+    "es": "Consulta logs de systemd",
+    "en": "Read systemd logs"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "Solo aplica a systemd. -u filtra una unidad; -b el arranque actual; -f sigue nuevas entradas. q sale del paginador y Ctrl+C termina seguimiento. Los permisos limitan qué logs puedes leer.",
+    "en": "Only applies to systemd. -u filters a unit; -b selects the current boot; -f follows new entries. q exits the pager and Ctrl+C stops following. Permissions limit which logs you can read."
+  },
+  "sources": [
+    "https://www.freedesktop.org/software/systemd/man/latest/journalctl.html"
+  ],
+  "related": [
+    "systemctl",
+    "logs",
+    "tail"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "journalctl.01",
+      "text": "journalctl -b",
+      "description": {
+        "es": "Consulta logs del arranque actual",
+        "en": "Read logs from the current boot"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "journalctl.02",
+      "text": "journalctl -u servicio.service",
+      "description": {
+        "es": "Filtra una unidad; sustituye el nombre",
+        "en": "Filter a unit; replace the name"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "journalctl.03",
+      "text": "journalctl -n 20 --no-pager",
+      "description": {
+        "es": "Muestra las últimas 20 entradas sin paginador",
+        "en": "Show the last 20 entries without a pager"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "journalctl.04",
+      "text": "journalctl -f",
+      "description": {
+        "es": "Sigue nuevas entradas (Ctrl+C para salir)",
+        "en": "Follow new entries (Ctrl+C to exit)"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ],
+  "keywords": [
+    "ver logs",
+    "logs del sistema",
+    "system logs"
+  ]
+}

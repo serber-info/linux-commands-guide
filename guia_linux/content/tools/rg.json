@@ -1,0 +1,57 @@
+{
+  "name": "rg",
+  "title": {
+    "es": "Uso de rg",
+    "en": "rg reference"
+  },
+  "brief": {
+    "es": "Busca texto con ripgrep",
+    "en": "Search text with ripgrep"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "Herramienta opcional. Busca recursivamente y respeta reglas de ignorado por defecto. -F busca texto literal; no es un reemplazo idéntico de todas las opciones de grep.",
+    "en": "Optional tool. Searches recursively and respects ignore rules by default. -F searches literal text; it is not an identical replacement for every grep option."
+  },
+  "sources": [
+    "https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md"
+  ],
+  "related": [
+    "grep",
+    "find"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "rg.01",
+      "text": "rg -n 'error' .",
+      "description": {
+        "es": "Busca error con números de línea",
+        "en": "Find error with line numbers"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "rg.02",
+      "text": "rg -F 'a.b' .",
+      "description": {
+        "es": "Busca a.b como texto literal",
+        "en": "Find a.b as literal text"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "rg.03",
+      "text": "rg -g '*.txt' 'hola' .",
+      "description": {
+        "es": "Limita la búsqueda a archivos .txt",
+        "en": "Limit the search to .txt files"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "environment",
+  "title": {
+    "es": "Variables, PATH y alias",
+    "en": "Variables, PATH and aliases"
+  },
+  "body": {
+    "es": "Una variable guarda texto; export permite que los procesos hijos la reciban. PATH es una lista de directorios donde la shell busca ejecutables. type y command -v explican cómo se resuelve un nombre.\nUn alias o función puede ocultar un ejecutable. Cambiar una variable en una terminal no cambia otra; no pegues tu entorno completo en issues porque puede contener secretos.",
+    "en": "A variable holds text; export passes it to child processes. PATH lists directories where the shell searches for executables. type and command -v explain name resolution.\nAn alias or function may hide an executable. Changing a variable in one terminal does not change another; do not paste your full environment into issues because it may contain secrets."
+  },
+  "commands": [
+    "command -v lh",
+    "type cd",
+    "printf '%s\\n' \"$PATH\""
+  ],
+  "related": [
+    "type",
+    "command",
+    "export",
+    "env"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

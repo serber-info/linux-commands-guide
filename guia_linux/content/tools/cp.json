@@ -1,0 +1,47 @@
+{
+  "name": "cp",
+  "title": {
+    "es": "Uso de cp",
+    "en": "cp reference"
+  },
+  "brief": {
+    "es": "Copia un archivo",
+    "en": "Copy a file"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "cp.basic-1",
+      "text": "cp -i -- origen.txt destino.txt",
+      "description": {
+        "es": "Pide confirmación antes de sobrescribir",
+        "en": "Ask before overwriting"
+      },
+      "effect": "write",
+      "quick": true,
+      "explanation": {
+        "es": "Pide confirmación antes de sobrescribir. Sustituye los nombres de archivo cuando corresponda.",
+        "en": "Ask before overwriting. Replace filenames where appropriate."
+      }
+    },
+    {
+      "ref": "system.13"
+    },
+    {
+      "ref": "system.14"
+    }
+  ],
+  "keywords": [
+    "copiar archivos",
+    "copiar carpetas",
+    "copy files"
+  ]
+}

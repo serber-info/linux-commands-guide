@@ -1,0 +1,71 @@
+{
+  "name": "dnf",
+  "title": {
+    "es": "Uso de dnf",
+    "en": "dnf reference"
+  },
+  "brief": {
+    "es": "Paquetes en Fedora/RHEL compatibles",
+    "en": "Packages on compatible Fedora/RHEL systems"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "Para sistemas con DNF; hay diferencias entre DNF4 y DNF5. search/info consultan; install modifica el sistema. Comprueba la versión disponible y no copies instrucciones de otro gestor.",
+    "en": "For DNF systems; DNF4 and DNF5 differ. search/info query; install changes the system. Check your installed version and do not copy another manager’s instructions."
+  },
+  "sources": [
+    "https://dnf5.readthedocs.io/en/latest/commands/index.html"
+  ],
+  "related": [
+    "nano",
+    "sudo"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "dnf.01",
+      "text": "dnf search nano",
+      "description": {
+        "es": "Busca paquetes relacionados con nano",
+        "en": "Search for nano packages"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "dnf.02",
+      "text": "dnf info nano",
+      "description": {
+        "es": "Consulta detalles del paquete",
+        "en": "Inspect package details"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "dnf.03",
+      "text": "dnf list --installed",
+      "description": {
+        "es": "Lista paquetes instalados",
+        "en": "List installed packages"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "dnf.04",
+      "text": "sudo dnf install nano",
+      "description": {
+        "es": "Instala nano",
+        "en": "Install nano"
+      },
+      "quick": true,
+      "effect": "admin"
+    }
+  ],
+  "keywords": [
+    "instalar paquetes",
+    "install packages"
+  ]
+}

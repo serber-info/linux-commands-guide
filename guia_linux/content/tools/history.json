@@ -1,0 +1,46 @@
+{
+  "name": "history",
+  "title": {
+    "es": "Uso de history",
+    "en": "history reference"
+  },
+  "brief": {
+    "es": "Consulta el historial de tu shell",
+    "en": "Inspect your shell history"
+  },
+  "category": "shell",
+  "level": "beginner",
+  "notes": {
+    "es": "Puede contener contraseñas o datos personales. La sintaxis depende del shell: history 10 es Bash; fc -l -10 muestra entradas recientes en Bash/zsh. Revisar historial no ejecuta sus comandos.",
+    "en": "May contain passwords or personal data. Syntax depends on the shell: history 10 is Bash; fc -l -10 shows recent entries in Bash/zsh. Inspecting history does not execute its commands."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "shortcuts"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "history.01",
+      "text": "fc -l -10",
+      "description": {
+        "es": "Lista entradas recientes (Bash/zsh)",
+        "en": "List recent entries (Bash/zsh)"
+      },
+      "quick": true,
+      "effect": "sensitive"
+    },
+    {
+      "id": "history.02",
+      "text": "history 10",
+      "description": {
+        "es": "Bash: muestra las últimas 10 entradas",
+        "en": "Bash: show the last 10 entries"
+      },
+      "quick": true,
+      "effect": "sensitive"
+    }
+  ]
+}

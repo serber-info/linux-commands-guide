@@ -1,0 +1,47 @@
+{
+  "name": "zip",
+  "title": {
+    "es": "Uso de zip",
+    "en": "zip reference"
+  },
+  "brief": {
+    "es": "Crea archivos ZIP",
+    "en": "Create ZIP archives"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "zip -r incluye directorios. Puede actualizar un ZIP existente. Los archivos ZIP no son copias de seguridad completas de todos los metadatos Unix.",
+    "en": "zip -r includes directories. It can update an existing ZIP. ZIP archives are not full backups of all Unix metadata."
+  },
+  "sources": [
+    "https://infozip.sourceforge.net/Zip.html"
+  ],
+  "related": [
+    "unzip",
+    "tar"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "zip.01",
+      "text": "zip archivo.zip notas.txt",
+      "description": {
+        "es": "Empaqueta un archivo",
+        "en": "Archive one file"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "zip.02",
+      "text": "zip -r archivo.zip carpeta/",
+      "description": {
+        "es": "Empaqueta un directorio",
+        "en": "Archive a directory"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

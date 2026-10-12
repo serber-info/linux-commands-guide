@@ -1,0 +1,71 @@
+{
+  "name": "wc",
+  "title": {
+    "es": "Uso de wc",
+    "en": "wc reference"
+  },
+  "brief": {
+    "es": "Cuenta líneas, palabras y bytes",
+    "en": "Count lines, words and bytes"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "Sin opciones muestra líneas, palabras y bytes. -l cuenta saltos de línea; -c bytes y -m caracteres, que pueden ocupar varios bytes en UTF-8.",
+    "en": "Without options, show lines, words and bytes. -l counts newlines; -c counts bytes and -m characters, which may span multiple bytes in UTF-8."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "related": [
+    "printf",
+    "cat"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "wc.01",
+      "text": "wc ejemplo.txt",
+      "description": {
+        "es": "Cuenta líneas, palabras y bytes",
+        "en": "Count lines, words and bytes"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "wc.02",
+      "text": "wc -l ejemplo.txt",
+      "description": {
+        "es": "Cuenta saltos de línea",
+        "en": "Count newline characters"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "wc.03",
+      "text": "wc -w ejemplo.txt",
+      "description": {
+        "es": "Cuenta palabras",
+        "en": "Count words"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "wc.04",
+      "text": "wc -m ejemplo.txt",
+      "description": {
+        "es": "Cuenta caracteres",
+        "en": "Count characters"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ],
+  "keywords": [
+    "contar líneas",
+    "count lines"
+  ]
+}

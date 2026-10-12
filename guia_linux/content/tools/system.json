@@ -1,0 +1,429 @@
+{
+  "name": "system",
+  "title": {
+    "es": "Comandos básicos del sistema",
+    "en": "Basic System Commands"
+  },
+  "brief": {
+    "es": "Navegación, archivos y gestión del sistema",
+    "en": "Navigation, files and system management"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "system.01",
+      "text": "Navegación de directorios",
+      "description": {
+        "es": "Navegación de directorios",
+        "en": "Directory Navigation"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "system.02",
+      "text": "cd <directory>",
+      "description": {
+        "es": "Cambia al directorio especificado",
+        "en": "Change to the specified directory"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "cd cambia el directorio de tu shell. cd .. sube un nivel; cd ~ vuelve a tu carpeta personal. Una ruta absoluta comienza por /. No se puede cambiar el directorio de otra terminal.",
+        "en": "cd changes your shell’s directory. cd .. goes up one level; cd ~ returns home. Absolute paths start with /. It cannot change another terminal’s directory."
+      }
+    },
+    {
+      "id": "system.03",
+      "text": "pwd",
+      "description": {
+        "es": "Imprime el directorio de trabajo actual",
+        "en": "Print the current working directory"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Muestra dónde estás. Usa esta ruta para interpretar nombres relativos como ./archivo y ../carpeta.",
+        "en": "Show where you are. Use this path to interpret relative names such as ./file and ../folder."
+      }
+    },
+    {
+      "id": "system.04",
+      "text": "pushd <directory>",
+      "description": {
+        "es": "Guarda el directorio actual y cambia al indicado",
+        "en": "Save current directory and switch to the given one"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.05",
+      "text": "popd",
+      "description": {
+        "es": "Vuelve al directorio guardado anteriormente",
+        "en": "Return to the previously saved directory"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.06",
+      "text": "dirs",
+      "description": {
+        "es": "Muestra la pila de directorios",
+        "en": "Show the directory stack"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.07",
+      "text": "Gestión de archivos y directorios",
+      "description": {
+        "es": "Gestión de archivos y directorios",
+        "en": "File and Directory Management"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "system.08",
+      "text": "touch <file>",
+      "description": {
+        "es": "Crea un archivo vacío o actualiza su timestamp",
+        "en": "Create an empty file or update its timestamp"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "system.09",
+      "text": "mkdir <directory>",
+      "description": {
+        "es": "Crea un nuevo directorio",
+        "en": "Create a new directory"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true,
+      "explanation": {
+        "es": "Crea directorios. -p crea también los padres que falten; las comillas mantienen una ruta con espacios como un solo argumento.",
+        "en": "Create directories. -p also creates missing parents; quotes keep a path containing spaces as one argument."
+      }
+    },
+    {
+      "id": "system.10",
+      "text": "mkdir -p <path>",
+      "description": {
+        "es": "Crea directorios incluyendo los padres necesarios",
+        "en": "Create directory and all parent directories"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "system.11",
+      "text": "rm <file>",
+      "description": {
+        "es": "Elimina un archivo",
+        "en": "Remove a file"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": true,
+      "explanation": {
+        "es": "Borra sin papelera. -r entra en directorios y borra su contenido. Comprueba pwd y ls antes; rm no tiene una operación de deshacer.",
+        "en": "Delete without a trash bin. -r enters directories and deletes their contents. Check pwd and ls first; rm has no undo operation."
+      }
+    },
+    {
+      "id": "system.12",
+      "text": "rm -r <directory>",
+      "description": {
+        "es": "Elimina un directorio y su contenido",
+        "en": "Remove a directory and its contents"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "system.13",
+      "text": "cp <src> <dst>",
+      "description": {
+        "es": "Copia un archivo",
+        "en": "Copy a file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true,
+      "explanation": {
+        "es": "Primero va el origen y después el destino. -r recorre directorios. Copiar puede sobrescribir el destino; revisa ambos nombres antes de continuar.",
+        "en": "The source comes first, then the destination. -r traverses directories. Copying may overwrite the destination; check both names first."
+      }
+    },
+    {
+      "id": "system.14",
+      "text": "cp -r <src_dir> <dst>",
+      "description": {
+        "es": "Copia un directorio de forma recursiva",
+        "en": "Copy a directory recursively"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "system.15",
+      "text": "mv <src> <dst>",
+      "description": {
+        "es": "Mueve o renombra un archivo o directorio",
+        "en": "Move or rename a file or directory"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true,
+      "explanation": {
+        "es": "Mueve o renombra: origen primero, destino después. Si el destino es un directorio, coloca el origen dentro. Puede sobrescribir archivos existentes.",
+        "en": "Move or rename: source first, destination second. If the destination is a directory, the source goes inside it. Existing files may be overwritten."
+      }
+    },
+    {
+      "id": "system.16",
+      "text": "ln -s <target> <link>",
+      "description": {
+        "es": "Crea un enlace simbólico",
+        "en": "Create a symbolic link"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "system.17",
+      "text": "locate <filename>",
+      "description": {
+        "es": "Busca archivos usando la base de datos de locate",
+        "en": "Find files using the locate database"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.18",
+      "text": "Visualización de archivos",
+      "description": {
+        "es": "Visualización de archivos",
+        "en": "File Viewing"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "system.19",
+      "text": "cat <file>",
+      "description": {
+        "es": "Muestra el contenido de un archivo",
+        "en": "Display file contents"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "system.20",
+      "text": "less <file>",
+      "description": {
+        "es": "Muestra el contenido de forma interactiva",
+        "en": "Display file contents interactively"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Lee sin editar. /texto busca, n repite la búsqueda, espacio avanza una página y q sale.",
+        "en": "Read without editing. /text searches, n repeats the search, space advances one page and q exits."
+      }
+    },
+    {
+      "id": "system.21",
+      "text": "more <file>",
+      "description": {
+        "es": "Muestra el contenido página por página",
+        "en": "Display file contents page by page"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.22",
+      "text": "nl <file>",
+      "description": {
+        "es": "Muestra el contenido con números de línea",
+        "en": "Display file contents with line numbers"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.23",
+      "text": "Información del sistema",
+      "description": {
+        "es": "Información del sistema",
+        "en": "System Information"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "system.24",
+      "text": "stat <file>",
+      "description": {
+        "es": "Muestra detalles del archivo (timestamps, permisos)",
+        "en": "Show file details (timestamps, permissions)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.25",
+      "text": "date",
+      "description": {
+        "es": "Muestra la fecha y hora actuales",
+        "en": "Show current date and time"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.26",
+      "text": "uptime",
+      "description": {
+        "es": "Muestra el tiempo que lleva encendido el sistema",
+        "en": "Show how long the system has been running"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.27",
+      "text": "whoami",
+      "description": {
+        "es": "Muestra el usuario actual",
+        "en": "Show the current user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.28",
+      "text": "id",
+      "description": {
+        "es": "Muestra el UID, GID y grupos del usuario actual",
+        "en": "Show UID, GID and groups of current user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.29",
+      "text": "hostname",
+      "description": {
+        "es": "Muestra o establece el nombre del host",
+        "en": "Show or set the hostname"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.30",
+      "text": "Listado de directorios",
+      "description": {
+        "es": "Listado de directorios",
+        "en": "Directory Listing"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "system.31",
+      "text": "ls",
+      "description": {
+        "es": "Lista el contenido del directorio actual",
+        "en": "List the current directory contents"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "-l muestra detalles; -h hace los tamaños legibles; -a incluye nombres ocultos. La consulta no cambia archivos.",
+        "en": "-l shows details; -h makes sizes readable; -a includes hidden names. This query does not change files."
+      }
+    },
+    {
+      "id": "system.32",
+      "text": "ls -a",
+      "description": {
+        "es": "Incluye archivos ocultos",
+        "en": "Include hidden files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.33",
+      "text": "ls -l",
+      "description": {
+        "es": "Formato largo con detalles",
+        "en": "Long format with details"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.34",
+      "text": "ls -lh",
+      "description": {
+        "es": "Formato largo con tamaños legibles",
+        "en": "Long format with human-readable sizes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "system.35",
+      "text": "tree",
+      "description": {
+        "es": "Muestra directorios en forma de árbol",
+        "en": "Display directories as a tree"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    }
+  ]
+}

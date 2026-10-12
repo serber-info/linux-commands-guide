@@ -1,0 +1,213 @@
+{
+  "name": "du",
+  "title": {
+    "es": "Opciones de DU",
+    "en": "DU Options"
+  },
+  "brief": {
+    "es": "Muestra el uso de espacio de directorios",
+    "en": "Display directory space usage"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "du.01",
+      "text": "du",
+      "description": {
+        "es": "Muestra el tamaño de archivos y directorios actuales",
+        "en": "Show size of files and directories"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "du.02",
+      "text": "du -a",
+      "description": {
+        "es": "Incluye archivos individuales en la salida",
+        "en": "Include individual files in output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "du.03",
+      "text": "du -h",
+      "description": {
+        "es": "Formato legible (KB, MB, GB)",
+        "en": "Human-readable format (KB, MB, GB)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "du.04",
+      "text": "du -s",
+      "description": {
+        "es": "Muestra solo el total de cada argumento",
+        "en": "Show only the total for each argument"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "du.05",
+      "text": "du -c",
+      "description": {
+        "es": "Muestra un total acumulado al final",
+        "en": "Show a grand total at the end"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "du.06",
+      "text": "du -k",
+      "description": {
+        "es": "Muestra tamaños en bloques de 1024 bytes",
+        "en": "Show sizes in 1024-byte blocks"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.07",
+      "text": "du -m",
+      "description": {
+        "es": "Muestra tamaños en megabytes",
+        "en": "Show sizes in megabytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.08",
+      "text": "du -b",
+      "description": {
+        "es": "Muestra tamaños en bytes",
+        "en": "Show sizes in bytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.09",
+      "text": "du -L",
+      "description": {
+        "es": "Sigue enlaces simbólicos",
+        "en": "Follow symbolic links"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.10",
+      "text": "du -x",
+      "description": {
+        "es": "Omite directorios en otros sistemas de archivos",
+        "en": "Skip directories on other filesystems"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.11",
+      "text": "du -d N",
+      "description": {
+        "es": "Muestra hasta N niveles de profundidad",
+        "en": "Show up to N levels of depth"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.12",
+      "text": "du --max-depth=N",
+      "description": {
+        "es": "Similar a -d N",
+        "en": "Same as -d N"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.13",
+      "text": "du --threshold=SIZE",
+      "description": {
+        "es": "Muestra solo entradas mayores o iguales a SIZE",
+        "en": "Show only entries >= SIZE"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.14",
+      "text": "du --exclude=PATTERN",
+      "description": {
+        "es": "Excluye archivos que coincidan con PATTERN",
+        "en": "Exclude files matching PATTERN"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.15",
+      "text": "du --apparent-size",
+      "description": {
+        "es": "Muestra el tamaño aparente en lugar de bloques usados",
+        "en": "Show apparent size instead of disk usage"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.16",
+      "text": "du --inodes",
+      "description": {
+        "es": "Cuenta inodos en lugar de tamaño",
+        "en": "Count inodes instead of size"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "du.17",
+      "text": "du --time",
+      "description": {
+        "es": "Muestra la fecha de última modificación",
+        "en": "Show last modification time"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "tamaño de carpetas",
+    "folder size"
+  ]
+}

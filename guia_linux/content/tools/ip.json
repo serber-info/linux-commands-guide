@@ -1,0 +1,209 @@
+{
+  "name": "ip",
+  "title": {
+    "es": "Opciones de IP",
+    "en": "IP Command Options"
+  },
+  "brief": {
+    "es": "Gestión moderna de interfaces y rutas de red",
+    "en": "Modern network interface and routing management"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "Las consultas no cambian la red. Las operaciones add, del, flush y set requieren privilegios y pueden cortar la conexión.",
+    "en": "Queries do not change networking. add, del, flush and set operations require privileges and may disconnect you."
+  },
+  "sources": [
+    "https://man7.org/linux/man-pages/man8/ip.8.html"
+  ],
+  "examples": [
+    {
+      "id": "ip.01",
+      "text": "ip link show",
+      "description": {
+        "es": "Muestra el estado de todos los enlaces de red",
+        "en": "Show all network links"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ip.02",
+      "text": "ip link set <iface> up",
+      "description": {
+        "es": "Activa la interfaz",
+        "en": "Bring interface up"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.03",
+      "text": "ip link set <iface> down",
+      "description": {
+        "es": "Desactiva la interfaz",
+        "en": "Bring interface down"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.04",
+      "text": "ip addr show",
+      "description": {
+        "es": "Muestra las IPs configuradas en todas las interfaces",
+        "en": "Show IP addresses on all interfaces"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ip.05",
+      "text": "ip addr add <ip/mask> dev <iface>",
+      "description": {
+        "es": "Asigna una IP a la interfaz",
+        "en": "Assign an IP address to interface"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.06",
+      "text": "ip addr del <ip/mask> dev <iface>",
+      "description": {
+        "es": "Elimina una IP de la interfaz",
+        "en": "Remove an IP address from interface"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.07",
+      "text": "ip addr flush dev <iface>",
+      "description": {
+        "es": "Elimina todas las IPs de la interfaz",
+        "en": "Flush all IP addresses from interface"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.08",
+      "text": "ip route show",
+      "description": {
+        "es": "Muestra la tabla de enrutamiento",
+        "en": "Show the routing table"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ip.09",
+      "text": "ip route add <dest> via <gw> dev <iface>",
+      "description": {
+        "es": "Añade una ruta a la tabla de enrutamiento",
+        "en": "Add a route to the routing table"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.10",
+      "text": "ip route del <dest>",
+      "description": {
+        "es": "Elimina una ruta",
+        "en": "Remove a route"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.11",
+      "text": "ip route flush cache",
+      "description": {
+        "es": "Limpia la caché de rutas",
+        "en": "Flush the routing cache"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.12",
+      "text": "ip neigh show",
+      "description": {
+        "es": "Muestra la tabla ARP/NDP",
+        "en": "Show the ARP/NDP neighbor table"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "ip.13",
+      "text": "ip neigh add <ip> lladdr <mac> dev <iface>",
+      "description": {
+        "es": "Añade una entrada ARP estática",
+        "en": "Add a static ARP entry"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.14",
+      "text": "ip link set <iface> mtu <size>",
+      "description": {
+        "es": "Establece el MTU de la interfaz",
+        "en": "Set interface MTU"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.15",
+      "text": "ip link set <iface> promisc on",
+      "description": {
+        "es": "Activa el modo promiscuo",
+        "en": "Enable promiscuous mode"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.16",
+      "text": "ip link set dev <iface> address <mac>",
+      "description": {
+        "es": "Cambia la dirección MAC",
+        "en": "Change the MAC address"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    },
+    {
+      "id": "ip.17",
+      "text": "ip tunnel add <name> mode <mode>",
+      "description": {
+        "es": "Crea un túnel de red",
+        "en": "Create a network tunnel"
+      },
+      "kind": "command",
+      "effect": "admin",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "permissions",
+  "title": {
+    "es": "Entender permisos sin usar 777",
+    "en": "Understand permissions without 777"
+  },
+  "body": {
+    "es": "ls -l muestra permisos del propietario, grupo y otros. r permite leer; w escribir; x ejecutar archivos. En directorios, x permite atravesarlos y w junto con x permite modificar sus entradas.\nchmod u+x añade ejecución al propietario. umask restringe permisos al crear archivos. No uses chmod -R 777 como solución universal y no cambies permisos de archivos del sistema para practicar.",
+    "en": "ls -l shows owner, group and other permissions. r allows reading; w writing; x executing files. On directories, x allows traversal, and w with x allows modifying directory entries.\nchmod u+x adds owner execution. umask restricts permissions when creating files. Do not use chmod -R 777 as a universal fix or practice on system files."
+  },
+  "commands": [
+    "ls -l",
+    "umask",
+    "id"
+  ],
+  "related": [
+    "chmod",
+    "umask",
+    "id",
+    "sudo"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

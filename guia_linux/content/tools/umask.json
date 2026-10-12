@@ -1,0 +1,57 @@
+{
+  "name": "umask",
+  "title": {
+    "es": "Uso de umask",
+    "en": "umask reference"
+  },
+  "brief": {
+    "es": "Comprende permisos de archivos nuevos",
+    "en": "Understand new-file permissions"
+  },
+  "category": "shell",
+  "level": "beginner",
+  "notes": {
+    "es": "La máscara elimina permisos de creación; no cambia archivos existentes. 077 restringe acceso a grupo y otros; afecta también a chmod simbólico cuando se omite u/g/o/a.",
+    "en": "The mask removes creation permissions; it does not change existing files. 077 restricts group and other access; it also affects symbolic chmod when u/g/o/a is omitted."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "chmod",
+    "touch"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "umask.01",
+      "text": "umask",
+      "description": {
+        "es": "Consulta la máscara actual",
+        "en": "Inspect the current mask"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "umask.02",
+      "text": "umask -S",
+      "description": {
+        "es": "Muestra permisos simbólicos resultantes",
+        "en": "Show symbolic allowed permissions"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "umask.03",
+      "text": "umask 077",
+      "description": {
+        "es": "Restringe permisos de nuevos archivos en esta shell",
+        "en": "Restrict new-file permissions in this shell"
+      },
+      "quick": true,
+      "effect": "write"
+    }
+  ]
+}

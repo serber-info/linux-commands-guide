@@ -1,0 +1,110 @@
+{
+  "name": "head",
+  "title": {
+    "es": "Opciones de HEAD",
+    "en": "HEAD Options"
+  },
+  "brief": {
+    "es": "Muestra el inicio de un archivo",
+    "en": "Display the beginning of a file"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "head.01",
+      "text": "head filename",
+      "description": {
+        "es": "Muestra las primeras 10 líneas del archivo",
+        "en": "Show the first 10 lines of the file"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "head.02",
+      "text": "head -n N filename",
+      "description": {
+        "es": "Muestra las primeras N líneas",
+        "en": "Show the first N lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "head.03",
+      "text": "head -c N filename",
+      "description": {
+        "es": "Muestra los primeros N bytes",
+        "en": "Show the first N bytes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "head.04",
+      "text": "head -q file1 file2",
+      "description": {
+        "es": "Suprime los encabezados de archivo en la salida",
+        "en": "Suppress file headers in output"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "head.05",
+      "text": "head -v filename",
+      "description": {
+        "es": "Muestra siempre el encabezado del archivo",
+        "en": "Always show file header"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "head.06",
+      "text": "head --lines=N filename",
+      "description": {
+        "es": "Igual que -n N",
+        "en": "Same as -n N"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "head.07",
+      "text": "head --bytes=N filename",
+      "description": {
+        "es": "Igual que -c N",
+        "en": "Same as -c N"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "head.08",
+      "text": "head -z filename",
+      "description": {
+        "es": "Usa NUL como terminador en lugar de nueva línea",
+        "en": "Use NUL as line delimiter instead of newline"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

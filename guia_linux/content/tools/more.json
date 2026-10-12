@@ -1,0 +1,25 @@
+{
+  "name": "more",
+  "title": {
+    "es": "Uso de more",
+    "en": "more reference"
+  },
+  "brief": {
+    "es": "Muestra el contenido página por página",
+    "en": "Display file contents page by page"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://man7.org/linux/man-pages/man1/more.1.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.21"
+    }
+  ]
+}

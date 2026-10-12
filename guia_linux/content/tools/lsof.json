@@ -1,0 +1,187 @@
+{
+  "name": "lsof",
+  "title": {
+    "es": "Opciones de LSOF",
+    "en": "LSOF Options"
+  },
+  "brief": {
+    "es": "Lista archivos abiertos por procesos",
+    "en": "List open files by processes"
+  },
+  "category": "processes",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://github.com/lsof-org/lsof/blob/master/Lsof.8"
+  ],
+  "examples": [
+    {
+      "id": "lsof.01",
+      "text": "lsof",
+      "description": {
+        "es": "Muestra todos los archivos abiertos",
+        "en": "Show all open files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsof.02",
+      "text": "lsof -u username",
+      "description": {
+        "es": "Archivos abiertos por un usuario específico",
+        "en": "Files opened by a specific user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsof.03",
+      "text": "lsof -c process_name",
+      "description": {
+        "es": "Archivos abiertos por un proceso específico",
+        "en": "Files opened by a specific process"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsof.04",
+      "text": "lsof -p PID",
+      "description": {
+        "es": "Archivos abiertos por el PID dado",
+        "en": "Files opened by the given PID"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsof.05",
+      "text": "lsof -i",
+      "description": {
+        "es": "Muestra archivos de red abiertos (TCP/UDP)",
+        "en": "Show open network files (TCP/UDP)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "lsof.06",
+      "text": "lsof -i :80",
+      "description": {
+        "es": "Archivos abiertos en el puerto 80",
+        "en": "Open files on port 80"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.07",
+      "text": "lsof -i TCP",
+      "description": {
+        "es": "Muestra solo conexiones TCP",
+        "en": "Show only TCP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.08",
+      "text": "lsof -i UDP",
+      "description": {
+        "es": "Muestra solo conexiones UDP",
+        "en": "Show only UDP connections"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.09",
+      "text": "lsof +D /path/to/dir",
+      "description": {
+        "es": "Archivos abiertos en el directorio (recursivo)",
+        "en": "Open files in directory (recursive)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.10",
+      "text": "lsof +d /path/to/dir",
+      "description": {
+        "es": "Archivos abiertos en el directorio (sin recursión)",
+        "en": "Open files in directory (non-recursive)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.11",
+      "text": "lsof -t",
+      "description": {
+        "es": "Muestra solo los PIDs",
+        "en": "Show only PIDs"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.12",
+      "text": "lsof -n",
+      "description": {
+        "es": "No resuelve nombres de host",
+        "en": "Do not resolve hostnames"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.13",
+      "text": "lsof -P",
+      "description": {
+        "es": "No convierte puertos a nombres de servicio",
+        "en": "Do not convert port numbers to service names"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.14",
+      "text": "lsof -r N",
+      "description": {
+        "es": "Refresca el listado cada N segundos",
+        "en": "Refresh listing every N seconds"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "lsof.15",
+      "text": "lsof -a -u user -c proc",
+      "description": {
+        "es": "AND lógico — combina múltiples filtros",
+        "en": "Logical AND — combine multiple filters"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

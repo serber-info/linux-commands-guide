@@ -1,0 +1,57 @@
+{
+  "name": "echo",
+  "title": {
+    "es": "Uso de echo",
+    "en": "echo reference"
+  },
+  "brief": {
+    "es": "Muestra texto o variables",
+    "en": "Display text or variables"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "echo es útil para texto sencillo. El tratamiento de -n y barras invertidas cambia entre shells; usa printf para formatos portables. No muestres secretos del entorno.",
+    "en": "echo is useful for simple text. -n and backslash handling varies by shell; use printf for portable formatting. Do not print environment secrets."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "printf",
+    "export"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "echo.01",
+      "text": "echo 'hola mundo'",
+      "description": {
+        "es": "Muestra texto literal",
+        "en": "Display literal text"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "echo.02",
+      "text": "echo \"$HOME\"",
+      "description": {
+        "es": "Muestra tu carpeta personal",
+        "en": "Display your home folder"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "echo.03",
+      "text": "echo '$HOME'",
+      "description": {
+        "es": "Comillas simples: no expande la variable",
+        "en": "Single quotes: do not expand the variable"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

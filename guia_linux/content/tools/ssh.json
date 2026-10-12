@@ -1,0 +1,195 @@
+{
+  "name": "ssh",
+  "title": {
+    "es": "Opciones de SSH",
+    "en": "SSH Options"
+  },
+  "brief": {
+    "es": "Cliente de shell seguro (Secure Shell)",
+    "en": "Secure Shell client"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "Verifica la huella de la clave del host por un canal fiable. StrictHostKeyChecking=no reduce esa protección. El reenvío del agente (-A) implica confiar en el host remoto.",
+    "en": "Verify the host-key fingerprint over a trusted channel. StrictHostKeyChecking=no weakens that protection. Agent forwarding (-A) requires trusting the remote host."
+  },
+  "sources": [
+    "https://www.openssh.com/manual.html"
+  ],
+  "examples": [
+    {
+      "id": "ssh.01",
+      "text": "ssh user@host",
+      "description": {
+        "es": "Conecta al host como el usuario dado",
+        "en": "Connect to host as the given user"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true,
+      "explanation": {
+        "es": "user es tu cuenta remota y host su dirección. -p elige puerto. Verifica la huella al conectar por primera vez; exit cierra la sesión remota.",
+        "en": "user is your remote account and host its address. -p selects a port. Verify the fingerprint on first connection; exit closes the remote session."
+      }
+    },
+    {
+      "id": "ssh.02",
+      "text": "ssh -p <port> user@host",
+      "description": {
+        "es": "Conecta usando el puerto especificado",
+        "en": "Connect using the specified port"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "ssh.03",
+      "text": "ssh -i key.pem user@host",
+      "description": {
+        "es": "Usa una clave privada para autenticación",
+        "en": "Use a private key for authentication"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "ssh.04",
+      "text": "ssh -L 8080:localhost:80 user@host",
+      "description": {
+        "es": "Túnel local: redirige el puerto local 8080 al 80 del host",
+        "en": "Local tunnel: forward local port 8080 to host port 80"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "ssh.05",
+      "text": "ssh -R 9090:localhost:8080 user@host",
+      "description": {
+        "es": "Túnel remoto: redirige el puerto 9090 del host al local 8080",
+        "en": "Remote tunnel: forward host port 9090 to local port 8080"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "ssh.06",
+      "text": "ssh -D 1080 user@host",
+      "description": {
+        "es": "Crea un proxy SOCKS dinámico en el puerto 1080",
+        "en": "Create a dynamic SOCKS proxy on port 1080"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.07",
+      "text": "ssh -N user@host",
+      "description": {
+        "es": "No ejecuta comandos — solo túneles",
+        "en": "Do not execute commands — tunnels only"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.08",
+      "text": "ssh -X user@host",
+      "description": {
+        "es": "Habilita el reenvío de X11 (GUI remota)",
+        "en": "Enable X11 forwarding (remote GUI)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.09",
+      "text": "ssh -A user@host",
+      "description": {
+        "es": "Habilita el reenvío del agente SSH",
+        "en": "Enable SSH agent forwarding"
+      },
+      "kind": "command",
+      "effect": "sensitive",
+      "quick": false
+    },
+    {
+      "id": "ssh.10",
+      "text": "ssh -v user@host",
+      "description": {
+        "es": "Modo verbose — útil para depurar conexiones",
+        "en": "Verbose mode — useful for debugging"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.11",
+      "text": "ssh -o StrictHostKeyChecking=no user@host",
+      "description": {
+        "es": "Desactiva la verificación de clave del host",
+        "en": "Disable host key checking"
+      },
+      "kind": "command",
+      "effect": "sensitive",
+      "quick": false
+    },
+    {
+      "id": "ssh.12",
+      "text": "ssh user@host 'command'",
+      "description": {
+        "es": "Ejecuta un comando remoto sin shell interactiva",
+        "en": "Run a remote command without interactive shell"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.13",
+      "text": "ssh-keygen -t ed25519",
+      "description": {
+        "es": "Genera un par de claves SSH (algoritmo moderno)",
+        "en": "Generate an SSH key pair (modern algorithm)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.14",
+      "text": "ssh-copy-id user@host",
+      "description": {
+        "es": "Copia la clave pública al host remoto",
+        "en": "Copy the public key to the remote host"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "ssh.15",
+      "text": "ssh-add key.pem",
+      "description": {
+        "es": "Añade una clave privada al agente SSH",
+        "en": "Add a private key to the SSH agent"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "conexión remota",
+    "remote connection"
+  ]
+}

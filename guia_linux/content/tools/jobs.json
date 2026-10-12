@@ -1,0 +1,48 @@
+{
+  "name": "jobs",
+  "title": {
+    "es": "Uso de jobs",
+    "en": "jobs reference"
+  },
+  "brief": {
+    "es": "Consulta trabajos de tu shell",
+    "en": "Inspect jobs in your shell"
+  },
+  "category": "processes",
+  "level": "beginner",
+  "notes": {
+    "es": "Un trabajo es un proceso o tubería gestionado por esta shell. Ctrl+Z lo suspende; jobs lo lista. No lista los trabajos de otra terminal.",
+    "en": "A job is a process or pipeline managed by this shell. Ctrl+Z suspends it; jobs lists it. It does not list jobs from another terminal."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "fg",
+    "bg",
+    "ps"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "jobs.01",
+      "text": "jobs",
+      "description": {
+        "es": "Lista trabajos de la shell actual",
+        "en": "List jobs in the current shell"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "jobs.02",
+      "text": "jobs -l",
+      "description": {
+        "es": "Añade identificadores de proceso",
+        "en": "Include process identifiers"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

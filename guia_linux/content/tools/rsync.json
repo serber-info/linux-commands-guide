@@ -1,0 +1,154 @@
+{
+  "name": "rsync",
+  "title": {
+    "es": "Opciones de RSYNC",
+    "en": "RSYNC Options"
+  },
+  "brief": {
+    "es": "Sincronización eficiente de archivos",
+    "en": "Efficient file synchronization"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "src/ copia el contenido; src copia también el directorio. Usa --dry-run antes de --delete: puede borrar archivos del destino.",
+    "en": "src/ copies the contents; src also copies the directory itself. Use --dry-run before --delete: it can remove destination files."
+  },
+  "sources": [
+    "https://download.samba.org/pub/rsync/rsync.1"
+  ],
+  "examples": [
+    {
+      "id": "rsync.01",
+      "text": "rsync -av src/ dst/",
+      "description": {
+        "es": "Sincroniza src/ en dst/ con salida verbose",
+        "en": "Sync src/ to dst/ with verbose output"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "rsync.02",
+      "text": "rsync -avz src/ user@host:/dst/",
+      "description": {
+        "es": "Sincroniza con compresión a un host remoto",
+        "en": "Sync with compression to a remote host"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "rsync.03",
+      "text": "rsync -avz user@host:/src/ dst/",
+      "description": {
+        "es": "Descarga desde un host remoto con compresión",
+        "en": "Download from a remote host with compression"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "rsync.04",
+      "text": "rsync -a --delete src/ dst/",
+      "description": {
+        "es": "Elimina en dst/ los archivos que no existen en src/",
+        "en": "Delete files in dst/ that don't exist in src/"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "rsync.05",
+      "text": "rsync -av --dry-run src/ dst/",
+      "description": {
+        "es": "Simula la sincronización sin realizar cambios",
+        "en": "Simulate sync without making changes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "rsync.06",
+      "text": "rsync -a --progress src/ dst/",
+      "description": {
+        "es": "Muestra el progreso de cada archivo",
+        "en": "Show per-file transfer progress"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "rsync.07",
+      "text": "rsync -a --exclude='*.log' src/ dst/",
+      "description": {
+        "es": "Excluye archivos que coincidan con el patrón",
+        "en": "Exclude files matching the pattern"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "rsync.08",
+      "text": "rsync -a --exclude-from=list.txt src/ dst/",
+      "description": {
+        "es": "Lee exclusiones desde un archivo",
+        "en": "Read exclusions from a file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "rsync.09",
+      "text": "rsync -a -e 'ssh -p 2222' src/ user@host:/dst/",
+      "description": {
+        "es": "Usa SSH con un puerto no estándar",
+        "en": "Use SSH with a non-standard port"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "rsync.10",
+      "text": "rsync -a --checksum src/ dst/",
+      "description": {
+        "es": "Compara por checksum en lugar de fecha/tamaño",
+        "en": "Compare by checksum instead of timestamp/size"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "rsync.11",
+      "text": "rsync -a --bwlimit=1000 src/ dst/",
+      "description": {
+        "es": "Limita el ancho de banda a 1000 KB/s",
+        "en": "Limit bandwidth to 1000 KB/s"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "rsync.12",
+      "text": "rsync -a --backup --backup-dir=/backup src/ dst/",
+      "description": {
+        "es": "Guarda copias de los archivos sobrescritos",
+        "en": "Keep backups of overwritten files"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    }
+  ]
+}

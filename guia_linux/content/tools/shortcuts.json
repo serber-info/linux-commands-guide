@@ -1,0 +1,209 @@
+{
+  "name": "shortcuts",
+  "title": {
+    "es": "Atajos de teclado en la terminal",
+    "en": "Terminal Keyboard Shortcuts"
+  },
+  "brief": {
+    "es": "Atajos de teclado de bash/zsh",
+    "en": "Bash/zsh keyboard shortcuts"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Atajos de edición: configuración tipo Emacs de Bash/zsh. Pueden variar en modo vi y según el emulador; zoom depende del terminal. Ctrl+C envía SIGINT, que un programa puede capturar.",
+    "en": "Editing shortcuts assume Emacs-style Bash/zsh bindings. They vary in vi mode and by emulator; zoom is terminal-specific. Ctrl+C sends SIGINT, which a program may handle."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/html_node/Readline-Interaction.html"
+  ],
+  "examples": [
+    {
+      "id": "shortcuts.01",
+      "text": "[TAB]",
+      "description": {
+        "es": "Autocompleta comandos, rutas y opciones",
+        "en": "Autocomplete commands, paths and options"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "shortcuts.02",
+      "text": "[CTRL] + A",
+      "description": {
+        "es": "Mueve el cursor al inicio de la línea",
+        "en": "Move cursor to beginning of line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "shortcuts.03",
+      "text": "[CTRL] + E",
+      "description": {
+        "es": "Mueve el cursor al final de la línea",
+        "en": "Move cursor to end of line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "shortcuts.04",
+      "text": "[CTRL] + ← / →",
+      "description": {
+        "es": "Salta a la palabra anterior/siguiente",
+        "en": "Jump to previous/next word"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "shortcuts.05",
+      "text": "[ALT] + B / F",
+      "description": {
+        "es": "Retrocede/avanza una palabra",
+        "en": "Move backward/forward one word"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "shortcuts.06",
+      "text": "[CTRL] + U",
+      "description": {
+        "es": "Elimina desde el cursor al inicio de línea",
+        "en": "Delete from cursor to beginning of line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.07",
+      "text": "[CTRL] + K",
+      "description": {
+        "es": "Elimina desde el cursor al final de línea",
+        "en": "Delete from cursor to end of line"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.08",
+      "text": "[CTRL] + W",
+      "description": {
+        "es": "Elimina la palabra anterior al cursor",
+        "en": "Delete the word before the cursor"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.09",
+      "text": "[CTRL] + Y",
+      "description": {
+        "es": "Pega el último texto eliminado (yank)",
+        "en": "Paste the last deleted text (yank)"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.10",
+      "text": "[CTRL] + C",
+      "description": {
+        "es": "Envía SIGINT al proceso en primer plano (puede capturarlo)",
+        "en": "Send SIGINT to the foreground process (it may handle it)"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.11",
+      "text": "[CTRL] + D",
+      "description": {
+        "es": "Cierra stdin (EOF) / sale del shell",
+        "en": "Close stdin (EOF) / exit the shell"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.12",
+      "text": "[CTRL] + L",
+      "description": {
+        "es": "Limpia la terminal (equivale a 'clear')",
+        "en": "Clear the terminal (same as 'clear')"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.13",
+      "text": "[CTRL] + Z",
+      "description": {
+        "es": "Suspende el proceso actual (SIGTSTP)",
+        "en": "Suspend the current process (SIGTSTP)"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.14",
+      "text": "[CTRL] + R",
+      "description": {
+        "es": "Busca en el historial de comandos",
+        "en": "Search command history"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.15",
+      "text": "[↑] / [↓]",
+      "description": {
+        "es": "Navega por el historial de comandos",
+        "en": "Navigate command history"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.16",
+      "text": "[CTRL] + [+]",
+      "description": {
+        "es": "Aumenta el zoom del terminal",
+        "en": "Increase terminal zoom"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "shortcuts.17",
+      "text": "[CTRL] + [-]",
+      "description": {
+        "es": "Disminuye el zoom del terminal",
+        "en": "Decrease terminal zoom"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "cd",
+  "title": {
+    "es": "Uso de cd",
+    "en": "cd reference"
+  },
+  "brief": {
+    "es": "Cambia al directorio especificado",
+    "en": "Change to the specified directory"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "examples": [
+    {
+      "id": "cd.basic-1",
+      "text": "cd ..",
+      "description": {
+        "es": "Sube al directorio padre",
+        "en": "Go to the parent directory"
+      },
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Sube al directorio padre. Sustituye los nombres de archivo cuando corresponda.",
+        "en": "Go to the parent directory. Replace filenames where appropriate."
+      }
+    },
+    {
+      "id": "cd.basic-2",
+      "text": "cd ~",
+      "description": {
+        "es": "Vuelve a tu carpeta personal",
+        "en": "Return to your home directory"
+      },
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Vuelve a tu carpeta personal. Sustituye los nombres de archivo cuando corresponda.",
+        "en": "Return to your home directory. Replace filenames where appropriate."
+      }
+    },
+    {
+      "id": "cd.basic-3",
+      "text": "cd -",
+      "description": {
+        "es": "Vuelve al directorio anterior",
+        "en": "Return to the previous directory"
+      },
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Vuelve al directorio anterior. Sustituye los nombres de archivo cuando corresponda.",
+        "en": "Return to the previous directory. Replace filenames where appropriate."
+      }
+    },
+    {
+      "ref": "system.02"
+    }
+  ]
+}

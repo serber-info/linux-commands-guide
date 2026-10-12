@@ -1,0 +1,81 @@
+{
+  "name": "apt",
+  "title": {
+    "es": "Uso de apt",
+    "en": "apt reference"
+  },
+  "brief": {
+    "es": "Paquetes en Debian/Ubuntu",
+    "en": "Packages on Debian/Ubuntu"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "Para distribuciones que usan APT. search/show/list consultan; update actualiza índices y no los paquetes. install modifica el sistema y requiere autorización. No mezcles gestores entre distribuciones.",
+    "en": "For APT-based distributions. search/show/list query; update refreshes indexes, not installed packages. install changes the system and requires authorization. Do not mix distribution package managers."
+  },
+  "sources": [
+    "https://manpages.debian.org/stable/apt/apt.8.en.html"
+  ],
+  "related": [
+    "nano",
+    "sudo"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "apt.01",
+      "text": "apt search nano",
+      "description": {
+        "es": "Busca paquetes relacionados con nano",
+        "en": "Search for nano packages"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "apt.02",
+      "text": "apt show nano",
+      "description": {
+        "es": "Consulta detalles del paquete",
+        "en": "Inspect package details"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "apt.03",
+      "text": "apt list --installed",
+      "description": {
+        "es": "Lista paquetes instalados",
+        "en": "List installed packages"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "apt.04",
+      "text": "sudo apt update",
+      "description": {
+        "es": "Actualiza índices de paquetes",
+        "en": "Refresh package indexes"
+      },
+      "quick": true,
+      "effect": "admin"
+    },
+    {
+      "id": "apt.05",
+      "text": "sudo apt install nano",
+      "description": {
+        "es": "Instala nano",
+        "en": "Install nano"
+      },
+      "quick": true,
+      "effect": "admin"
+    }
+  ],
+  "keywords": [
+    "instalar paquetes",
+    "install packages"
+  ]
+}

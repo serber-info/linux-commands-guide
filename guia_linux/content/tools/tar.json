@@ -1,0 +1,154 @@
+{
+  "name": "tar",
+  "title": {
+    "es": "Opciones de TAR",
+    "en": "TAR Options"
+  },
+  "brief": {
+    "es": "Empaquetado y compresión de archivos",
+    "en": "File archiving and compression"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/tar/manual/tar.html"
+  ],
+  "examples": [
+    {
+      "id": "tar.01",
+      "text": "tar -czf archive.tar.gz dir/",
+      "description": {
+        "es": "Crea un archivo .tar.gz comprimido con gzip",
+        "en": "Create a gzip-compressed .tar.gz archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tar.02",
+      "text": "tar -cjf archive.tar.bz2 dir/",
+      "description": {
+        "es": "Crea un archivo .tar.bz2 comprimido con bzip2",
+        "en": "Create a bzip2-compressed .tar.bz2 archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tar.03",
+      "text": "tar -cJf archive.tar.xz dir/",
+      "description": {
+        "es": "Crea un archivo .tar.xz comprimido con xz",
+        "en": "Create an xz-compressed .tar.xz archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tar.04",
+      "text": "tar -cf archive.tar dir/",
+      "description": {
+        "es": "Crea un archivo tar sin compresión",
+        "en": "Create a tar archive without compression"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tar.05",
+      "text": "tar -xzf archive.tar.gz",
+      "description": {
+        "es": "Extrae un archivo .tar.gz",
+        "en": "Extract a .tar.gz archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tar.06",
+      "text": "tar -xjf archive.tar.bz2",
+      "description": {
+        "es": "Extrae un archivo .tar.bz2",
+        "en": "Extract a .tar.bz2 archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tar.07",
+      "text": "tar -xJf archive.tar.xz",
+      "description": {
+        "es": "Extrae un archivo .tar.xz",
+        "en": "Extract a .tar.xz archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tar.08",
+      "text": "tar -xzf archive.tar.gz -C /dest/",
+      "description": {
+        "es": "Extrae en el directorio especificado",
+        "en": "Extract to the specified directory"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tar.09",
+      "text": "tar -tzf archive.tar.gz",
+      "description": {
+        "es": "Lista el contenido sin extraer",
+        "en": "List archive contents without extracting"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tar.10",
+      "text": "tar -czf archive.tar.gz --exclude='*.log' dir/",
+      "description": {
+        "es": "Crea un archivo excluyendo ciertos archivos",
+        "en": "Create archive excluding certain files"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tar.11",
+      "text": "tar -czf archive.tar.gz -C /parent/ subdir/",
+      "description": {
+        "es": "Crea un archivo desde un directorio padre",
+        "en": "Create archive relative to a parent directory"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tar.12",
+      "text": "tar --append -f archive.tar file.txt",
+      "description": {
+        "es": "Añade un archivo a un tar existente",
+        "en": "Append a file to an existing tar archive"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "name": "sha256sum",
+  "title": {
+    "es": "Uso de sha256sum",
+    "en": "sha256sum reference"
+  },
+  "brief": {
+    "es": "Comprueba integridad con SHA-256",
+    "en": "Check integrity with SHA-256"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Una suma detecta diferencias, no identifica al autor. Compara con una suma publicada por un canal de confianza. -c lee un archivo de sumas; no comprueba firmas.",
+    "en": "A checksum detects differences, not authorship. Compare with a checksum from a trusted channel. -c reads a checksum file; it does not verify signatures."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "related": [
+    "file"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "sha256sum.01",
+      "text": "sha256sum descarga.iso",
+      "description": {
+        "es": "Calcula una suma SHA-256",
+        "en": "Calculate a SHA-256 checksum"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "sha256sum.02",
+      "text": "sha256sum -c SHA256SUMS",
+      "description": {
+        "es": "Verifica archivos contra una lista de sumas",
+        "en": "Verify files against a checksum list"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

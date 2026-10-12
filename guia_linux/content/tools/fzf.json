@@ -1,0 +1,46 @@
+{
+  "name": "fzf",
+  "title": {
+    "es": "Uso de fzf",
+    "en": "fzf reference"
+  },
+  "brief": {
+    "es": "Selecciona texto de forma interactiva",
+    "en": "Select text interactively"
+  },
+  "category": "shell",
+  "level": "intermediate",
+  "notes": {
+    "es": "Herramienta opcional. Filtra y devuelve una selección; no ejecuta el texto por sí sola en este ejemplo. Escape cancela y Enter selecciona.",
+    "en": "Optional tool. Filter and return a selection; this example does not execute the text. Escape cancels and Enter selects."
+  },
+  "sources": [
+    "https://github.com/junegunn/fzf"
+  ],
+  "related": [
+    "printf"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "fzf.01",
+      "text": "printf '%s\\n' rojo verde azul | fzf",
+      "description": {
+        "es": "Elige un color entre tres líneas",
+        "en": "Choose a color from three lines"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "fzf.02",
+      "text": "fzf --help",
+      "description": {
+        "es": "Consulta las opciones instaladas",
+        "en": "Read installed options"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

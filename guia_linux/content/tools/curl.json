@@ -1,0 +1,176 @@
+{
+  "name": "curl",
+  "title": {
+    "es": "Opciones de CURL",
+    "en": "CURL Options"
+  },
+  "brief": {
+    "es": "Transfiere datos con URLs",
+    "en": "Transfer data with URLs"
+  },
+  "category": "network",
+  "level": "intermediate",
+  "notes": {
+    "es": "No uses -k como arreglo habitual: desactiva la verificación del certificado TLS. Evita poner contraseñas reales en la línea de comandos o en el historial.",
+    "en": "Do not use -k as a routine fix: it disables TLS certificate verification. Avoid real passwords in command lines or history."
+  },
+  "sources": [
+    "https://curl.se/docs/manpage.html"
+  ],
+  "examples": [
+    {
+      "id": "curl.01",
+      "text": "curl https://example.com",
+      "description": {
+        "es": "Realiza una petición HTTP GET",
+        "en": "Perform an HTTP GET request"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "curl.02",
+      "text": "curl -I https://example.com",
+      "description": {
+        "es": "Muestra solo los encabezados de respuesta (HEAD)",
+        "en": "Show only response headers (HEAD)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "curl.03",
+      "text": "curl -o file.txt https://example.com/file",
+      "description": {
+        "es": "Guarda la respuesta en un archivo",
+        "en": "Save response to a file"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "curl.04",
+      "text": "curl -O https://example.com/file.zip",
+      "description": {
+        "es": "Guarda con el nombre original del archivo",
+        "en": "Save with the original filename"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "curl.05",
+      "text": "curl -L https://example.com",
+      "description": {
+        "es": "Sigue redirecciones HTTP",
+        "en": "Follow HTTP redirects"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "curl.06",
+      "text": "curl -u user:pass https://example.com",
+      "description": {
+        "es": "Autenticación básica HTTP",
+        "en": "HTTP basic authentication"
+      },
+      "kind": "command",
+      "effect": "sensitive",
+      "quick": false
+    },
+    {
+      "id": "curl.07",
+      "text": "curl -d 'key=value' https://example.com",
+      "description": {
+        "es": "Envía datos POST",
+        "en": "Send POST data"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "curl.08",
+      "text": "curl -H 'Content-Type: application/json' URL",
+      "description": {
+        "es": "Añade una cabecera personalizada",
+        "en": "Add a custom request header"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "curl.09",
+      "text": "curl -X PUT https://example.com",
+      "description": {
+        "es": "Usa el método HTTP especificado",
+        "en": "Use the specified HTTP method"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "curl.10",
+      "text": "curl -s https://example.com",
+      "description": {
+        "es": "Modo silencioso — sin barra de progreso",
+        "en": "Silent mode — no progress bar"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "curl.11",
+      "text": "curl -v https://example.com",
+      "description": {
+        "es": "Modo verbose — muestra detalles de la conexión",
+        "en": "Verbose mode — show connection details"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "curl.12",
+      "text": "curl -k https://self-signed.example.com",
+      "description": {
+        "es": "Acepta certificados SSL no verificados",
+        "en": "Accept unverified SSL certificates"
+      },
+      "kind": "command",
+      "effect": "sensitive",
+      "quick": false
+    },
+    {
+      "id": "curl.13",
+      "text": "curl --limit-rate 100K https://example.com",
+      "description": {
+        "es": "Limita la velocidad de transferencia",
+        "en": "Limit transfer speed"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "curl.14",
+      "text": "curl -x proxy:8080 https://example.com",
+      "description": {
+        "es": "Usa un proxy HTTP",
+        "en": "Use an HTTP proxy"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    }
+  ]
+}

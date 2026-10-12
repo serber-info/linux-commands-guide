@@ -1,0 +1,56 @@
+{
+  "name": "apropos",
+  "title": {
+    "es": "Uso de apropos",
+    "en": "apropos reference"
+  },
+  "brief": {
+    "es": "Encuentra manuales por tema",
+    "en": "Find manuals by topic"
+  },
+  "category": "basics",
+  "level": "beginner",
+  "notes": {
+    "es": "Busca en la base de resúmenes de man. Si no hay resultados puede faltar la base de datos; no significa que no exista el comando.",
+    "en": "Search the man summary database. No results may mean the database is missing, not that the command does not exist."
+  },
+  "sources": [
+    "https://gitlab.com/man-db/man-db"
+  ],
+  "related": [
+    "man"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "apropos.01",
+      "text": "apropos directory",
+      "description": {
+        "es": "Busca manuales sobre directorios",
+        "en": "Find manuals about directories"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "apropos.02",
+      "text": "apropos copy",
+      "description": {
+        "es": "Busca comandos para copiar",
+        "en": "Find commands for copying"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "apropos.03",
+      "text": "apropos -e ls",
+      "description": {
+        "es": "Busca el nombre exacto ls",
+        "en": "Find the exact name ls"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

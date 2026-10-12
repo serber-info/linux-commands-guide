@@ -1,0 +1,143 @@
+{
+  "name": "scp",
+  "title": {
+    "es": "Opciones de SCP",
+    "en": "SCP Options"
+  },
+  "brief": {
+    "es": "Copia segura de archivos via SSH",
+    "en": "Secure file copy over SSH"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Verifica la identidad del host remoto. StrictHostKeyChecking=no reduce esa protección. Las copias pueden sobrescribir archivos.",
+    "en": "Verify the remote host identity. StrictHostKeyChecking=no weakens that protection. Copies can overwrite files."
+  },
+  "sources": [
+    "https://www.openssh.com/manual.html"
+  ],
+  "examples": [
+    {
+      "id": "scp.01",
+      "text": "scp file user@host:/path",
+      "description": {
+        "es": "Copia un archivo al servidor remoto",
+        "en": "Copy a file to the remote server"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "scp.02",
+      "text": "scp user@host:/path/file .",
+      "description": {
+        "es": "Descarga un archivo del servidor remoto",
+        "en": "Download a file from the remote server"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "scp.03",
+      "text": "scp -r dir user@host:/path",
+      "description": {
+        "es": "Copia un directorio completo de forma recursiva",
+        "en": "Copy a directory recursively"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "scp.04",
+      "text": "scp -p file user@host:/path",
+      "description": {
+        "es": "Preserva permisos y marcas de tiempo",
+        "en": "Preserve permissions and timestamps"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "scp.05",
+      "text": "scp -P <port> file user@host:/path",
+      "description": {
+        "es": "Usa el puerto SSH especificado",
+        "en": "Use the specified SSH port"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "scp.06",
+      "text": "scp -i key.pem file user@host:/path",
+      "description": {
+        "es": "Usa una clave privada para la autenticación",
+        "en": "Use a private key for authentication"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "scp.07",
+      "text": "scp -C file user@host:/path",
+      "description": {
+        "es": "Habilita la compresión de datos",
+        "en": "Enable data compression"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "scp.08",
+      "text": "scp -v file user@host:/path",
+      "description": {
+        "es": "Modo verbose — salida detallada",
+        "en": "Verbose mode — detailed output"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "scp.09",
+      "text": "scp -q file user@host:/path",
+      "description": {
+        "es": "Silencia errores y progreso",
+        "en": "Quiet mode — suppress errors and progress"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "scp.10",
+      "text": "scp -l <limit> file user@host:/path",
+      "description": {
+        "es": "Limita el ancho de banda en Kbit/s",
+        "en": "Limit bandwidth in Kbit/s"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "scp.11",
+      "text": "scp -o StrictHostKeyChecking=no file user@host:/path",
+      "description": {
+        "es": "Desactiva la verificación del host",
+        "en": "Disable host key checking"
+      },
+      "kind": "command",
+      "effect": "sensitive",
+      "quick": false
+    }
+  ]
+}

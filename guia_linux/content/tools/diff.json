@@ -1,0 +1,57 @@
+{
+  "name": "diff",
+  "title": {
+    "es": "Uso de diff",
+    "en": "diff reference"
+  },
+  "brief": {
+    "es": "Compara archivos de texto",
+    "en": "Compare text files"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "diff muestra diferencias, no cambia los archivos. Devuelve 0 si son iguales, 1 si difieren y un valor mayor si hay un error. -u añade contexto para leer cambios.",
+    "en": "diff shows differences and does not change files. It returns 0 for equal files, 1 for differences and a higher value on error. -u adds context for readable changes."
+  },
+  "sources": [
+    "https://www.gnu.org/software/diffutils/manual/diffutils.html"
+  ],
+  "related": [
+    "cat",
+    "git"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "diff.01",
+      "text": "diff antes.txt despues.txt",
+      "description": {
+        "es": "Compara dos archivos",
+        "en": "Compare two files"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "diff.02",
+      "text": "diff -u antes.txt despues.txt",
+      "description": {
+        "es": "Muestra diferencias con contexto",
+        "en": "Show differences with context"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "diff.03",
+      "text": "diff -r carpeta-a carpeta-b",
+      "description": {
+        "es": "Compara directorios recursivamente",
+        "en": "Compare directories recursively"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "sudo",
+  "title": {
+    "es": "Uso de sudo",
+    "en": "sudo reference"
+  },
+  "brief": {
+    "es": "Comprende y consulta privilegios",
+    "en": "Understand and inspect privileges"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "sudo ejecuta con permisos de otro usuario, normalmente root. No lo añadas para ocultar errores. sudo -l consulta permisos; sudo -k invalida credenciales en caché. No ejecutes sudo con scripts no revisados.",
+    "en": "sudo runs with another user’s privileges, usually root. Do not add it to hide errors. sudo -l lists permissions; sudo -k invalidates cached credentials. Do not sudo unreviewed scripts."
+  },
+  "sources": [
+    "https://www.sudo.ws/docs/man/sudo.man/"
+  ],
+  "related": [
+    "id",
+    "whoami",
+    "chmod"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "sudo.01",
+      "text": "sudo -l",
+      "description": {
+        "es": "Consulta lo que tienes permitido ejecutar",
+        "en": "List what you are allowed to run"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "sudo.02",
+      "text": "sudo -k",
+      "description": {
+        "es": "Invalida tu autenticación en caché",
+        "en": "Invalidate cached authentication"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "sudo.03",
+      "text": "sudo -u otro_usuario whoami",
+      "description": {
+        "es": "Ejecuta whoami como el usuario indicado",
+        "en": "Run whoami as the named user"
+      },
+      "quick": true,
+      "effect": "admin"
+    }
+  ]
+}

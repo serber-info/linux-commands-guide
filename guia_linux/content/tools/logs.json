@@ -1,0 +1,331 @@
+{
+  "name": "logs",
+  "title": {
+    "es": "Ubicaciones de Logs del Sistema",
+    "en": "System Log Locations"
+  },
+  "brief": {
+    "es": "Rutas de logs importantes en Linux",
+    "en": "Important log file paths in Linux"
+  },
+  "category": "system",
+  "level": "intermediate",
+  "notes": {
+    "es": "Estas rutas son orientativas: dependen de distribución y configuración. No todos los archivos existen. Para systemd usa journalctl; el daemon de Docker suele registrarse en el journal, no en /var/log/docker.log.",
+    "en": "These paths depend on distribution and configuration; not every file exists. Use journalctl for systemd; the Docker daemon often logs to the journal, not /var/log/docker.log."
+  },
+  "sources": [
+    "https://www.freedesktop.org/software/systemd/man/latest/journalctl.html"
+  ],
+  "examples": [
+    {
+      "id": "logs.01",
+      "text": "Logs de Sistema",
+      "description": {
+        "es": "Logs de Sistema",
+        "en": "System Logs"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "logs.02",
+      "text": "/var/log/syslog",
+      "description": {
+        "es": "Log principal del sistema (Debian/Ubuntu)",
+        "en": "Main system log (Debian/Ubuntu)"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "logs.03",
+      "text": "/var/log/messages",
+      "description": {
+        "es": "Log principal del sistema (RHEL/CentOS)",
+        "en": "Main system log (RHEL/CentOS)"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "logs.04",
+      "text": "/var/log/kern.log",
+      "description": {
+        "es": "Mensajes del kernel",
+        "en": "Kernel messages"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "logs.05",
+      "text": "/var/log/auth.log",
+      "description": {
+        "es": "Autenticaciones y accesos (Debian/Ubuntu)",
+        "en": "Authentication and access log (Debian/Ubuntu)"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "logs.06",
+      "text": "/var/log/secure",
+      "description": {
+        "es": "Autenticaciones y accesos (RHEL/CentOS)",
+        "en": "Authentication and access log (RHEL/CentOS)"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "logs.07",
+      "text": "/var/log/cron.log",
+      "description": {
+        "es": "Log de tareas cron",
+        "en": "Cron job log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.08",
+      "text": "/var/log/audit/audit.log",
+      "description": {
+        "es": "Eventos auditados del sistema",
+        "en": "Audited system events"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.09",
+      "text": "/var/log/boot.log",
+      "description": {
+        "es": "Mensajes de arranque del sistema",
+        "en": "System boot messages"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.10",
+      "text": "/var/log/dmesg",
+      "description": {
+        "es": "Mensajes de diagnóstico del kernel",
+        "en": "Kernel diagnostic messages"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.11",
+      "text": "/var/log/faillog",
+      "description": {
+        "es": "Intentos de inicio de sesión fallidos",
+        "en": "Failed login attempts"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.12",
+      "text": "/var/log/lastlog",
+      "description": {
+        "es": "Último inicio de sesión de cada usuario",
+        "en": "Last login for each user"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.13",
+      "text": "Logs de Servidores Web",
+      "description": {
+        "es": "Logs de Servidores Web",
+        "en": "Web Server Logs"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "logs.14",
+      "text": "Apache: /var/log/apache2/access.log",
+      "description": {
+        "es": "Log de accesos de Apache (Debian)",
+        "en": "Apache access log (Debian)"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.15",
+      "text": "Apache: /var/log/apache2/error.log",
+      "description": {
+        "es": "Log de errores de Apache",
+        "en": "Apache error log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.16",
+      "text": "Nginx: /var/log/nginx/access.log",
+      "description": {
+        "es": "Log de accesos de Nginx",
+        "en": "Nginx access log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.17",
+      "text": "Nginx: /var/log/nginx/error.log",
+      "description": {
+        "es": "Log de errores de Nginx",
+        "en": "Nginx error log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.18",
+      "text": "Logs de Bases de Datos",
+      "description": {
+        "es": "Logs de Bases de Datos",
+        "en": "Database Logs"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "logs.19",
+      "text": "MySQL: /var/log/mysql/mysql.log",
+      "description": {
+        "es": "Log general de MySQL",
+        "en": "MySQL general log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.20",
+      "text": "MySQL: /var/log/mysql/error.log",
+      "description": {
+        "es": "Log de errores de MySQL",
+        "en": "MySQL error log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.21",
+      "text": "PostgreSQL: /var/log/postgresql/*.log",
+      "description": {
+        "es": "Logs de PostgreSQL",
+        "en": "PostgreSQL logs"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.22",
+      "text": "Logs de Servicios",
+      "description": {
+        "es": "Logs de Servicios",
+        "en": "Service Logs"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "logs.23",
+      "text": "Systemd: /var/log/journal/",
+      "description": {
+        "es": "Logs binarios de systemd (usar journalctl)",
+        "en": "systemd binary logs (use journalctl)"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.24",
+      "text": "Docker (systemd): journalctl -u docker.service",
+      "description": {
+        "es": "Consulta el log del daemon si lo gestiona systemd",
+        "en": "Query daemon logs when managed by systemd"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.25",
+      "text": "Postfix: /var/log/mail.log",
+      "description": {
+        "es": "Log de correo electrónico",
+        "en": "Mail server log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.26",
+      "text": "FTP: /var/log/vsftpd.log",
+      "description": {
+        "es": "Log del servicio vsftpd",
+        "en": "vsftpd FTP service log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.27",
+      "text": "Logs de Firewall",
+      "description": {
+        "es": "Logs de Firewall",
+        "en": "Firewall Logs"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "logs.28",
+      "text": "Firewalld: /var/log/firewalld",
+      "description": {
+        "es": "Log de firewalld",
+        "en": "firewalld log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "logs.29",
+      "text": "UFW: /var/log/ufw.log",
+      "description": {
+        "es": "Log de UFW (Uncomplicated Firewall)",
+        "en": "UFW (Uncomplicated Firewall) log"
+      },
+      "kind": "path",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

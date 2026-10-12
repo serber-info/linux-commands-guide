@@ -1,0 +1,51 @@
+{
+  "name": "ncdu",
+  "title": {
+    "es": "Uso de ncdu",
+    "en": "ncdu reference"
+  },
+  "brief": {
+    "es": "Explora uso de disco interactivamente",
+    "en": "Explore disk usage interactively"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Herramienta opcional. -r desactiva el borrado desde ncdu: recomendado al aprender. Escanea un directorio; q sale. Sin -r algunas teclas permiten borrar.",
+    "en": "Optional tool. -r disables deletion from ncdu: recommended while learning. Scan a directory; q exits. Without -r some keys allow deletion."
+  },
+  "sources": [
+    "https://dev.yorhel.nl/ncdu/man"
+  ],
+  "related": [
+    "du",
+    "df"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "ncdu.01",
+      "text": "ncdu -r .",
+      "description": {
+        "es": "Explora el directorio actual sin permitir borrado",
+        "en": "Explore the current directory with deletion disabled"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "ncdu.02",
+      "text": "ncdu -r -x .",
+      "description": {
+        "es": "Evita cruzar a otros sistemas de archivos",
+        "en": "Do not cross to other filesystems"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ],
+  "keywords": [
+    "espacio en disco",
+    "disk space"
+  ]
+}

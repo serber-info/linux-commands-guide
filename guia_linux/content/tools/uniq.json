@@ -1,0 +1,92 @@
+{
+  "name": "uniq",
+  "title": {
+    "es": "Opciones de UNIQ",
+    "en": "UNIQ Options"
+  },
+  "brief": {
+    "es": "Filtra líneas duplicadas adyacentes",
+    "en": "Filter adjacent duplicate lines"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "uniq.01",
+      "text": "uniq filename",
+      "description": {
+        "es": "Elimina líneas duplicadas consecutivas",
+        "en": "Remove consecutive duplicate lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "Solo agrupa duplicados consecutivos. Para contar valores repetidos usa sort archivo | uniq -c.",
+        "en": "Only groups adjacent duplicates. To count repeated values, use sort file | uniq -c."
+      }
+    },
+    {
+      "id": "uniq.02",
+      "text": "uniq -c filename",
+      "description": {
+        "es": "Cuenta las ocurrencias de cada línea",
+        "en": "Count occurrences of each line"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uniq.03",
+      "text": "uniq -d filename",
+      "description": {
+        "es": "Muestra solo las líneas duplicadas",
+        "en": "Show only duplicate lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uniq.04",
+      "text": "uniq -u filename",
+      "description": {
+        "es": "Muestra solo las líneas únicas (no duplicadas)",
+        "en": "Show only unique (non-duplicated) lines"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uniq.05",
+      "text": "uniq -i filename",
+      "description": {
+        "es": "Ignora mayúsculas/minúsculas al comparar",
+        "en": "Ignore case when comparing"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "uniq.06",
+      "text": "sort filename | uniq",
+      "description": {
+        "es": "Patrón habitual: ordenar antes de aplicar uniq",
+        "en": "Common pattern: sort first, then apply uniq"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

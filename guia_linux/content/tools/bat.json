@@ -1,0 +1,37 @@
+{
+  "name": "bat",
+  "title": {
+    "es": "Uso de bat",
+    "en": "bat reference"
+  },
+  "brief": {
+    "es": "Lectura con resaltado de sintaxis",
+    "en": "Read files with syntax highlighting"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Requiere bat; en algunas distribuciones el ejecutable es batcat. q sale del paginador.",
+    "en": "Requires bat; some distributions name the executable batcat. q exits the pager."
+  },
+  "sources": [
+    "https://github.com/sharkdp/bat"
+  ],
+  "aliases": [
+    "batcat"
+  ],
+  "examples": [
+    {
+      "ref": "cat.10"
+    },
+    {
+      "ref": "cat.11"
+    },
+    {
+      "ref": "cat.12"
+    },
+    {
+      "ref": "cat.14"
+    }
+  ]
+}

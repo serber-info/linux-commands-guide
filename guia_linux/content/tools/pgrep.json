@@ -1,0 +1,61 @@
+{
+  "name": "pgrep",
+  "title": {
+    "es": "Uso de pgrep",
+    "en": "pgrep reference"
+  },
+  "brief": {
+    "es": "Encuentra PID por nombre",
+    "en": "Find PIDs by name"
+  },
+  "category": "processes",
+  "level": "beginner",
+  "notes": {
+    "es": "pgrep consulta; no envía señales. -x exige nombre exacto; -f busca en toda la línea de comandos y puede coincidir con más procesos. Revisa antes de usar kill.",
+    "en": "pgrep queries; it sends no signals. -x requires an exact name; -f searches the full command line and may match more processes. Review before using kill."
+  },
+  "sources": [
+    "https://gitlab.com/procps-ng/procps/-/blob/master/man/pgrep.1"
+  ],
+  "related": [
+    "ps",
+    "kill"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "pgrep.01",
+      "text": "pgrep -x bash",
+      "description": {
+        "es": "Busca procesos con nombre exacto bash",
+        "en": "Find processes named exactly bash"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "pgrep.02",
+      "text": "pgrep -a python",
+      "description": {
+        "es": "Muestra PID y línea de comandos",
+        "en": "Show PIDs and command lines"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "pgrep.03",
+      "text": "pgrep -u \"$USER\"",
+      "description": {
+        "es": "Lista PID de tu usuario",
+        "en": "List your user’s PIDs"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ],
+  "keywords": [
+    "buscar procesos",
+    "find processes"
+  ]
+}

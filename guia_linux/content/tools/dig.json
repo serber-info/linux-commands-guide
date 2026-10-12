@@ -1,0 +1,61 @@
+{
+  "name": "dig",
+  "title": {
+    "es": "Uso de dig",
+    "en": "dig reference"
+  },
+  "brief": {
+    "es": "Consulta registros DNS",
+    "en": "Query DNS records"
+  },
+  "category": "network",
+  "level": "beginner",
+  "notes": {
+    "es": "Requiere las herramientas de BIND (el paquete varía por distribución). A consulta IPv4; AAAA IPv6; MX correo. Genera consultas DNS y no prueba que el servicio web funcione.",
+    "en": "Requires BIND tools (package names vary by distribution). A queries IPv4, AAAA IPv6 and MX mail. It generates DNS queries and does not prove a web service works."
+  },
+  "sources": [
+    "https://bind9.readthedocs.io/en/latest/manpages.html#dig-dns-lookup-utility"
+  ],
+  "related": [
+    "getent",
+    "ping"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "dig.01",
+      "text": "dig example.com A",
+      "description": {
+        "es": "Consulta registros IPv4",
+        "en": "Query IPv4 records"
+      },
+      "quick": true,
+      "effect": "network"
+    },
+    {
+      "id": "dig.02",
+      "text": "dig example.com AAAA",
+      "description": {
+        "es": "Consulta registros IPv6",
+        "en": "Query IPv6 records"
+      },
+      "quick": true,
+      "effect": "network"
+    },
+    {
+      "id": "dig.03",
+      "text": "dig +short example.com",
+      "description": {
+        "es": "Muestra respuestas resumidas",
+        "en": "Show concise answers"
+      },
+      "quick": true,
+      "effect": "network"
+    }
+  ],
+  "keywords": [
+    "consultar dns",
+    "dns lookup"
+  ]
+}

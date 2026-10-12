@@ -1,0 +1,25 @@
+{
+  "name": "hostname",
+  "title": {
+    "es": "Uso de hostname",
+    "en": "hostname reference"
+  },
+  "brief": {
+    "es": "Muestra o establece el nombre del host",
+    "en": "Show or set the hostname"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://net-tools.sourceforge.io/"
+  ],
+  "examples": [
+    {
+      "ref": "system.29"
+    }
+  ]
+}

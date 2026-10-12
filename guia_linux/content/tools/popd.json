@@ -1,0 +1,25 @@
+{
+  "name": "popd",
+  "title": {
+    "es": "Uso de popd",
+    "en": "popd reference"
+  },
+  "brief": {
+    "es": "Vuelve al directorio guardado anteriormente",
+    "en": "Return to the previously saved directory"
+  },
+  "category": "shell",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "examples": [
+    {
+      "ref": "system.05"
+    }
+  ]
+}

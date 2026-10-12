@@ -1,0 +1,132 @@
+{
+  "name": "htop",
+  "title": {
+    "es": "Opciones de HTOP",
+    "en": "HTOP Options"
+  },
+  "brief": {
+    "es": "Monitor de procesos interactivo",
+    "en": "Interactive process monitor"
+  },
+  "category": "processes",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://htop.dev/"
+  ],
+  "examples": [
+    {
+      "id": "htop.01",
+      "text": "htop",
+      "description": {
+        "es": "Inicia htop con configuración predeterminada",
+        "en": "Start htop with default settings"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "htop.02",
+      "text": "htop -d N",
+      "description": {
+        "es": "Retardo de actualización en décimas de segundo",
+        "en": "Update delay in tenths of a second"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "htop.03",
+      "text": "htop -C",
+      "description": {
+        "es": "Desactiva el uso de colores",
+        "en": "Disable colors"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "htop.04",
+      "text": "htop -u user",
+      "description": {
+        "es": "Muestra solo procesos del usuario indicado",
+        "en": "Show only processes of the given user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "htop.05",
+      "text": "htop -p pid1,pid2",
+      "description": {
+        "es": "Muestra solo los procesos con los PIDs indicados",
+        "en": "Show only the specified PIDs"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "htop.06",
+      "text": "htop -s column",
+      "description": {
+        "es": "Ordena por la columna especificada (cpu, mem...)",
+        "en": "Sort by the specified column (cpu, mem...)"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "htop.07",
+      "text": "htop -t",
+      "description": {
+        "es": "Activa la vista de árbol de procesos",
+        "en": "Enable tree view of processes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "htop.08",
+      "text": "htop --no-color",
+      "description": {
+        "es": "Alias de -C; desactiva colores",
+        "en": "Alias for -C; disable colors"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "htop.09",
+      "text": "htop --tree",
+      "description": {
+        "es": "Alias de -t; vista en árbol",
+        "en": "Alias for -t; tree view"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "htop.10",
+      "text": "htop --version",
+      "description": {
+        "es": "Muestra la versión de htop instalada",
+        "en": "Show installed htop version"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

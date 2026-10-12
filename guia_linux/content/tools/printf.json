@@ -1,0 +1,58 @@
+{
+  "name": "printf",
+  "title": {
+    "es": "Uso de printf",
+    "en": "printf reference"
+  },
+  "brief": {
+    "es": "Imprime texto con formato predecible",
+    "en": "Print predictably formatted text"
+  },
+  "category": "text",
+  "level": "beginner",
+  "notes": {
+    "es": "El primer argumento es el formato; %s inserta texto y \\n un salto de línea. Mantén el formato fijo y pasa variables como argumentos entre comillas: printf \"%s\\n\" \"$nombre\".",
+    "en": "The first argument is the format; %s inserts text and \\n a newline. Keep the format fixed and pass quoted variables as arguments: printf \"%s\\n\" \"$name\"."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "related": [
+    "echo",
+    "wc",
+    "sort"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "printf.01",
+      "text": "printf '%s\\n' 'hola mundo'",
+      "description": {
+        "es": "Imprime una línea con espacios",
+        "en": "Print one line containing spaces"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "printf.02",
+      "text": "printf '%s\\n' rojo azul rojo",
+      "description": {
+        "es": "Genera tres líneas para practicar tuberías",
+        "en": "Generate three lines for pipe practice"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "printf.03",
+      "text": "printf '%s\\n' \"$HOME\"",
+      "description": {
+        "es": "Imprime tu directorio personal",
+        "en": "Print your home directory"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

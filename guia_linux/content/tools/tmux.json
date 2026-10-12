@@ -1,0 +1,249 @@
+{
+  "name": "tmux",
+  "title": {
+    "es": "Opciones de TMUX",
+    "en": "TMUX Options"
+  },
+  "brief": {
+    "es": "Multiplexor de terminal",
+    "en": "Terminal multiplexer"
+  },
+  "category": "shell",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://github.com/tmux/tmux/wiki"
+  ],
+  "examples": [
+    {
+      "id": "tmux.01",
+      "text": "Sesiones",
+      "description": {
+        "es": "Sesiones",
+        "en": "Sessions"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "tmux.02",
+      "text": "tmux",
+      "description": {
+        "es": "Inicia una nueva sesión tmux",
+        "en": "Start a new tmux session"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tmux.03",
+      "text": "tmux new -s name",
+      "description": {
+        "es": "Crea una nueva sesión con nombre",
+        "en": "Create a new named session"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tmux.04",
+      "text": "tmux ls",
+      "description": {
+        "es": "Lista las sesiones activas",
+        "en": "List active sessions"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tmux.05",
+      "text": "tmux attach -t name",
+      "description": {
+        "es": "Se conecta a una sesión existente",
+        "en": "Attach to an existing session"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "tmux.06",
+      "text": "tmux kill-session -t name",
+      "description": {
+        "es": "Cierra una sesión",
+        "en": "Kill a session"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "tmux.07",
+      "text": "tmux rename-session -t old new",
+      "description": {
+        "es": "Renombra una sesión",
+        "en": "Rename a session"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tmux.08",
+      "text": "Atajos de teclado  (prefijo: Ctrl+B)",
+      "description": {
+        "es": "Atajos de teclado  (prefijo: Ctrl+B)",
+        "en": "Keyboard Shortcuts  (prefix: Ctrl+B)"
+      },
+      "kind": "section"
+    },
+    {
+      "id": "tmux.09",
+      "text": "Ctrl+B  d",
+      "description": {
+        "es": "Desconecta (detach) de la sesión actual",
+        "en": "Detach from the current session"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.10",
+      "text": "Ctrl+B  c",
+      "description": {
+        "es": "Crea una nueva ventana",
+        "en": "Create a new window"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.11",
+      "text": "Ctrl+B  n / p",
+      "description": {
+        "es": "Cambia a la ventana siguiente / anterior",
+        "en": "Switch to next / previous window"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.12",
+      "text": "Ctrl+B  N",
+      "description": {
+        "es": "Cambia a la ventana número N",
+        "en": "Switch to window number N"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.13",
+      "text": "Ctrl+B  ,",
+      "description": {
+        "es": "Renombra la ventana actual",
+        "en": "Rename the current window"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.14",
+      "text": "Ctrl+B  &",
+      "description": {
+        "es": "Cierra la ventana actual",
+        "en": "Close the current window"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tmux.15",
+      "text": "Ctrl+B  %",
+      "description": {
+        "es": "Divide el panel en izquierda/derecha",
+        "en": "Split pane into left/right"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.16",
+      "text": "Ctrl+B  \"",
+      "description": {
+        "es": "Divide el panel en arriba/abajo",
+        "en": "Split pane into top/bottom"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.17",
+      "text": "Ctrl+B  ←↑→↓",
+      "description": {
+        "es": "Navega entre paneles",
+        "en": "Navigate between panes"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.18",
+      "text": "Ctrl+B  z",
+      "description": {
+        "es": "Alterna el zoom del panel actual",
+        "en": "Toggle zoom on current pane"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.19",
+      "text": "Ctrl+B  x",
+      "description": {
+        "es": "Cierra el panel actual",
+        "en": "Close the current pane"
+      },
+      "kind": "shortcut",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "tmux.20",
+      "text": "Ctrl+B  [",
+      "description": {
+        "es": "Entra en modo copiar/desplazamiento",
+        "en": "Enter copy/scroll mode"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "tmux.21",
+      "text": "Ctrl+B  ?",
+      "description": {
+        "es": "Muestra la lista de atajos de teclado",
+        "en": "Show all keyboard shortcuts"
+      },
+      "kind": "shortcut",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "name": "nmap",
+  "title": {
+    "es": "Opciones de NMAP",
+    "en": "NMAP Options"
+  },
+  "brief": {
+    "es": "Escáner de redes y puertos",
+    "en": "Network and port scanner"
+  },
+  "category": "advanced",
+  "level": "advanced",
+  "notes": {
+    "es": "Escanea solo sistemas propios o con autorización. Un escaneo genera tráfico y puede activar alertas; algunas opciones requieren root.",
+    "en": "Scan only systems you own or are authorized to test. Scans generate traffic and may trigger alerts; some options require root."
+  },
+  "sources": [
+    "https://nmap.org/book/man.html"
+  ],
+  "examples": [
+    {
+      "id": "nmap.01",
+      "text": "nmap host",
+      "description": {
+        "es": "Escaneo básico de puertos en un host",
+        "en": "Basic port scan on a host"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nmap.02",
+      "text": "nmap -sS host",
+      "description": {
+        "es": "Escaneo SYN (sigiloso, requiere root)",
+        "en": "SYN scan (stealthy, requires root)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nmap.03",
+      "text": "nmap -sT host",
+      "description": {
+        "es": "Escaneo TCP completo (sin root)",
+        "en": "Full TCP connect scan (no root needed)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nmap.04",
+      "text": "nmap -sU host",
+      "description": {
+        "es": "Escaneo de puertos UDP",
+        "en": "UDP port scan"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nmap.05",
+      "text": "nmap -sV host",
+      "description": {
+        "es": "Detecta versiones de servicios",
+        "en": "Detect service versions"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": true
+    },
+    {
+      "id": "nmap.06",
+      "text": "nmap -O host",
+      "description": {
+        "es": "Detecta el sistema operativo",
+        "en": "Detect the operating system"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.07",
+      "text": "nmap -A host",
+      "description": {
+        "es": "Escaneo completo (OS, versión, scripts, traceroute)",
+        "en": "Full scan (OS, version, scripts, traceroute)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.08",
+      "text": "nmap -p 80,443 host",
+      "description": {
+        "es": "Escanea puertos específicos",
+        "en": "Scan specific ports"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.09",
+      "text": "nmap -p- host",
+      "description": {
+        "es": "Escanea todos los puertos (1-65535)",
+        "en": "Scan all 65535 ports"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.10",
+      "text": "nmap -T4 host",
+      "description": {
+        "es": "Nivel de agresividad T4 (rápido)",
+        "en": "Timing template T4 (fast)"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.11",
+      "text": "nmap --open host",
+      "description": {
+        "es": "Muestra solo puertos abiertos",
+        "en": "Show only open ports"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.12",
+      "text": "nmap -Pn host",
+      "description": {
+        "es": "Escanea sin hacer ping previo",
+        "en": "Skip ping, scan directly"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.13",
+      "text": "nmap -sC host",
+      "description": {
+        "es": "Ejecuta scripts de detección básicos",
+        "en": "Run default detection scripts"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.14",
+      "text": "nmap --script=http-title host",
+      "description": {
+        "es": "Ejecuta un script específico de NSE",
+        "en": "Run a specific NSE script"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.15",
+      "text": "nmap -iL targets.txt",
+      "description": {
+        "es": "Escanea una lista de hosts desde archivo",
+        "en": "Scan a list of hosts from a file"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.16",
+      "text": "nmap -oN scan.txt host",
+      "description": {
+        "es": "Guarda la salida en formato normal",
+        "en": "Save output in normal format"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.17",
+      "text": "nmap -oX scan.xml host",
+      "description": {
+        "es": "Guarda la salida en formato XML",
+        "en": "Save output in XML format"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    },
+    {
+      "id": "nmap.18",
+      "text": "nmap --traceroute host",
+      "description": {
+        "es": "Realiza un traceroute al host",
+        "en": "Run a traceroute to the host"
+      },
+      "kind": "command",
+      "effect": "network",
+      "quick": false
+    }
+  ]
+}

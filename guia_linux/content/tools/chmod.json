@@ -1,0 +1,173 @@
+{
+  "name": "chmod",
+  "title": {
+    "es": "Opciones de CHMOD",
+    "en": "CHMOD Options"
+  },
+  "brief": {
+    "es": "Cambia permisos de archivos y directorios",
+    "en": "Change file and directory permissions"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Evita 777 como solución general. +x sin indicar usuarios está condicionado por umask; u+x modifica solo al propietario. -R afecta también a directorios y archivos.",
+    "en": "Avoid 777 as a general fix. +x without a user class is affected by umask; u+x affects only the owner. -R affects both directories and files."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "chmod.01",
+      "text": "chmod 755 filename",
+      "description": {
+        "es": "rwx para propietario, rx para grupo y otros",
+        "en": "rwx for owner, rx for group and others"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true,
+      "explanation": {
+        "es": "u, g y o son propietario, grupo y otros. r, w y x son lectura, escritura y ejecución. En directorios, x permite atravesarlos. No uses 777 para arreglar permisos sin entenderlos.",
+        "en": "u, g and o mean owner, group and others. r, w and x mean read, write and execute. On directories, x allows traversal. Do not use 777 to fix permissions without understanding them."
+      }
+    },
+    {
+      "id": "chmod.02",
+      "text": "chmod 644 filename",
+      "description": {
+        "es": "rw para propietario, r para grupo y otros",
+        "en": "rw for owner, r for group and others"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chmod.03",
+      "text": "chmod +x filename",
+      "description": {
+        "es": "Añade ejecución según umask (usa u+x para solo el propietario)",
+        "en": "Add execution subject to umask (use u+x for the owner only)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chmod.04",
+      "text": "chmod -x filename",
+      "description": {
+        "es": "Retira ejecución según umask (usa a-x para todos)",
+        "en": "Remove execution subject to umask (use a-x for everyone)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chmod.05",
+      "text": "chmod u+w filename",
+      "description": {
+        "es": "Añade escritura solo al propietario",
+        "en": "Add write permission for owner only"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chmod.06",
+      "text": "chmod g-w filename",
+      "description": {
+        "es": "Revoca escritura al grupo",
+        "en": "Remove write permission from group"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.07",
+      "text": "chmod o+r filename",
+      "description": {
+        "es": "Añade lectura a otros",
+        "en": "Add read permission for others"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.08",
+      "text": "chmod u=rwx,g=rx,o= filename",
+      "description": {
+        "es": "Permisos exactos para cada categoría",
+        "en": "Set exact permissions per category"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.09",
+      "text": "chmod -R 755 directory",
+      "description": {
+        "es": "Aplica permisos recursivamente",
+        "en": "Apply permissions recursively"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.10",
+      "text": "chmod a+x filename",
+      "description": {
+        "es": "Añade ejecución para todos (all)",
+        "en": "Add execute for all (all)"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.11",
+      "text": "chmod ug=rw filename",
+      "description": {
+        "es": "Lectura y escritura para propietario y grupo",
+        "en": "Read and write for owner and group"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.12",
+      "text": "chmod 400 filename",
+      "description": {
+        "es": "Solo lectura para el propietario",
+        "en": "Read-only for owner"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chmod.13",
+      "text": "chmod 777 filename",
+      "description": {
+        "es": "Todos los permisos para todos los usuarios",
+        "en": "All permissions for all users"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "cambiar permisos",
+    "change permissions"
+  ]
+}

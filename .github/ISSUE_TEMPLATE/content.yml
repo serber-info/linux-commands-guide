@@ -1,0 +1,26 @@
+name: Incorrect or confusing example / Ejemplo incorrecto
+description: Help improve accuracy or beginner clarity / Mejorar exactitud o claridad
+title: "[Content]: "
+body:
+  - type: input
+    id: command
+    attributes:
+      label: lh command / Comando lh
+      placeholder: lh grep --explain
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or unclear? / ¿Qué falla o no se entiende?
+      description: Remove secrets, personal data and private paths before pasting output.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Distribution, shell and tool version / Distribución, shell y versión
+  - type: input
+    id: source
+    attributes:
+      label: Official source if available / Fuente oficial si la tienes

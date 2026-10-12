@@ -1,0 +1,8 @@
+include install.sh
+include helper.py
+include CONTRIBUTING.md
+include CHANGELOG.md
+recursive-include scripts *.py
+recursive-include docs *.md *.gif *.cast
+recursive-include tests *.py
+recursive-include tests *.json

@@ -1,0 +1,68 @@
+{
+  "name": "kill",
+  "title": {
+    "es": "Uso de kill",
+    "en": "kill reference"
+  },
+  "brief": {
+    "es": "Envía señales a procesos",
+    "en": "Send signals to processes"
+  },
+  "category": "processes",
+  "level": "beginner",
+  "notes": {
+    "es": "kill no siempre mata: envía señales. Por defecto envía TERM para permitir salida ordenada. Verifica el PID con ps; -KILL no permite limpieza y es último recurso.",
+    "en": "kill does not always kill: it sends signals. By default it sends TERM for an orderly exit. Verify the PID with ps; -KILL prevents cleanup and is a last resort."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ],
+  "related": [
+    "ps",
+    "pgrep",
+    "jobs"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "kill.01",
+      "text": "kill -l",
+      "description": {
+        "es": "Lista las señales disponibles",
+        "en": "List available signals"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "kill.02",
+      "text": "kill -TERM 12345",
+      "description": {
+        "es": "Solicita terminar el PID de ejemplo; sustitúyelo",
+        "en": "Request termination of the example PID; replace it"
+      },
+      "quick": true,
+      "effect": "admin"
+    },
+    {
+      "id": "kill.03",
+      "text": "kill -STOP 12345",
+      "description": {
+        "es": "Suspende el PID de ejemplo",
+        "en": "Stop the example PID"
+      },
+      "quick": true,
+      "effect": "admin"
+    },
+    {
+      "id": "kill.04",
+      "text": "kill -CONT 12345",
+      "description": {
+        "es": "Reanuda el PID de ejemplo",
+        "en": "Resume the example PID"
+      },
+      "quick": true,
+      "effect": "admin"
+    }
+  ]
+}

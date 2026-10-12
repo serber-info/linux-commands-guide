@@ -1,0 +1,71 @@
+{
+  "name": "pacman",
+  "title": {
+    "es": "Uso de pacman",
+    "en": "pacman reference"
+  },
+  "brief": {
+    "es": "Paquetes en Arch y derivadas",
+    "en": "Packages on Arch-based systems"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "Para Arch y derivadas. -Q consulta instalados; -S opera con repositorios. Evita sudo pacman -Sy seguido de instalaciones: las actualizaciones parciales no están soportadas. -Syu actualiza todo el sistema.",
+    "en": "For Arch-based systems. -Q queries installed packages; -S uses repositories. Avoid sudo pacman -Sy followed by installs: partial upgrades are unsupported. -Syu upgrades the whole system."
+  },
+  "sources": [
+    "https://man.archlinux.org/man/pacman.8"
+  ],
+  "related": [
+    "nano",
+    "sudo"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "pacman.01",
+      "text": "pacman -Qs nano",
+      "description": {
+        "es": "Busca entre paquetes instalados",
+        "en": "Search installed packages"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "pacman.02",
+      "text": "pacman -Ss nano",
+      "description": {
+        "es": "Busca en las bases de repositorios locales",
+        "en": "Search local repository databases"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "pacman.03",
+      "text": "pacman -Qi nano",
+      "description": {
+        "es": "Consulta un paquete instalado",
+        "en": "Inspect an installed package"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "pacman.04",
+      "text": "sudo pacman -Syu",
+      "description": {
+        "es": "Sincroniza bases y actualiza el sistema completo",
+        "en": "Sync databases and upgrade the whole system"
+      },
+      "quick": true,
+      "effect": "admin"
+    }
+  ],
+  "keywords": [
+    "instalar paquetes",
+    "install packages"
+  ]
+}

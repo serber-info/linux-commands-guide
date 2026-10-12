@@ -1,0 +1,25 @@
+{
+  "name": "uptime",
+  "title": {
+    "es": "Uso de uptime",
+    "en": "uptime reference"
+  },
+  "brief": {
+    "es": "Muestra el tiempo que lleva encendido el sistema",
+    "en": "Show how long the system has been running"
+  },
+  "category": "system",
+  "level": "beginner",
+  "notes": {
+    "es": "Los valores entre < > son marcadores: sustitúyelos y no escribas los símbolos. Usa comillas en rutas con espacios.",
+    "en": "Values in < > are placeholders: replace them and omit the angle brackets. Quote paths containing spaces."
+  },
+  "sources": [
+    "https://gitlab.com/procps-ng/procps/-/blob/master/man/uptime.1"
+  ],
+  "examples": [
+    {
+      "ref": "system.26"
+    }
+  ]
+}

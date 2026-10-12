@@ -1,0 +1,284 @@
+{
+  "name": "find",
+  "title": {
+    "es": "Opciones de FIND",
+    "en": "FIND Options"
+  },
+  "brief": {
+    "es": "Busca archivos y directorios",
+    "en": "Search for files and directories"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Prueba primero los filtros con -print. -delete elimina sin papelera e implica recorrido en profundidad. -exec ejecuta otra herramienta: revisa sus efectos.",
+    "en": "Test filters with -print first. -delete removes without a trash bin and implies depth-first traversal. -exec runs another tool: review its effects."
+  },
+  "sources": [
+    "https://www.gnu.org/software/findutils/manual/html_node/find_html/index.html"
+  ],
+  "examples": [
+    {
+      "id": "find.01",
+      "text": "find /path",
+      "description": {
+        "es": "Busca todos los archivos y directorios en la ruta",
+        "en": "List all files and directories under path"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true,
+      "explanation": {
+        "es": "La primera ruta es dónde buscar. -type f limita a archivos; -name usa comodines y debe ir entre comillas. Revisa con -print antes de cualquier borrado.",
+        "en": "The first path is where to search. -type f limits results to files; -name uses globs and must be quoted. Inspect with -print before any deletion."
+      }
+    },
+    {
+      "id": "find.02",
+      "text": "find /path -name 'file'",
+      "description": {
+        "es": "Busca por nombre exacto",
+        "en": "Search by exact name"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "find.03",
+      "text": "find /path -iname 'file'",
+      "description": {
+        "es": "Busca por nombre ignorando mayúsculas",
+        "en": "Case-insensitive name search"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "find.04",
+      "text": "find /path -type f",
+      "description": {
+        "es": "Busca solo archivos",
+        "en": "Find regular files only"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "find.05",
+      "text": "find /path -type d",
+      "description": {
+        "es": "Busca solo directorios",
+        "en": "Find directories only"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "find.06",
+      "text": "find /path -size +100M",
+      "description": {
+        "es": "Busca archivos mayores de 100 MB",
+        "en": "Find files larger than 100 MB"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.07",
+      "text": "find /path -size -100M",
+      "description": {
+        "es": "Busca archivos menores de 100 MB",
+        "en": "Find files smaller than 100 MB"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.08",
+      "text": "find /path -mtime -7",
+      "description": {
+        "es": "Archivos modificados en los últimos 7 días",
+        "en": "Files modified in the last 7 days"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.09",
+      "text": "find /path -atime -7",
+      "description": {
+        "es": "Archivos accedidos en los últimos 7 días",
+        "en": "Files accessed in the last 7 days"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.10",
+      "text": "find /path -mmin -30",
+      "description": {
+        "es": "Archivos modificados en los últimos 30 minutos",
+        "en": "Files modified in the last 30 minutes"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.11",
+      "text": "find /path -user username",
+      "description": {
+        "es": "Archivos pertenecientes a un usuario",
+        "en": "Files owned by a specific user"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.12",
+      "text": "find /path -group groupname",
+      "description": {
+        "es": "Archivos pertenecientes a un grupo",
+        "en": "Files belonging to a group"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.13",
+      "text": "find /path -perm 755",
+      "description": {
+        "es": "Archivos con permisos exactos 755",
+        "en": "Files with exact permissions 755"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.14",
+      "text": "find /path -empty",
+      "description": {
+        "es": "Archivos o directorios vacíos",
+        "en": "Find empty files or directories"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.15",
+      "text": "find /path -exec cmd {} \\;",
+      "description": {
+        "es": "Ejecuta un comando en cada resultado",
+        "en": "Execute a command on each result"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.16",
+      "text": "find /path -delete",
+      "description": {
+        "es": "Elimina los archivos encontrados",
+        "en": "Delete found files"
+      },
+      "kind": "command",
+      "effect": "delete",
+      "quick": false
+    },
+    {
+      "id": "find.17",
+      "text": "find /path -name '*.txt' -o -name '*.log'",
+      "description": {
+        "es": "Busca archivos .txt o .log",
+        "en": "Find .txt or .log files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.18",
+      "text": "find /path -not -name '*.txt'",
+      "description": {
+        "es": "Excluye archivos con el nombre especificado",
+        "en": "Exclude files matching name"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.19",
+      "text": "find /path -maxdepth 2",
+      "description": {
+        "es": "Limita la búsqueda a 2 niveles de profundidad",
+        "en": "Limit search depth to 2 levels"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.20",
+      "text": "find /path -mindepth 2",
+      "description": {
+        "es": "Omite los primeros 2 niveles de profundidad",
+        "en": "Skip the first 2 directory levels"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.21",
+      "text": "find /path -newer file",
+      "description": {
+        "es": "Archivos más recientes que 'file'",
+        "en": "Files newer than 'file'"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "find.22",
+      "text": "find /path -type f -exec chmod 644 {} \\;",
+      "description": {
+        "es": "Cambia permisos de archivos encontrados a 644",
+        "en": "Set permissions of found files to 644"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "find.23",
+      "text": "find /path -type f -print0 | xargs -0 grep 'pat'",
+      "description": {
+        "es": "Busca un patrón en el contenido de los archivos",
+        "en": "Search for a pattern inside found files"
+      },
+      "kind": "command",
+      "effect": "reference",
+      "quick": false
+    }
+  ],
+  "keywords": [
+    "buscar archivos",
+    "search files",
+    "buscar carpetas"
+  ]
+}

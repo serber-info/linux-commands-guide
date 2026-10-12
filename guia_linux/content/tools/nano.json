@@ -1,0 +1,61 @@
+{
+  "name": "nano",
+  "title": {
+    "es": "Uso de nano",
+    "en": "nano reference"
+  },
+  "brief": {
+    "es": "Edita archivos en la terminal",
+    "en": "Edit files in the terminal"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Ctrl+O guarda; Enter confirma el nombre; Ctrl+X sale. ^ significa Ctrl en la ayuda inferior. Revisa el nombre antes de guardar para no sobrescribir otro archivo.",
+    "en": "Ctrl+O saves; Enter confirms the name; Ctrl+X exits. ^ means Ctrl in the bottom help bar. Check the name before saving to avoid overwriting another file."
+  },
+  "sources": [
+    "https://www.nano-editor.org/dist/latest/nano.html"
+  ],
+  "related": [
+    "less",
+    "vim"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "nano.01",
+      "text": "nano notas.txt",
+      "description": {
+        "es": "Abre o crea notas.txt al guardar",
+        "en": "Open notes.txt, creating it when saved"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "nano.02",
+      "text": "nano -l notas.txt",
+      "description": {
+        "es": "Muestra números de línea",
+        "en": "Show line numbers"
+      },
+      "quick": true,
+      "effect": "write"
+    },
+    {
+      "id": "nano.03",
+      "text": "nano -v notas.txt",
+      "description": {
+        "es": "Abre en modo de visualización",
+        "en": "Open in view mode"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ],
+  "keywords": [
+    "editar archivos",
+    "edit files"
+  ]
+}

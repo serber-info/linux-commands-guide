@@ -1,0 +1,99 @@
+{
+  "name": "chown",
+  "title": {
+    "es": "Opciones de CHOWN",
+    "en": "CHOWN Options"
+  },
+  "brief": {
+    "es": "Cambia propietario y grupo de archivos",
+    "en": "Change file owner and group"
+  },
+  "category": "files",
+  "level": "intermediate",
+  "notes": {
+    "es": "Sustituye los valores de ejemplo antes de usarlos. Consulta el manual de tu versión para compatibilidad y permisos.",
+    "en": "Replace example values before use. Check your installed version’s manual for compatibility and permissions."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "examples": [
+    {
+      "id": "chown.01",
+      "text": "chown user filename",
+      "description": {
+        "es": "Cambia el propietario a 'user'",
+        "en": "Change owner to 'user'"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chown.02",
+      "text": "chown user:group filename",
+      "description": {
+        "es": "Cambia propietario y grupo",
+        "en": "Change owner and group"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chown.03",
+      "text": "chown :group filename",
+      "description": {
+        "es": "Cambia solo el grupo",
+        "en": "Change group only"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chown.04",
+      "text": "chown -R user directory",
+      "description": {
+        "es": "Cambia propietario recursivamente",
+        "en": "Change owner recursively"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chown.05",
+      "text": "chown -R user:group directory",
+      "description": {
+        "es": "Cambia propietario y grupo recursivamente",
+        "en": "Change owner and group recursively"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": true
+    },
+    {
+      "id": "chown.06",
+      "text": "chown --from=old_user new_user filename",
+      "description": {
+        "es": "Cambia a new_user solo si el propietario actual es old_user",
+        "en": "Change owner to new_user only if the current owner is old_user"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    },
+    {
+      "id": "chown.07",
+      "text": "chown --reference=ref_file filename",
+      "description": {
+        "es": "Copia propietario y grupo de otro archivo",
+        "en": "Copy owner and group from another file"
+      },
+      "kind": "command",
+      "effect": "write",
+      "quick": false
+    }
+  ]
+}

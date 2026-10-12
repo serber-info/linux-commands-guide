@@ -1,0 +1,47 @@
+{
+  "name": "readlink",
+  "title": {
+    "es": "Uso de readlink",
+    "en": "readlink reference"
+  },
+  "brief": {
+    "es": "Inspecciona enlaces simbólicos",
+    "en": "Inspect symbolic links"
+  },
+  "category": "files",
+  "level": "beginner",
+  "notes": {
+    "es": "Un enlace simbólico apunta a otra ruta. readlink muestra el destino escrito en el enlace; -f resuelve una ruta canónica en GNU. No modifica el enlace.",
+    "en": "A symlink points to another path. readlink shows its stored target; -f resolves a canonical path on GNU. It does not modify the link."
+  },
+  "sources": [
+    "https://www.gnu.org/software/coreutils/manual/coreutils.html"
+  ],
+  "related": [
+    "ln",
+    "realpath"
+  ],
+  "aliases": [],
+  "examples": [
+    {
+      "id": "readlink.01",
+      "text": "readlink enlace",
+      "description": {
+        "es": "Muestra el destino del enlace",
+        "en": "Show the link target"
+      },
+      "quick": true,
+      "effect": "reference"
+    },
+    {
+      "id": "readlink.02",
+      "text": "readlink -f enlace",
+      "description": {
+        "es": "Resuelve la ruta canónica (GNU)",
+        "en": "Resolve the canonical path (GNU)"
+      },
+      "quick": true,
+      "effect": "reference"
+    }
+  ]
+}

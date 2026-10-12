@@ -1,0 +1,23 @@
+{
+  "name": "wc",
+  "title": {
+    "es": "Contar líneas de un archivo",
+    "en": "Count lines in a file"
+  },
+  "task": {
+    "es": "Cuenta las líneas de palabras.txt sin imprimir el nombre del archivo.",
+    "en": "Count lines in palabras.txt without printing the filename."
+  },
+  "fixtures": {
+    "palabras.txt": "uno\ndos\ntres\n"
+  },
+  "solution": "wc -l < palabras.txt",
+  "expected": "3\n",
+  "hint": {
+    "es": "Usa stdin con una redirección de entrada.",
+    "en": "Use stdin with input redirection."
+  },
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "navigation",
+  "title": {
+    "es": "Moverte por directorios",
+    "en": "Navigate directories"
+  },
+  "body": {
+    "es": "pwd muestra dónde estás; ls muestra qué hay; cd cambia dónde estás. / inicia una ruta absoluta; . es el directorio actual; .. su padre; ~ tu carpeta personal. Los ejemplos con <ruta> son marcadores, no se copian literalmente. Usa comillas cuando una ruta tenga espacios.\nEmpieza con consultas. cd afecta solo a la shell en la que lo ejecutas.",
+    "en": "pwd shows where you are; ls shows what is there; cd changes where you are. / starts an absolute path; . means the current directory; .. its parent; ~ your home. <path> examples are placeholders, not literal syntax. Quote paths containing spaces.\nStart with queries. cd affects only the shell where you run it."
+  },
+  "commands": [
+    "pwd",
+    "ls -la",
+    "cd ..",
+    "cd ~"
+  ],
+  "related": [
+    "pwd",
+    "ls",
+    "cd"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

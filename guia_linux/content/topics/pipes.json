@@ -1,0 +1,27 @@
+{
+  "name": "pipes",
+  "title": {
+    "es": "Conectar comandos con tuberías",
+    "en": "Connect commands with pipes"
+  },
+  "body": {
+    "es": "Un programa recibe stdin, escribe resultados en stdout y diagnósticos en stderr. | conecta stdout de un programa a stdin del siguiente; no conecta stderr por defecto.\nConstruye una tubería por pasos: primero observa el texto, después filtra y finalmente cuenta. Los siguientes ejemplos no necesitan archivos y no cambian tu sistema.",
+    "en": "A program receives stdin, writes results to stdout and diagnostics to stderr. | connects one program’s stdout to the next program’s stdin; it does not connect stderr by default.\nBuild a pipeline in steps: inspect text, filter it, then count. These examples need no files and do not change your system."
+  },
+  "commands": [
+    "printf '%s\\n' rojo azul rojo",
+    "printf '%s\\n' rojo azul rojo | grep -F rojo",
+    "printf '%s\\n' rojo azul rojo | grep -F rojo | wc -l"
+  ],
+  "related": [
+    "printf",
+    "grep",
+    "wc",
+    "sort",
+    "uniq",
+    "descriptors"
+  ],
+  "sources": [
+    "https://www.gnu.org/software/bash/manual/bash.html"
+  ]
+}

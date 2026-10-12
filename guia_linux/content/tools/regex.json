@@ -1,0 +1,275 @@
+{
+  "name": "regex",
+  "title": {
+    "es": "Expresiones Regulares",
+    "en": "Regular Expressions"
+  },
+  "brief": {
+    "es": "Patrones de búsqueda con regex",
+    "en": "Regex search patterns"
+  },
+  "category": "text",
+  "level": "intermediate",
+  "notes": {
+    "es": "No todas las regex funcionan en todas las herramientas. BRE: grep; ERE: grep -E, sed -E, awk; PCRE: grep -P si está disponible. \\d y lookaround son PCRE, no ERE. Los comodines del shell no son regex.",
+    "en": "Not every regex works in every tool. BRE: grep; ERE: grep -E, sed -E, awk; PCRE: grep -P when available. \\d and lookaround are PCRE, not ERE. Shell globs are not regex."
+  },
+  "sources": [
+    "https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html"
+  ],
+  "examples": [
+    {
+      "id": "regex.01",
+      "text": "^word",
+      "description": {
+        "es": "ERE: Coincide con 'word' al inicio de la línea",
+        "en": "ERE: Match 'word' at the start of the line"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "regex.02",
+      "text": "word$",
+      "description": {
+        "es": "ERE: Coincide con 'word' al final de la línea",
+        "en": "ERE: Match 'word' at the end of the line"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "regex.03",
+      "text": "\\bword\\b",
+      "description": {
+        "es": "ERE: Coincide con 'word' como palabra completa",
+        "en": "ERE: Match 'word' as a whole word"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "regex.04",
+      "text": ".",
+      "description": {
+        "es": "ERE: Cualquier carácter excepto nueva línea",
+        "en": "ERE: Any character except newline"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "regex.05",
+      "text": "\\d",
+      "description": {
+        "es": "PCRE: Cualquier dígito (equivale a [0-9])",
+        "en": "PCRE: Any digit (equivalent to [0-9])"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": true
+    },
+    {
+      "id": "regex.06",
+      "text": "\\D",
+      "description": {
+        "es": "PCRE: Cualquier carácter que NO sea dígito",
+        "en": "PCRE: Any non-digit character"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.07",
+      "text": "\\w",
+      "description": {
+        "es": "PCRE: Letra, dígito o guion bajo",
+        "en": "PCRE: Word character: letter, digit or underscore"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.08",
+      "text": "\\W",
+      "description": {
+        "es": "PCRE: Carácter que NO sea de palabra",
+        "en": "PCRE: Non-word character"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.09",
+      "text": "\\s",
+      "description": {
+        "es": "PCRE: Espacio en blanco (espacio, tabulación, nueva línea)",
+        "en": "PCRE: Whitespace (space, tab, newline)"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.10",
+      "text": "\\S",
+      "description": {
+        "es": "PCRE: Carácter que NO sea espacio en blanco",
+        "en": "PCRE: Non-whitespace character"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.11",
+      "text": "[aeiou]",
+      "description": {
+        "es": "ERE: Cualquier vocal minúscula",
+        "en": "ERE: Any lowercase vowel"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.12",
+      "text": "[^aeiou]",
+      "description": {
+        "es": "ERE: Cualquier carácter que NO sea vocal minúscula",
+        "en": "ERE: Any character that is NOT a lowercase vowel"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.13",
+      "text": "[A-Za-z]",
+      "description": {
+        "es": "ERE: Cualquier letra mayúscula o minúscula",
+        "en": "ERE: Any uppercase or lowercase letter"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.14",
+      "text": "(word){3}",
+      "description": {
+        "es": "ERE: Exactamente 3 repeticiones de 'word' (sin paréntesis, {3} solo afecta a la 'd')",
+        "en": "ERE: Exactly 3 repetitions of 'word' (without parentheses, {3} only applies to 'd')"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.15",
+      "text": "(word){2,5}",
+      "description": {
+        "es": "ERE: Entre 2 y 5 repeticiones de 'word'",
+        "en": "ERE: Between 2 and 5 repetitions of 'word'"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.16",
+      "text": "a*",
+      "description": {
+        "es": "ERE: 0 o más 'a' (el cuantificador afecta al elemento anterior)",
+        "en": "ERE: 0 or more 'a' (a quantifier applies to the previous item)"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.17",
+      "text": "a+",
+      "description": {
+        "es": "ERE: 1 o más 'a'",
+        "en": "ERE: 1 or more 'a'"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.18",
+      "text": "colou?r",
+      "description": {
+        "es": "ERE: 'u' opcional: coincide con color y colour",
+        "en": "ERE: Optional 'u': matches color and colour"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.19",
+      "text": "(w1|w2)",
+      "description": {
+        "es": "ERE: Coincide con 'w1' o 'w2'",
+        "en": "ERE: Match 'w1' or 'w2'"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.20",
+      "text": "(?<=@)\\w+",
+      "description": {
+        "es": "PCRE: Palabra precedida de '@' (lookbehind positivo)",
+        "en": "PCRE: Word preceded by '@' (positive lookbehind)"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.21",
+      "text": "\\w+(?=\\.com)",
+      "description": {
+        "es": "PCRE: Palabra seguida de '.com' (lookahead positivo)",
+        "en": "PCRE: Word followed by '.com' (positive lookahead)"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.22",
+      "text": "(?i)word",
+      "description": {
+        "es": "PCRE: Coincide ignorando mayúsculas/minúsculas",
+        "en": "PCRE: Case-insensitive match"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    },
+    {
+      "id": "regex.23",
+      "text": "^$",
+      "description": {
+        "es": "ERE: Línea vacía",
+        "en": "ERE: Empty line"
+      },
+      "kind": "pattern",
+      "effect": "reference",
+      "quick": false
+    }
+  ]
+}
